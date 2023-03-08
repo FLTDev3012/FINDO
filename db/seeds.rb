@@ -5,3 +5,12 @@
 #
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
+
+
+# Wishlist.destroy_all
+User.destroy_all
+
+dorian = User.create(email: "dorian@gmail.com", password: 'coucou')
+jernito = User.create(email: "jernito@gmail.com", password: 'coucou')
+
+wishlist_1 = Wishlist.create(name: 'Wishlist 1', user_id: dorian.id)
