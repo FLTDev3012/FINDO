@@ -5,18 +5,18 @@
 // 3. You can override them below!
 
 // General style
-$font-family-sans-serif: $body-font;
-$headings-font-family:   $headers-font;
-$body-bg:                $light-gray;
+$font-family-sans-serif: $text;
+$headings-font-family:   $titre;
+$body-bg:                white;
 $font-size-base:         1rem;
 
 // Colors
-$body-color: $gray;
-$primary:    $blue;
-$success:    $green;
-$info:       $yellow;
-$danger:     $red;
-$warning:    $orange;
+$body-color: $vert;
+$primary:    $vert;
+$success:    $vert;
+$info:       $vert;
+$danger:     $vert;
+$warning:    $vert;
 
 // Buttons & inputs' radius
 $border-radius:    2px;
