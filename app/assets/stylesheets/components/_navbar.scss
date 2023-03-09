@@ -11,6 +11,7 @@
   width: 40px;
 }
 
+
 .nav-link-btn {
   display: flex;
   justify-content: center;
@@ -41,4 +42,51 @@
 .nav-link-blanc:hover {
   transform: scale(1) translateY(-8px);
   color: white;
+=======
+.titre-logo {
+  font-family: $titre;
+  color: $vert;
+  font-size: 30px;
+  margin-left: 20px;
+  margin-top: 10px;
+}
+
+//// s'inscrire
+.nav-link1 {
+
+  border: 1px solid white;
+  border-radius: 30px;
+  text-decoration: none;
+  font-family: $text;
+  padding: 10px;
+  margin-right: 12px;
+  color: $vert;
+  background-color: white;
+}
+
+//// se connecter
+.nav-link2 {
+  text-decoration: none;
+  font-family: $text;
+  padding: 10px;
+  margin-right: 16px;
+  color: $vert;
+}
+
+.avatar {
+  border-radius: 50%;
+  border: 1px solid white;
+  margin: 10px;
+  height: 44px;
+  width: 44px;
+}
+
+///// mes wishlists
+.nav-link3 {
+  text-decoration: none;
+  font-family: $text;
+  padding: 10px;
+  margin-right: 10px;
+  margin-top: 10px;
+  color: $vert;
 }
