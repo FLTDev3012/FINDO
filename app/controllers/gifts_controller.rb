@@ -1,4 +1,8 @@
 class GiftsController < ApplicationController
+  def index
+    @gifts = policy_scope(Gift)
+  end
+
   def show
     @gift = Gift.find(params[:id])
     authorize @gift
@@ -25,6 +29,12 @@ class GiftsController < ApplicationController
     @gift.update(gift_params)
     authorize @gift
     @gift.save
+  end
+
+  def destroy
+    @gift = Gift.find(params[:id])
+    authorize @gift
+    @gift.destroy
   end
 end
 

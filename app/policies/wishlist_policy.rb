@@ -4,23 +4,29 @@ class WishlistPolicy < ApplicationPolicy
     # def resolve
     #   scope.all
     # end
+
     def resolve
       scope.all # If users can see all restaurants
       # scope.where(user: user) # If users can only see their restaurants
       # scope.where("name LIKE 't%'") # If users can only see restaurants starting with `t`
       # ...
     end
-
-    def show?
-      true
-    end
-
-    def new?
-      true
-    end
-
-    def create?
-      true
-    end
   end
+
+  def show?
+    true
+  end
+
+  def new?
+    true
+  end
+
+  def create?
+    record.user == user
+  end
+
+  def destroy?
+    record.user == user
+  end
+
 end

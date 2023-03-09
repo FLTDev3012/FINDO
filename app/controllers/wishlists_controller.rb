@@ -20,11 +20,18 @@ class WishlistsController < ApplicationController
     @wishlist.user = current_user
     authorize @wishlist
     @wishlist.save
+    redirect_to wishlist_path(@wishlist)
   end
 
   def edit
     @wishlist = Wishlist.find(params[:id])
     authorize @wishlist
+  end
+
+  def destroy
+    @wishlist = Wishlist.find(params[:id])
+    authorize @wishlist
+    @wishlist.destroy
   end
 end
 
