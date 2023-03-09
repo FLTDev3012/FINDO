@@ -4,48 +4,39 @@
 *::after {
   box-sizing: content-box;
 }
-
 section {
   height: 100vh;
 }
-
 .navbar-lewagon {
   justify-content: space-between;
   background: rgba(255, 255, 255, 0);
 }
-
 .navbar-lewagon .navbar-collapse {
   flex-grow: 0;
 }
-
 .navbar-lewagon .navbar-brand img {
   width: 40px;
 }
-
 .hero-banner-top {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-
 .Text-hero-banner {
   position: relative;
   max-width: 820px;
   margin-top: 100px;
 }
-
 .Text-hero-banner h1 {
   position: relative;
   font-weight: 1000;
   line-height: 1.2em;
 }
-
 .Text-hero-banner p {
   position: relative;
   max-width: 500px;
   margin-top: 15px;
 }
-
 .image-hero-banner {
   width: 300px;
   display: flex;
@@ -53,32 +44,81 @@ section {
   padding-left: 100px;
   margin-top: 100px;
 }
-
 .image-hero-banner img {
   max-width: 230px;
   margin-top: 240px;
 }
-
 .hero-banner-bottom {
   display: flex;
   justify-content: space-evenly;
   align-items: top;
 }
-
-.fleche {
-  display: flex;
-  position: relative;
-}
-
-.numero {
-  display: flex;
-  position: absolute;
-}
-
 .Paragraphes {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-around;
   width: clamp(300px, 65%, 935px);
+}
+
+@media (max-width: 768px) {
+  .hero-banner-top {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .Text-hero-banner {
+    position: relative;
+    max-width: 820px;
+    margin-top: 20px;
+  }
+  .image-hero-banner img {
+    max-width: 230px;
+    margin-top: -100px;
+  }
+
+  .hero-banner-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: top;
+  }
+
+  .Paragraphes {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 292px;
+  }
+  #home-bottom-image {
+    display: none;
+  }
+}
+
+@media (max-width: 560px) {
+  .hero-banner-top {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .Text-hero-banner {
+    position: relative;
+    max-width: 820px;
+    margin-top: 20px;
+  }
+  .image-hero-banner img {
+    max-width: 230px;
+    margin-top: -100px;
+  }
+
+  .Paragraphes {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 269px;
+  }
+  #home-bottom-image {
+    display: none;
+  }
 }
