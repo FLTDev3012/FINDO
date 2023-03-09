@@ -51,6 +51,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_03_09_114432) do
     t.integer "vote"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "photo"
   end
 
   create_table "gifts_tags", force: :cascade do |t|
