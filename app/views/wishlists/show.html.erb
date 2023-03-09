@@ -1,5 +1,8 @@
 <h1>Show wishlist</h1>
 
-<% @wishlist.gifts.each do |gift| %>
-  <p><%= gift.name %></p>
+<% @wishlist.wishlists_gifts.each do |wishlists_gift| %>
+  <p><%= wishlists_gift.gift.name %></p>
+  <p><%= link_to "voir" , wishlists_gift_path(wishlists_gift) %></p>
 <% end %>
+
+  <p><%= link_to "toute mes wishlists" , wishlists_path %></p>

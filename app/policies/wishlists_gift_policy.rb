@@ -6,6 +6,10 @@ class WishlistsGiftPolicy < ApplicationPolicy
     # end
   end
 
+  def show?
+    true
+  end
+
   def destroy?
     record.user == current_user
   end

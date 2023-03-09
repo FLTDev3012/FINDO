@@ -34,15 +34,6 @@ class WishlistsController < ApplicationController
     @wishlist.destroy
   end
 
-  def top
-    @wishlist = Wishlist.find(params[:id])
-
-    # on doit trouver le gift
-    @gift_top = @wishlist.wishlists_gift.order("vote desc").limit(1).first
-    # trouver celui qui a le plus de votes
-
-    authorize @wishlist
-  end
 end
 
 private

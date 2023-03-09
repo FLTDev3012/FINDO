@@ -23,7 +23,7 @@ wishlist_2 = Wishlist.create(name: 'Wishlist 2', user_id: dorian.id)
 wishlist_3 = Wishlist.create(name: 'Wishlist 3', user_id: dorian.id)
 
 
-gift_1 = Gift.create(name: 'Gift 1', price: 2)
+gift_1 = Gift.create(name: 'Gift 1 top', price: 2, vote:5)
 gift_2 = Gift.create(name: 'Gift 2', price: 2)
 gift_3 = Gift.create(name: 'Gift 3', price: 2)
 
