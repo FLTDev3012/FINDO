@@ -14,3 +14,14 @@ dorian = User.create(email: "dorian@gmail.com", password: 'coucou')
 jernito = User.create(email: "jernito@gmail.com", password: 'coucou')
 
 wishlist_1 = Wishlist.create(name: 'Wishlist 1', user_id: dorian.id)
+wishlist_2 = Wishlist.create(name: 'Wishlist 2', user_id: dorian.id)
+wishlist_3 = Wishlist.create(name: 'Wishlist 3', user_id: dorian.id)
+
+
+gift_1 = Gift.create(name: 'Gift 1', price: 2)
+gift_2 = Gift.create(name: 'Gift 2', price: 2)
+gift_3 = Gift.create(name: 'Gift 3', price: 2)
+
+WishlistsGift.create(wishlist: wishlist_1, gift: gift_1)
+WishlistsGift.create(wishlist: wishlist_1, gift: gift_2)
+WishlistsGift.create(wishlist: wishlist_2, gift: gift_3)
