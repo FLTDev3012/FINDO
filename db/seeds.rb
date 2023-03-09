@@ -9,6 +9,11 @@
 
 # Wishlist.destroy_all
 User.destroy_all
+Wishlist.destroy_all
+Gift.destroy_all
+WishlistsGift.destroy_all
+Tag.destroy_all
+
 
 dorian = User.create(email: "dorian@gmail.com", password: 'coucou')
 jernito = User.create(email: "jernito@gmail.com", password: 'coucou')
@@ -25,3 +30,8 @@ gift_3 = Gift.create(name: 'Gift 3', price: 2)
 WishlistsGift.create(wishlist: wishlist_1, gift: gift_1)
 WishlistsGift.create(wishlist: wishlist_1, gift: gift_2)
 WishlistsGift.create(wishlist: wishlist_2, gift: gift_3)
+
+anniveraire = Tag.create(name: 'anniversaire')
+noel = Tag.create(name: 'noel')
+adulte = Tag.create(name: 'adulte')
+decoration = Tag.create(name: 'decorations')

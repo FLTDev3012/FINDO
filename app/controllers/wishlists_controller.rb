@@ -43,9 +43,6 @@ class WishlistsController < ApplicationController
 
     authorize @wishlist
   end
-
-  private
-  end
 end
 
 private
