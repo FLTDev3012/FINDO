@@ -11,8 +11,9 @@ jernito = User.create(email: "jernito@gmail.com", password: 'coucou')
 eva = User.create(email: "eva@gmail.com", password: 'coucou')
 mathieu = User.create(email: "mathieu@gmail.com", password: 'coucou')
 
-wishlist_1 = Wishlist.create(name: 'Anniversaire Jernito', user_id: dorian.id)
+wishlist_1 = Wishlist.create(name: 'Anniversaire Pablo', user_id: dorian.id)
 
+wishlist_2 = Wishlist.create(name: 'Anniversaire Jose', user_id: jernito.id)
 
 # seeds des cadeaux
 Gift.destroy_all
@@ -97,3 +98,31 @@ Sangle réglable en coton écru avec boucle coulissante.", rating: 5, url: "http
 
 #20
 Gift.create!(name: 'Bumbag', price: 46.90, description: "Sac banane en cuir. Pochette banane porté bandoulière", rating: 4.5, url: "https://www.etsy.com/listing/1195987127/womens-leather-banana-bag-bum-bag-hip?ga_order=most_relevant&ga_search_type=all&ga_view_type=gallery&ga_search_query=sac+banane&ref=sc_gallery-1-6&frs=1&bes=1&plkey=3e31d3788b0d5a44238d5589e6721ff341178e98%3A1195987127", vote: 0, photo: 'https://i.etsystatic.com/23228114/r/il/d118c3/4204939046/il_1588xN.4204939046_cs01.jpg')
+
+
+wishlists_gift1 = WishlistsGift.create!(wishlist_id: Wishlist.first.id, gift_id: Gift.first.id)
+wishlists_gift2 = WishlistsGift.create!(wishlist_id: Wishlist.first.id, gift_id: Gift.second.id)
+wishlists_gift3 = WishlistsGift.create!(wishlist_id: Wishlist.first.id, gift_id: Gift.last.id)
+
+
+
+
+Vote.create!(wishlists_gift_id: wishlists_gift1.id, user_id: User.first.id)
+wishlists_gift1.vote += 1
+wishlists_gift1.save!
+Vote.create!(wishlists_gift_id: wishlists_gift1.id, user_id: User.second.id)
+wishlists_gift1.vote += 1
+wishlists_gift1.save!
+Vote.create!(wishlists_gift_id: wishlists_gift1.id, user_id: User.third.id)
+wishlists_gift1.vote += 1
+wishlists_gift1.save!
+Vote.create!(wishlists_gift_id: wishlists_gift2.id, user_id: User.first.id)
+wishlists_gift2.vote += 1
+wishlists_gift2.save!
+
+
+wishlists_gift1 = WishlistsGift.create!(wishlist_id: Wishlist.second.id, gift_id: Gift.last.id)
+wishlists_gift2 = WishlistsGift.create!(wishlist_id: Wishlist.second.id, gift_id: Gift.second.id)
+Vote.create!(wishlists_gift_id: wishlists_gift1.id, user_id: User.first.id)
+wishlists_gift1.vote += 1
+wishlists_gift1.save!
