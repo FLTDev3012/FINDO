@@ -10,6 +10,7 @@ class GiftPolicy < ApplicationPolicy
       # scope.where("name LIKE 't%'") # If users can only see restaurants starting with `t`
       # ...
     end
+  end
 
     def show?
       true
@@ -31,5 +32,7 @@ class GiftPolicy < ApplicationPolicy
       false
     end
 
-  end
+    def destroy?
+      false
+    end
 end

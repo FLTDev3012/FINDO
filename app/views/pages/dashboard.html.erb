@@ -1,0 +1,9 @@
+<h1>dashboard</h1>
+
+<p><%= current_user.email %></p>
+
+<% @wishlists.each do |wishlist| %>
+    <p><%= link_to wishlist.name, wishlist_path(wishlist) %></p>
+<% end %>
+
+<%  %>
