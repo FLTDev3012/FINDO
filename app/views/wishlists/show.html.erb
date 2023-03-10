@@ -1,8 +1,24 @@
 <h1>Show wishlist</h1>
+<div class="container">
+  <div class="cards">
 
-<% @wishlist.wishlists_gifts.each do |wishlists_gift| %>
-  <p><%= wishlists_gift.gift.name %></p>
-  <p><%= link_to "voir" , wishlists_gift_path(wishlists_gift) %></p>
-<% end %>
+    <% @wishlist.wishlists_gifts.each do |wishlists_gift| %>
+      <div class="animated-card">
+        <div class="front-card">
+          <%= cl_image_tag wishlists_gift.gift.photo, height: 150, width: 200, crop: :fill %>
+        </div>
 
+        <div class="back-card">
+          <div class="back-card-info">
+            <p><%= wishlists_gift.gift.name %></p>
+            <p><%= wishlists_gift.gift.price %></p>
+          </div>
+            <%= link_to "voir" , wishlists_gift_path(wishlists_gift), class: "button-home" %>
+        </div>
+
+      </div>
+
+    <% end %>
+  </div>
   <p><%= link_to "toute mes wishlists" , wishlists_path %></p>
+</div>
