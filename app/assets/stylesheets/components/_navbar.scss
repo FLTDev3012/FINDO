@@ -11,6 +11,11 @@
   width: 40px;
 }
 
+//// background vert + bouton blanc et texte blanc ------------------------
+
+///////////////////////// pour se loguer
+
+// s'inscrire
 .nav-link-btn {
   display: flex;
   justify-content: center;
@@ -19,7 +24,7 @@
   border-radius: 30px;
   background: white;
   text-decoration: none;
-  margin-top: 5px;
+
   margin-right: 15px;
   width: 85px;
   transition: transform 0.5s;
@@ -29,16 +34,54 @@
   transform: scale(1) translateY(-8px);
 }
 
+// se connecter
 .nav-link-blanc {
   color: white;
   text-decoration: none;
   display: flex;
   justify-content: center;
-  margin-top: 6px;
+  margin-top: 1px;
+  margin-right: 23px;
   transition: transform 0.5s;
 }
 
 .nav-link-blanc:hover {
+  transform: scale(1) translateY(-8px);
+  color: white;
+}
+
+///////////////////////// Une fois logué
+
+/// mes wishslists
+
+.nav-link-wishlist-blanc {
+  color: white;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  margin-right: 13px;
+  transition: transform 0.5s;
+}
+
+.nav-link-wishlist-blanc:hover {
+  transform: scale(1) translateY(-8px);
+  color: white;
+}
+
+/// mes votes
+
+.nav-link-votes-blanc {
+  color: white;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  margin-right: 5px;
+  transition: transform 0.5s;
+}
+
+.nav-link-votes-blanc:hover {
   transform: scale(1) translateY(-8px);
   color: white;
 }
@@ -50,6 +93,8 @@
   margin-left: 20px;
   margin-top: 10px;
 }
+
+//// background blanc  ------------------------
 
 //// s'inscrire
 .nav-link1 {

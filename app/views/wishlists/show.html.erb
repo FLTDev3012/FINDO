@@ -1,4 +1,4 @@
-<h1>Show wishlist</h1>
+<!--<h1>Show wishlist</h1>
 
 <% @wishlist.wishlists_gifts.each do |wishlists_gift| %>
   <p><%= wishlists_gift.gift.name %></p>
@@ -6,3 +6,126 @@
 <% end %>
 
   <p><%= link_to "toute mes wishlists" , wishlists_path %></p>
+
+ <div class="home-body">-->
+
+ <!--------------------------NAVBAR---------------------------------->
+
+ <div class="home-body">
+  <div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
+    <div class="container-fluid">
+      <%= link_to "/", class: "navbar-brand" do %>
+        <h1 class="titre">Findo</h1>
+      <% end %>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto">
+          <% if user_signed_in? %>
+            <li class="nav-item active-blanc">
+              <%= link_to "Mes wishlists", "#", class: "nav-link-wishlist-blanc" %>
+            </li>
+            <li class="nav-item-mesvotes-blanc">
+              <%= link_to "Mes votes", "#", class: "nav-link-votes-blanc" %>
+            </li>
+            <li class="nav-item dropdown">
+              <%= image_tag "https://kitt.lewagon.com/placeholder/users/ssaunier", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
+              <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                <%= link_to "Action", "#", class: "dropdown-item" %>
+                <%= link_to "Another action", "#", class: "dropdown-item" %>
+                <%= link_to "Log out", destroy_user_session_path, data: {turbo_method: :delete}, class: "dropdown-item" %>
+              </div>
+            </li>
+          <% else %>
+            <li class="nav-item">
+              <%= link_to "S'inscrire", new_user_session_path, class: "nav-link-btn" %>
+            </li>
+            <li class="nav-item">
+              <%= link_to "Se connecter", new_user_session_path, class: "nav-link-blanc" %>
+            </li>
+          <% end %>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+
+ <!--------------------------END NAVBAR---------------------------------->
+
+
+
+ <!--------------------------TOP---------------------------------->
+
+<div class="container">
+
+<!---Title Hero banner à gauche---->
+
+  <section class="hero-banner-top">
+
+    <div class="Text-hero-banner">
+      <h1 class="titre">
+          Trouve LE cadeau rapidement et facilement
+      </h1>
+      <p class="text">
+          Choisis tes critères, rassemble tes amis et vote pour le meilleur cadeau de la liste.
+          C'est simple, rapide et ludique.
+      </p>
+        <%= link_to "Decouvrir", new_wishlist_path, class:"button-home" %>
+    </div>
+
+ <!---END Title Hero banner à gauche---->
+
+
+ <!---IMG Hero banner à droite---->
+
+      <div class="image-hero-banner">
+        <%=image_tag "cadeau-img-banner.jpg"%>
+      </div>
+
+  </section>
+
+ <!---END IMG Hero banner à droite---->
+
+
+ <!--------------------------BOTTOM---------------------------------->
+
+  <section class="hero-banner-bottom">
+
+ <!--- Fleche et numéro à gauche bottom ---->
+
+        <%=image_tag "fleche et images", class:"fleche-numero"%>
+
+
+ <!--- END Fleche et numéro à gauche bottom ---->
+
+
+ <!--- Paragraphe droite bottom ---->
+
+
+    <div class="Paragraphes">
+      <p class="$text">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent eget est id ex efficitur finibus tempus in mauris. Suspendisse metus sem volutpat sit amet auctor sed.
+      </p>
+      <p class="$text">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent eget est id ex efficitur finibus tempus in mauris. Suspendisse metus sem volutpat sit amet auctor sed.
+      </p>
+      <p class="$text">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent eget est id ex efficitur finibus tempus in mauris. Suspendisse metus sem volutpat sit amet auctor sed.
+      </p>
+    </div>
+
+  </section>
+
+
+
+
+    <%= image_tag "image-bottom-vert", id:"home-bottom-image"%>
+ <!--- END Paragraphe droite bottom ---->
+
+</div>
+
+
+</div>
