@@ -1,0 +1,25 @@
+.wishlist-name-description {
+  margin-top: 340px;
+}
+
+.Text-wishlist-name {
+  text-align: center;
+  margin-bottom: 30px;
+  line-height: 50px;
+}
+
+.card.pillule {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: row;
+  margin-top: 60px;
+}
+.pillule-category-show {
+  border: 1px solid black;
+  border-radius: 15px;
+  background: $terra;
+  color: white;
+  width: fit-content;
+  padding: 5px 10px;
+  margin-right: 45px;
+}
