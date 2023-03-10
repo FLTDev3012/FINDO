@@ -1,12 +1,44 @@
 <h1>new wishlist</h1>
 <h2>cree une wishlist</h2>
 
+<div data-controller= "tag-selection">
 
-<%= simple_form_for(@wishlist) do |f| %>
-  <%= f.input :name %>
-  <%= f.input :name %>
-  <%= f.input :name %>
-  <%= f.input :name %>
+  <%# formulaire  %>
+  <%= form_tag wishlists_path do %>
+    <% @first_tag.each do |tag| %>
+      <div data-action= "click->tag-selection#firstcheck"><%= check_box_tag tag.name, true, false, class: 'd-done'%>
+      <%= tag.name %></div>
+    <% end %>
+    <% @second_tag.each do |tag| %>
+      <div data-action= "click->tag-selection#secondcheck"><%= check_box_tag tag.name, true, false, class: 'd-done'%>
+      <%= tag.name %></div>
+    <% end %>
+    <% @third_tag.each do |tag| %>
+      <div data-action= "click->tag-selection#thirdcheck"><%= check_box_tag tag.name, true, false, class: 'd-done'%>
+      <%= tag.name %></div>
+    <% end %>
+    <% @fourth_tag.each do |tag| %>
+      <div data-action= "click->tag-selection#fourthcheck"><%= check_box_tag tag.name, true, false, class: 'd-done'%>
+      <%= tag.name %></div>
+    <% end %>
+    <%= submit_tag "Nouvelle Wishlist" %>
+  <% end %>
 
-  <%= f.submit %>
-<% end %>
+  <div class="range_container" data-action="mousemove->tag-selection#changemin">
+    <div class="sliders_control">
+        <input id="fromSlider" type="range" value="10" min="0" max="100"/>
+        <input id="toSlider" type="range" value="40" min="0" max="100"/>
+    </div>
+    <div class="form_control">
+        <div class="form_control_container">
+            <div class="form_control_container__time">Min</div>
+            <input class="form_control_container__time__input" type="number" id="fromInput" value="10" min="0" max="100" data-tag-selection-target="rangeinput"/>
+        </div>
+        <div class="form_control_container">
+            <div class="form_control_container__time">Max</div>
+            <input class="form_control_container__time__input" type="number" id="toInput" value="40" min="0" max="100"/>
+        </div>
+    </div>
+</div>
+<p data-tag-selection-target="rangeresult"></p>
+</div>

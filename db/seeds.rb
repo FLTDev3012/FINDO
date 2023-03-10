@@ -15,7 +15,6 @@ Tag.destroy_all
 p "------ All Tag Destroyed ----------"
 
 
-
 dorian = User.create(email: "dorian@gmail.com", password: 'coucou', username: "Dorian l'éléphant")
 jernito = User.create(email: "jernito@gmail.com", password: 'coucou', username: 'Jernito le rigolo')
 eva = User.create(email: "eva@gmail.com", password: 'coucou', username: 'Eva la catha')
@@ -143,6 +142,7 @@ wishlists_gift3 = WishlistsGift.create!(wishlist_id: Wishlist.first.id, gift_id:
 
 p "------ #{WishlistsGift.count} wishlistsGifts created ----------"
 
+
 Vote.create!(wishlists_gift_id: wishlists_gift1.id, user_id: User.first.id)
 wishlists_gift1.vote += 1
 wishlists_gift1.save!
@@ -162,3 +162,30 @@ wishlists_gift2 = WishlistsGift.create!(wishlist_id: Wishlist.second.id, gift_id
 Vote.create!(wishlists_gift_id: wishlists_gift1.id, user_id: User.first.id)
 wishlists_gift1.vote += 1
 wishlists_gift1.save!
+
+
+# tag
+
+Tag.create!(name: "Anniversaire")
+Tag.create!(name: "Noël")
+Tag.create!(name: "Naissance")
+Tag.create!(name: "Petit cadeau")
+Tag.create!(name: "Adulte")
+Tag.create!(name: "Bébé")
+Tag.create!(name: "Ado")
+Tag.create!(name: "Enfant")
+Tag.create!(name: "Décoration")
+Tag.create!(name: "Sport")
+Tag.create!(name: "Made in France")
+Tag.create!(name: "Lifestyle")
+Tag.create!(name: "Beauté")
+Tag.create!(name: "Zéro déchet")
+Tag.create!(name: "Artisanal")
+Tag.create!(name: "DIY")
+Tag.create!(name: "High-Tech")
+Tag.create!(name: "0-200+")
+Tag.create!(name: "0-25")
+Tag.create!(name: "25-50")
+Tag.create!(name: "50-100")
+Tag.create!(name: "100-200")
+Tag.create!(name: "200+")

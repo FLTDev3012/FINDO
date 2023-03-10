@@ -12,10 +12,20 @@ class WishlistsController < ApplicationController
 
   def new
     @wishlist = Wishlist.new
+
+    @first_tag = Tag.all.select { |tag| tag.name == "Anniversaire" || tag.name == "Noël" || tag.name == "Naissance" || tag.name == "Petit cadeau" }
+
+    @second_tag = Tag.all.select { |tag| tag.name == "Bébé" || tag.name == "Ado" || tag.name == "Adulte" || tag.name == "Enfant" }
+
+    @third_tag = Tag.all.select { |tag| tag.name == "Décoration" || tag.name == "Sport" || tag.name == "Made in France" || tag.name == "Lifestyle" || tag.name == "Beauté" || tag.name == "Zéro déchet" || tag.name == "Artisanal" || tag.name == "DIY" || tag.name == "High-Tech"}
+
+    @fourth_tag = Tag.all.select { |tag| tag.name == "0-200+" || tag.name == "0-25" || tag.name == "25-50" || tag.name == "50-100" || tag.name == "100-200" || tag.name == "200+" }
+
     authorize @wishlist
   end
 
   def create
+    raise
     @wishlist = Wishlist.new(wishlist_params)
     @wishlist.user = current_user
     authorize @wishlist
