@@ -6,10 +6,10 @@ WishlistsGift.destroy_all
 Tag.destroy_all
 
 
-dorian = User.create(email: "dorian@gmail.com", password: 'coucou')
-jernito = User.create(email: "jernito@gmail.com", password: 'coucou')
-eva = User.create(email: "eva@gmail.com", password: 'coucou')
-mathieu = User.create(email: "mathieu@gmail.com", password: 'coucou')
+dorian = User.create(email: "dorian@gmail.com", password: 'coucou', username: "Dorian l'éléphant")
+jernito = User.create(email: "jernito@gmail.com", password: 'coucou', username: 'Jernito le rigolo')
+eva = User.create(email: "eva@gmail.com", password: 'coucou', username: 'Eva la catha')
+mathieu = User.create(email: "mathieu@gmail.com", password: 'coucou', username: 'Mathieu le mieleux')
 
 wishlist_1 = Wishlist.create(name: 'Anniversaire Pablo', user_id: dorian.id)
 

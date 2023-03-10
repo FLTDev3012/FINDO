@@ -1,0 +1,13 @@
+.home-body {
+  background-image: image-url("vague-verte.png");
+  background-repeat: no-repeat;
+  background-position-x: right;
+  background-size: 60%;
+  position: relative;
+}
+
+#home-bottom-image {
+  position: absolute;
+  bottom: 0px;
+  right: 0;
+}
