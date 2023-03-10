@@ -3,9 +3,10 @@
  <!--------------------------NAVBAR---------------------------------->
 
 
+ <div class="home-body">
   <div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
     <div class="container-fluid">
-      <%= link_to "#", class: "navbar-brand" do %>
+      <%= link_to "/", class: "navbar-brand" do %>
         <h1 class="titre">Findo</h1>
       <% end %>
 
@@ -14,16 +15,20 @@
       </button>
 
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav me-auto">
+        <ul class="navbar-nav me-auto blanc">
           <% if user_signed_in? %>
-            <li class="nav-item active">
-              <%= link_to "Home", "#", class: "nav-link" %>
+            <li class="nav-item active-blanc">
+              <%= link_to "Mes wishlists", "#", class: "nav-link-wishlist-blanc" %>
             </li>
-            <li class="nav-item">
-              <%= link_to "Messages", "#", class: "nav-link" %>
+            <li class="nav-item-mesvotes-blanc">
+              <%= link_to "Mes votes", "#", class: "nav-link-votes-blanc" %>
             </li>
             <li class="nav-item dropdown">
-              <%= image_tag "https://kitt.lewagon.com/placeholder/users/ssaunier", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
+              <% if current_user.photo.attached? %>
+              <%= cl_image_tag current_user.photo.key, crop: :fill, class: "avatar dropdown-toggle", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
+              <% else %>
+              <%= image_tag "avatar_vide" %>
+              <% end %>
               <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
                 <%= link_to "Action", "#", class: "dropdown-item" %>
                 <%= link_to "Another action", "#", class: "dropdown-item" %>
@@ -64,7 +69,7 @@
           Choisis tes critères, rassemble tes amis et vote pour le meilleur cadeau de la liste.
           C'est simple, rapide et ludique.
       </p>
-        <%= link_to "decouvrir", new_wishlist_path, class:"button-home" %>
+        <%= link_to "Decouvrir", new_wishlist_path, class:"button-home" %>
     </div>
 
  <!---END Title Hero banner à gauche---->
