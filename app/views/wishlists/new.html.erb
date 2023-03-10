@@ -22,6 +22,8 @@
       <%= tag.name %></div>
     <% end %>
     <%= submit_tag "Nouvelle Wishlist" %>
+    <%# LINE BELOW TO REMOVE %>
+    <%= link_to "Nouvelle Wishlist", wishlist_path(18) %>
   <% end %>
 
   <div class="range_container" data-action="mousemove->tag-selection#changemin">
