@@ -61,69 +61,46 @@
 
 <div class="container">
 
-<!---Title Hero banner à gauche---->
+<!---Title & tag wishlist---->
 
-  <section class="hero-banner-top">
+  <section class="wishlist-name-description">
 
-    <div class="Text-hero-banner">
+    <div class="Text-wishlist-name">
       <h1 class="titre">
-          Trouve LE cadeau rapidement et facilement
+          <%= @wishlist.name %>
       </h1>
       <p class="text">
-          Choisis tes critères, rassemble tes amis et vote pour le meilleur cadeau de la liste.
-          C'est simple, rapide et ludique.
+          Vote pour le cadeau qui correspond le mieux à la personne !
       </p>
-        <%= link_to "Decouvrir", new_wishlist_path, class:"button-home" %>
     </div>
 
- <!---END Title Hero banner à gauche---->
-
-
- <!---IMG Hero banner à droite---->
-
-      <div class="image-hero-banner">
-        <%=image_tag "cadeau-img-banner.jpg"%>
-      </div>
+    <div class="card pillule">
+      <button class="pillule-category-show"> Anniversaire </button>
+      <button class="pillule-category-show"> Adulte </button>
+      <button class="pillule-category-show"> Lifestyle </button>
+      <button class="pillule-category-show"> 10€ - 15€ </button>
+    </div>
 
   </section>
 
- <!---END IMG Hero banner à droite---->
+ <!---END Title @ tag wishlist---->
 
 
  <!--------------------------BOTTOM---------------------------------->
 
-  <section class="hero-banner-bottom">
+ <!--- Avatard gauche ---->
 
- <!--- Fleche et numéro à gauche bottom ---->
+<%= cl_image_tag current_user.photo.key, height: 300, width: 400, crop: :fill %>
 
-        <%=image_tag "fleche et images", class:"fleche-numero"%>
-
-
- <!--- END Fleche et numéro à gauche bottom ---->
-
-
- <!--- Paragraphe droite bottom ---->
-
-
-    <div class="Paragraphes">
-      <p class="$text">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent eget est id ex efficitur finibus tempus in mauris. Suspendisse metus sem volutpat sit amet auctor sed.
-      </p>
-      <p class="$text">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent eget est id ex efficitur finibus tempus in mauris. Suspendisse metus sem volutpat sit amet auctor sed.
-      </p>
-      <p class="$text">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent eget est id ex efficitur finibus tempus in mauris. Suspendisse metus sem volutpat sit amet auctor sed.
-      </p>
-    </div>
-
-  </section>
+ <!--- END Avatard gauche ---->
 
 
 
+ <!--- Cards droite---->
 
-    <%= image_tag "image-bottom-vert", id:"home-bottom-image"%>
- <!--- END Paragraphe droite bottom ---->
+
+<!--- END Cards droite---->
+
 
 </div>
 
