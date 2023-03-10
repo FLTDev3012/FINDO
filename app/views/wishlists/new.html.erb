@@ -2,11 +2,15 @@
 <h2>cree une wishlist</h2>
 
 
-<%= simple_form_for(@wishlist) do |f| %>
-  <%= f.input :name %>
-  <%= f.input :name %>
-  <%= f.input :name %>
-  <%= f.input :name %>
-
-  <%= f.submit %>
+<%= form_tag wishlists_path do %>
+  <% @first_tag.each do |tag| %>
+    <%= check_box_tag tag.name %>
+  <% end %>
+  <% @second_tag.each do |tag| %>
+    <%= check_box_tag tag.name %>
+  <% end %>
+  <% @third_tag.each do |tag| %>
+    <%= check_box_tag tag.name %>
+  <% end %>
+  <%= submit_tag "Nouvelle Wishlist" %>
 <% end %>
