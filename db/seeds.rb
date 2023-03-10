@@ -24,17 +24,30 @@ mathieu = User.create(email: "mathieu@gmail.com", password: 'coucou', username: 
 p "------ #{User.count} user created ----------"
 
 
-file = URI.open("app/assets/images/avatar_mathieu.png")
-mathieu.photo.attach(io: file, filename: "avatar_mathieu.png", content_type: "image/png")
+file = URI.open("app/assets/images/avatar/Dorian.jpeg")
+dorian.photo.attach(io: file, filename: "Dorian.jpeg", content_type: "image/jpeg")
+dorian.save
+
+file = URI.open("app/assets/images/avatar/Eva.jpeg")
+eva.photo.attach(io: file, filename: "Eva.jpeg", content_type: "image/jpeg")
+eva.save
+
+file = URI.open("app/assets/images/avatar/Jernito.jpeg")
+jernito.photo.attach(io: file, filename: "Jernito.jpeg", content_type: "image/jpeg")
+jernito.save
+
+file = URI.open("app/assets/images/avatar/Mathieu.jpeg")
+mathieu.photo.attach(io: file, filename: "Mathieu.jpeg", content_type: "image/jpeg")
 mathieu.save
 
+p "------ 4 pictures avatar created ----------"
 
 wishlist_1 = Wishlist.create(name: 'Anniversaire Pablo', user_id: dorian.id)
 
 wishlist_2 = Wishlist.create(name: 'Anniversaire Jose', user_id: jernito.id)
 
 
-p "------ #{Wishlist.count} user created ----------"
+p "------ #{Wishlist.count} wishlists created ----------"
 
 # seeds des cadeaux
 Gift.destroy_all
@@ -121,14 +134,14 @@ Sangle réglable en coton écru avec boucle coulissante.", rating: 5, url: "http
 #20
 Gift.create!(name: 'Bumbag', price: 46.90, description: "Sac banane en cuir. Pochette banane porté bandoulière", rating: 4.5, url: "https://www.etsy.com/listing/1195987127/womens-leather-banana-bag-bum-bag-hip?ga_order=most_relevant&ga_search_type=all&ga_view_type=gallery&ga_search_query=sac+banane&ref=sc_gallery-1-6&frs=1&bes=1&plkey=3e31d3788b0d5a44238d5589e6721ff341178e98%3A1195987127", vote: 0, photo: 'https://i.etsystatic.com/23228114/r/il/d118c3/4204939046/il_1588xN.4204939046_cs01.jpg')
 
-p "------ #{Gift.count} user created ----------"
+p "------ #{Gift.count} Gifts created ----------"
 
 wishlists_gift1 = WishlistsGift.create!(wishlist_id: Wishlist.first.id, gift_id: Gift.first.id)
 wishlists_gift2 = WishlistsGift.create!(wishlist_id: Wishlist.first.id, gift_id: Gift.second.id)
 wishlists_gift3 = WishlistsGift.create!(wishlist_id: Wishlist.first.id, gift_id: Gift.last.id)
 
 
-p "------ #{WishlistsGift.count} user created ----------"
+p "------ #{WishlistsGift.count} wishlistsGifts created ----------"
 
 Vote.create!(wishlists_gift_id: wishlists_gift1.id, user_id: User.first.id)
 wishlists_gift1.vote += 1
