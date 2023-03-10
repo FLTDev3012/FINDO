@@ -25,7 +25,6 @@ class WishlistsController < ApplicationController
   end
 
   def create
-    raise
     @wishlist = Wishlist.new(wishlist_params)
     @wishlist.user = current_user
     authorize @wishlist
