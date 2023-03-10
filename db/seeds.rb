@@ -1,9 +1,18 @@
+require 'open-uri'
+
+
+p "------ Starting creating data ----------"
 # Wishlist.destroy_all
 User.destroy_all
+p "------ All users Destroyed ----------"
 Wishlist.destroy_all
+p "------ All wishlists Destroyed ----------"
 Gift.destroy_all
+p "------ All gifts Destroyed ----------"
 WishlistsGift.destroy_all
+p "------ All wishlistsGift Destroyed ----------"
 Tag.destroy_all
+p "------ All Tag Destroyed ----------"
 
 
 dorian = User.create(email: "dorian@gmail.com", password: 'coucou', username: "Dorian l'éléphant")
@@ -11,12 +20,37 @@ jernito = User.create(email: "jernito@gmail.com", password: 'coucou', username: 
 eva = User.create(email: "eva@gmail.com", password: 'coucou', username: 'Eva la catha')
 mathieu = User.create(email: "mathieu@gmail.com", password: 'coucou', username: 'Mathieu le mieleux')
 
+p "------ #{User.count} user created ----------"
+
+
+file = URI.open("app/assets/images/avatar/Dorian.jpeg")
+dorian.photo.attach(io: file, filename: "Dorian.jpeg", content_type: "image/jpeg")
+dorian.save
+
+file = URI.open("app/assets/images/avatar/Eva.jpeg")
+eva.photo.attach(io: file, filename: "Eva.jpeg", content_type: "image/jpeg")
+eva.save
+
+file = URI.open("app/assets/images/avatar/Jernito.jpeg")
+jernito.photo.attach(io: file, filename: "Jernito.jpeg", content_type: "image/jpeg")
+jernito.save
+
+file = URI.open("app/assets/images/avatar/Mathieu.jpeg")
+mathieu.photo.attach(io: file, filename: "Mathieu.jpeg", content_type: "image/jpeg")
+mathieu.save
+
+p "------ 4 pictures avatar created ----------"
+
 wishlist_1 = Wishlist.create(name: 'Anniversaire Pablo', user_id: dorian.id)
 
 wishlist_2 = Wishlist.create(name: 'Anniversaire Jose', user_id: jernito.id)
 
+
+p "------ #{Wishlist.count} wishlists created ----------"
+
 # seeds des cadeaux
 Gift.destroy_all
+p "------ All Gift Destroyed ----------"
 
 #1
 Gift.create!(name: 'Bougies Carthage', price: 12.00, description: 'Nos bougies décoratives sont moulées individuellement en petite quantité dans notre studio à Paris. Nous utilisons la cire de soja 100% naturelle, végan et écoresponsable.', rating: 4.9, url: "https://www.etsy.com/listing/1395022433/the-carthage-pillars?ga_order=most_relevant&ga_search_type=all&ga_view_type=gallery&ga_search_query=bougies&ref=sr_gallery-1-7&organic_search_click=1", vote: 0, photo: 'https://i.etsystatic.com/40325058/r/il/a7fa98/4606306632/il_1588xN.4606306632_1t7x.jpg')
@@ -99,12 +133,14 @@ Sangle réglable en coton écru avec boucle coulissante.", rating: 5, url: "http
 #20
 Gift.create!(name: 'Bumbag', price: 46.90, description: "Sac banane en cuir. Pochette banane porté bandoulière", rating: 4.5, url: "https://www.etsy.com/listing/1195987127/womens-leather-banana-bag-bum-bag-hip?ga_order=most_relevant&ga_search_type=all&ga_view_type=gallery&ga_search_query=sac+banane&ref=sc_gallery-1-6&frs=1&bes=1&plkey=3e31d3788b0d5a44238d5589e6721ff341178e98%3A1195987127", vote: 0, photo: 'https://i.etsystatic.com/23228114/r/il/d118c3/4204939046/il_1588xN.4204939046_cs01.jpg')
 
+p "------ #{Gift.count} Gifts created ----------"
 
 wishlists_gift1 = WishlistsGift.create!(wishlist_id: Wishlist.first.id, gift_id: Gift.first.id)
 wishlists_gift2 = WishlistsGift.create!(wishlist_id: Wishlist.first.id, gift_id: Gift.second.id)
 wishlists_gift3 = WishlistsGift.create!(wishlist_id: Wishlist.first.id, gift_id: Gift.last.id)
 
 
+p "------ #{WishlistsGift.count} wishlistsGifts created ----------"
 
 
 Vote.create!(wishlists_gift_id: wishlists_gift1.id, user_id: User.first.id)
@@ -126,3 +162,30 @@ wishlists_gift2 = WishlistsGift.create!(wishlist_id: Wishlist.second.id, gift_id
 Vote.create!(wishlists_gift_id: wishlists_gift1.id, user_id: User.first.id)
 wishlists_gift1.vote += 1
 wishlists_gift1.save!
+
+
+# tag
+
+Tag.create!(name: "Anniversaire")
+Tag.create!(name: "Noël")
+Tag.create!(name: "Naissance")
+Tag.create!(name: "Petit cadeau")
+Tag.create!(name: "Adulte")
+Tag.create!(name: "Bébé")
+Tag.create!(name: "Ado")
+Tag.create!(name: "Enfant")
+Tag.create!(name: "Décoration")
+Tag.create!(name: "Sport")
+Tag.create!(name: "Made in France")
+Tag.create!(name: "Lifestyle")
+Tag.create!(name: "Beauté")
+Tag.create!(name: "Zéro déchet")
+Tag.create!(name: "Artisanal")
+Tag.create!(name: "DIY")
+Tag.create!(name: "High-Tech")
+Tag.create!(name: "0-200+")
+Tag.create!(name: "0-25")
+Tag.create!(name: "25-50")
+Tag.create!(name: "50-100")
+Tag.create!(name: "100-200")
+Tag.create!(name: "200+")

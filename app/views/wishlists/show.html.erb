@@ -2,6 +2,7 @@
 <div class="container">
   <div class="cards">
 
+
     <% @wishlist.wishlists_gifts.each do |wishlists_gift| %>
       <div class="animated-card">
         <div class="front-card">
@@ -21,4 +22,104 @@
     <% end %>
   </div>
   <p><%= link_to "toute mes wishlists" , wishlists_path %></p>
+
+
+ <!--------------------------NAVBAR---------------------------------->
+
+ <div class="home-body">
+  <div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
+    <div class="container-fluid">
+      <%= link_to "/", class: "navbar-brand" do %>
+        <h1 class="titre">Findo</h1>
+      <% end %>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto">
+          <% if user_signed_in? %>
+            <li class="nav-item active-blanc">
+              <%= link_to "Mes wishlists", "#", class: "nav-link-wishlist-blanc" %>
+            </li>
+            <li class="nav-item-mesvotes-blanc">
+              <%= link_to "Mes votes", "#", class: "nav-link-votes-blanc" %>
+            </li>
+            <li class="nav-item dropdown">
+              <% if current_user.photo.attached? %>
+              <%= cl_image_tag current_user.photo.key, crop: :fill, class: "avatar dropdown-toggle", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
+              <% else %>
+              <%= image_tag "avatar_vide" %>
+              <% end %>
+              <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                <%= link_to "Action", "#", class: "dropdown-item" %>
+                <%= link_to "Another action", "#", class: "dropdown-item" %>
+                <%= link_to "Log out", destroy_user_session_path, data: {turbo_method: :delete}, class: "dropdown-item" %>
+              </div>
+            </li>
+          <% else %>
+            <li class="nav-item">
+              <%= link_to "S'inscrire", new_user_session_path, class: "nav-link-btn" %>
+            </li>
+            <li class="nav-item">
+              <%= link_to "Se connecter", new_user_session_path, class: "nav-link-blanc" %>
+            </li>
+          <% end %>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+
+ <!--------------------------END NAVBAR---------------------------------->
+
+
+
+ <!--------------------------TOP---------------------------------->
+
+<div class="container">
+
+<!---Title & tag wishlist---->
+
+  <section class="wishlist-name-description">
+
+    <div class="Text-wishlist-name">
+      <h1 class="titre">
+          <%= @wishlist.name %>
+      </h1>
+      <p class="text">
+          Vote pour le cadeau qui correspond le mieux à la personne !
+      </p>
+    </div>
+
+    <div class="card pillule">
+      <button class="pillule-category-show"> Anniversaire </button>
+      <button class="pillule-category-show"> Adulte </button>
+      <button class="pillule-category-show"> Lifestyle </button>
+      <button class="pillule-category-show"> 10€ - 15€ </button>
+    </div>
+
+  </section>
+
+ <!---END Title @ tag wishlist---->
+
+
+ <!--------------------------BOTTOM---------------------------------->
+
+ <!--- Avatard gauche ---->
+
+
+
+ <!--- END Avatard gauche ---->
+
+
+
+ <!--- Cards droite---->
+
+
+<!--- END Cards droite---->
+
+
 </div>
+
