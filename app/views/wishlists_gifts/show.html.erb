@@ -1,4 +1,37 @@
 <h1>hello world</h1>
 
 <h1><%= @wishlists_gift.gift.name %></h1>
+
+  <div class="image-show">
+    <img src="<%=@wishlists_gift.gift.photo%>" >
+  </div>
+
+  <div class="text">
+    <div class="$text">
+      <p>
+        <%= @wishlists_gift.gift.description %>
+      </p>
+      <p>
+        A été voté <%= @wishlists_gift.gift.vote %> depuis sa création
+      </p>
+
+    <div class="bouton">
+        <%= link_to "Offrir !", new_wishlist_path, class:"button-home" %>
+    </div>
+    </div>
+  </div>
+
+
+  <div class="$text">
+    <%= @wishlists_gift.gift.rating %>/5
+  </div>
+
+
+  <div class="text">
+    <p>Avis sur cet article</p>
+    <p>Avis des Findoos</p>
+  </div>
+
+
+
 <p><%= link_to "retour a la wishlist",  wishlist_path(@wishlists_gift.wishlist)%></p>
