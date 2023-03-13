@@ -17,3 +17,16 @@ input[type="checkbox"].d-done {
   background-color: transparent;
   cursor: pointer;
 }
+
+
+.top-left-icon {
+  position: absolute;
+  left: -28px;
+  top: -20px;
+}
+
+.top-right-icon {
+  position: absolute;
+  right: -22px;
+  top: -12px;
+}
