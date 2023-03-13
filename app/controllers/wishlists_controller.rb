@@ -25,8 +25,14 @@ class WishlistsController < ApplicationController
   end
 
   def create
-    @wishlist = Wishlist.new(wishlist_params)
+    @wishlist = Wishlist.new
     @wishlist.user = current_user
+    @wishlist.save
+    # recuperer les tags en true dans le formualire les trsnformer en wishlist tag et les dpnner a la wishlist
+    @chosen_tag = params.select { |key, value| value == "true" }.keys
+    @chosen_tag.each do |key|
+      key = WishlistsTag.new(wishlist_id: @wishlist.id, tag_id: Tag.find_by_name(key).id)
+    end
     authorize @wishlist
     @wishlist.save
     redirect_to wishlist_path(@wishlist)
