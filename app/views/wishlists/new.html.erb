@@ -29,10 +29,11 @@
 
         <div data-action= "click->tag-selection#thirdcheck" data-tag-selection-target="third" class="d-none"><%= check_box_tag tag.name, true, false, class: 'd-done'%>
           <div class="card-tag-9"><%= image_tag tag.image_path, class: "new--icones"%><%= tag.name %></div>
-          <p data-action= "click->tag-selection#thirdbuttoncheck" data-tag-selection-target="thirdbutton"  class="d-none">Suivant</p>
         </div>
 
       <% end %>
+      <p data-action= "click->tag-selection#thirdbuttoncheck" data-tag-selection-target="thirdbutton"  class="d-none">Suivant</p>
+
     </div>
 
     <% @fourth_tag.each do |tag| %>

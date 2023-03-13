@@ -45,7 +45,7 @@ class WishlistsController < ApplicationController
     # recuperer ;es tags en true dans le formualire les trsnformer en wishlist tag et les dpnner a la wishlist
     @chosen_tag = params.select { |key, value| value == "true" }.keys
     @chosen_tag.each do |tag|
-      @test = WishlistsTag.create(wishlist_id: @wishlist.id, tag_id: Tag.find_by_name(tag).id)
+      WishlistsTag.create!(wishlist: @wishlist, tag: Tag.find_by_name(tag))
     end
 
     authorize @wishlist
