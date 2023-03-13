@@ -1,0 +1,42 @@
+*,
+*::before,
+*::after {
+  box-sizing: content-box;
+}
+
+.description-text {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.titre-image {
+  margin-left: 50px;
+  width: clamp(200px, 50%, 830px);
+}
+
+.image-show {
+  display: flex;
+  flex-direction: column;
+}
+
+.avis-rating {
+  margin-left: 50px;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.avis-findos {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-evenly;
+  margin-top: 100px;
+}
+
+.retour-wishlist {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-top: 600px;
+}
