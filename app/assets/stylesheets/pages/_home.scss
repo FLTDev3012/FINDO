@@ -61,6 +61,12 @@ section {
   width: clamp(300px, 65%, 935px);
 }
 
+.btn-bottom {
+  margin-left: 180px;
+  margin-top: 15px;
+  height: 20vh;
+}
+
 @media (max-width: 768px) {
   .hero-banner-top {
     display: flex;
