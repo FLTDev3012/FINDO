@@ -36,7 +36,12 @@ export default class extends Controller {
   thirdcheck(event) {
     // on inverse la valeur actuelle
     event.currentTarget.firstChild.checked = !event.currentTarget.firstChild.checked
-
+    if (event.currentTarget.firstChild.checked) {
+      event.currentTarget.querySelector(".card-tag-9").classList.add("selected")
+    }
+    else {
+      event.currentTarget.querySelector(".card-tag-9").classList.remove("selected")
+    }
   }
 
   thirdbuttoncheck(event) {

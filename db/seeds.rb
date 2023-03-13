@@ -53,6 +53,7 @@ p "------ All Gift Destroyed ----------"
 
 
 # tag
+# <%= image_tag "icones/vase.png" %>
 
 anniv = Tag.create!(name: "Anniversaire")
 noel = Tag.create!(name: "Noël")
@@ -62,15 +63,15 @@ adulte = Tag.create!(name: "Adulte")
 bebe = Tag.create!(name: "Bébé")
 ado = Tag.create!(name: "Ado")
 enfant = Tag.create!(name: "Enfant")
-deco = Tag.create!(name: "Décoration")
-sport = Tag.create!(name: "Sport")
-made = Tag.create!(name: "Made in France")
-life = Tag.create!(name: "Lifestyle")
-beau = Tag.create!(name: "Beauté")
-zero = Tag.create!(name: "Zéro déchet")
-arti = Tag.create!(name: "Artisanal")
-diy = Tag.create!(name: "DIY")
-ht = Tag.create!(name: "High-Tech")
+deco = Tag.create!(name: "Décoration", image_path: "icones/vase.png")
+sport = Tag.create!(name: "Sport", image_path: "icones/badminton.png")
+made = Tag.create!(name: "Made in France", image_path: "icones/tour-eiffel.png")
+life = Tag.create!(name: "Lifestyle", image_path: "icones/chien.png")
+beau = Tag.create!(name: "Beauté", image_path: "icones/mascara.png")
+zero = Tag.create!(name: "Zéro déchet", image_path: "icones/durabilite.png")
+arti = Tag.create!(name: "Artisanal", image_path: "icones/echecs.png")
+diy = Tag.create!(name: "DIY", image_path: "icones/couture.png")
+ht = Tag.create!(name: "High-Tech", image_path: "icones/regarder.png")
 six = Tag.create!(name: "0-200+")
 un = Tag.create!(name: "0-25")
 deux = Tag.create!(name: "25-50")
