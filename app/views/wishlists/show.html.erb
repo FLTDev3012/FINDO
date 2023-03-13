@@ -78,6 +78,14 @@
         <p class="pillule-category-show"><%= tag.tag.name %></p>
       <% end %>
     </div>
+
+
+    <div>
+      <% @gifts.each do |gift|%>
+        <p><%= gift.name %></p>
+      <% end %>
+    </div>
+
   </div>
 
 
@@ -109,14 +117,17 @@
     <div class="cards">
         <% @wishlist.wishlists_gifts.each do |wishlists_gift| %>
           <div class="animated-card">
-            <div class="front-card">
-             <img src="<%= wishlists_gift.gift.photo %>" alt="">
+            <div class="front-card d-flex justify-content-end" style="background-image: url(<%= wishlists_gift.gift.photo %>)">
+              <div class="p-4">
+                <p>12</p>
+              </div>
               <%#= cl_image_tag wishlists_gift.gift.photo, height: 150, width: 200 , crop: :fill,class:"" %>
             </div>
 
             <div class="back-card">
               <div class="back-card-info">
-                <h2>mettre l'oeil</h2>
+                <%= image_tag "icones/oeil.png", class:"oeil" %>
+                <%# <h2>mettre l'oeil</h2> %>
                 <div class="data">
                   <h3><%= wishlists_gift.gift.name %></h3>
                   <h3><%= wishlists_gift.gift.price %>€</h3>
