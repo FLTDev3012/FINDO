@@ -1,16 +1,22 @@
 import { Controller } from "@hotwired/stimulus"
 
+
+// toutes les targets
 // Connects to data-controller="tag-selection"
 export default class extends Controller {
-  static targets = ["checkbox", "rangeinput", "rangeresult", "first", "second", "third", "thirdbutton", "fourth", "five" ]
+  static targets = ["checkbox", "first", "second", "third", "thirdbutton", "fourth", "five", "rangeinputmin", "rangeinputmax", "rangeresultmin", "rangeresultmax" ]
   connect() {
   }
 
+
   firstcheck(event) {
+    // au premier enfant qui a un clic on passe a la suite et on passe la valeur a true
     event.currentTarget.firstChild.checked = true
+    // au clic on passe first en display none
     this.firstTargets.forEach(element => {
       element.classList.add("d-none")
     });
+    // on passe second en display normal
     this.secondTargets.forEach(element => {
       element.classList.remove("d-none")
     });
@@ -28,12 +34,12 @@ export default class extends Controller {
   }
 
   thirdcheck(event) {
+    // on inverse la valeur actuelle
     event.currentTarget.firstChild.checked = !event.currentTarget.firstChild.checked
 
   }
 
   thirdbuttoncheck(event) {
-
     event.currentTarget
     this.thirdTargets.forEach(element => {
       element.classList.add("d-none")
@@ -54,18 +60,25 @@ export default class extends Controller {
   }
 
 
+// <----------- js pour le range -------------->
 
+  changerange(event) {
 
-  changemin(event) {
+    this.changemin()
+    this.changemax()
+  }
+  changemin() {
     this.rangeresultminTarget.innerHTML = this.rangeinputminTarget.value
+    console.log("changemin")
   }
 
-  changemax(event) {
+  changemax() {
     this.rangeresultmaxTarget.innerHTML = this.rangeinputmaxTarget.value
   }
+
 }
 
-// <----------- js pour le range -------------->
+// <----------- js pour le range debase -------------->
 function controlFromInput(fromSlider, fromInput, toInput, controlSlider) {
   const [from, to] = getParsed(fromInput, toInput);
   fillSlider(fromInput, toInput, '#C6C6C6', '#D49775', controlSlider);
@@ -153,3 +166,5 @@ fromSlider.oninput = () => controlFromSlider(fromSlider, toSlider, fromInput);
 toSlider.oninput = () => controlToSlider(fromSlider, toSlider, toInput);
 fromInput.oninput = () => controlFromInput(fromSlider, fromInput, toInput, toSlider);
 toInput.oninput = () => controlToInput(toSlider, fromInput, toInput, toSlider);
+
+// <----------- js pour le range de base fin-------------->

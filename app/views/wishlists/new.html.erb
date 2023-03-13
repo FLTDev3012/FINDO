@@ -7,7 +7,7 @@
   <%= form_tag wishlists_path do %>
 
     <% @first_tag.each do |tag| %>
-      <div data-action= "click->tag-selection#firstcheck" data-tag-selection-target="first"><%= check_box_tag tag.name, true, false, class: 'd-done'%>
+      <div data-action= "click->tag-selection#firstcheck" data-tag-selection-target="first"><%= check_box_tag tag.name, true, false, class:'d-done'%>
       <%= tag.name %></div>
     <% end %>
 
@@ -42,21 +42,24 @@
 
   <% end %>
 
-  <div class="range_container" data-action="mousemove->tag-selection#changemin" data-action="mousemove->tag-selection#changemax">
+  <div class="range_container" data-action="mousemove->tag-selection#changerange">
     <div class="sliders_control">
         <input id="fromSlider" type="range" value="20" min="0" max="300"/>
         <input id="toSlider" type="range" value="60" min="0" max="300"/>
     </div>
     <div class="form_control">
         <div class="form_control_container">
+            <p data-tag-selection-target="rangeresultmin"></p>
             <div class="form_control_container__time">Min</div>
-            <input class="form_control_container__time__input" type="number" id="fromInput" value="20" min="0" max="300" data-tag-selection-target="rangeinputmin"/>
+            <input class="form_control_container__time__input d-none" type="number" id="fromInput" value="20" min="0" max="300" data-tag-selection-target="rangeinputmin"/>
         </div>
         <div class="form_control_container">
+            <p data-tag-selection-target="rangeresultmax"></p>
             <div class="form_control_container__time">Max</div>
-            <input class="form_control_container__time__input" type="number" id="toInput" value="60" min="0" max="300" data-tag-selection-target="rangeinputmax"/>
+            <input class="form_control_container__time__input d-none" type="number" id="toInput" value="60" min="0" max="300" data-tag-selection-target="rangeinputmax"/>
         </div>
     </div>
 </div>
-<p data-tag-selection-target="rangeresult"></p>
+
+
 </div>
