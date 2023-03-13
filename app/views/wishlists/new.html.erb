@@ -16,23 +16,30 @@
       <%= tag.name %></div>
     <% end %>
 
-    <% @third_tag.each do |tag| %>
-      <div data-action= "click->tag-selection#thirdcheck" data-tag-selection-target="third" class="d-none"><%= check_box_tag tag.name, true, false, class: 'd-done'%>
-      <%= tag.name %></div>
-    <% end %>
+    <div>
+      <% @third_tag.each do |tag| %>
+        <div data-action= "click->tag-selection#thirdcheck" data-tag-selection-target="third" class="d-none"><%= check_box_tag tag.name, true, false, class: 'd-done'%>
+        <%= tag.name %></div>
+      <% end %>
+      <p data-action= "click->tag-selection#thirdbuttoncheck" data-tag-selection-target="thirdbutton"  class="d-none">Suivant</p>
+    </div>
 
     <% @fourth_tag.each do |tag| %>
       <div data-action= "click->tag-selection#fourthcheck" data-tag-selection-target="fourth" class="d-none"><%= check_box_tag tag.name, true, false, class: 'd-done'%>
-      <%= tag.name %></div>
+        <%= tag.name %>
+      </div>
     <% end %>
 
-    <div class="d-none">
-      <%= label_tag :wishlist_name, "Nom de la wishlist", class: 'd-none'%>
+    <div data-tag-selection-target="five" class="d-none">
+      <%= label_tag :wishlist_name, "Nom de la wishlist"%>
       <%= text_field_tag :wishlist_name %>
+
+        <%= submit_tag "Nouvelle Wishlist" %>
+
     </div>
 
 
-    <%= submit_tag "Nouvelle Wishlist", class: 'd-none' %>
+
   <% end %>
 
   <div class="range_container" data-action="mousemove->tag-selection#changemin" data-action="mousemove->tag-selection#changemax">
