@@ -1,9 +1,56 @@
-<h1>dashboard</h1>
+<div class="dash-king">
+  <!-- dashboard -->
+  <div class="dashboard">
+    <!-- 3 logo a gauche -->
+    <div class="dashboard-logo">
+      <%= image_tag "icones/poussin.png", class:"avatar-rond"%>
+      <%= image_tag "icones/feux-dartifice.png", class:"avatar-rond"%>
+      <%= image_tag "icones/message.png", class:"avatar-rond"%>
 
-<p><%= current_user.email %></p>
+    </div>
 
-<% @wishlists.each do |wishlist| %>
-    <p><%= link_to wishlist.name, wishlist_path(wishlist) %></p>
-<% end %>
+    <div class="dashboard-page">
 
-<%  %>
+      <!-- premiere page(mon profil) -->
+      <div class="dashboard-mon-profil">
+        <div class="dashboard-title">
+          <h2>Mon profil</h2>
+        </div>
+
+        <div class="dashboard-quatre">
+          <div class="dashboard-1">
+            <p><%= current_user.username %></p>
+          </div>
+          <div class="dashboard-2">
+            <p><%= current_user.email %></p>
+          </div>
+          <div class="dashboard-3">
+            <p><%= current_user.username %></p>
+          </div>
+          <div class="dashboard-4">
+            <p><%= current_user.username %></p>
+          </div>
+
+          <!-- <%= image_tag "avatar/Dorian.jpeg", class:"avatar-rond"%> -->
+        </div>
+
+      </div>
+
+
+      <!-- deuxieme page(mes wishlist) -->
+      <div class="dashboarddnone">
+        <h2>Mes wishlist</h2>
+
+        <% @my_wishlists.each do |wishlist| %>
+            <p><%= link_to wishlist.name, wishlist_path(wishlist) %></p>
+        <% end %>
+      </div>
+
+      <!-- troisieme page(mon profil) -->
+      <div class="dashboarddnone">
+        <h2>Top cadeau</h2>
+      </div>
+    </div>
+
+  </div>
+</div>
