@@ -1,17 +1,36 @@
-<h1>new wishlist</h1>
-<h2>cree une wishlist</h2>
+<h1>METTRE LA NAVBAR</h1>
+
 
 <div data-controller= "tag-selection">
 
   <%# formulaire  %>
   <%= form_tag wishlists_path do %>
-    <div class="card-grid">
-      <% @first_tag.each do |tag| %>
-        <div data-action= "click->tag-selection#firstcheck" data-tag-selection-target="first"><%= check_box_tag tag.name, true, false, class: 'd-done'%>
-        <div class="card-tag"><%= tag.name %></div>
+
+    <div class="container">
+      <div data-tag-selection-target="first" class="div-question">
+        <div class="card-grid">
+          <% @first_tag.each do |tag| %>
+            <div data-action= "click->tag-selection#firstcheck"><%= check_box_tag tag.name, true, false, class: 'd-done'%>
+
+            <div class="card-tag"><%= tag.name %>
+
+             <% if @first_tag.index(tag) == 1 %>
+                <%= image_tag "grafitis/trait-y", class: "top-left-icon" %>
+
+            <% end %>
+
+           <% if @first_tag.index(tag) == 2 %>
+              <%= image_tag "grafitis/trait-c", class: "top-right-icon" %>
+            <% end %></div>
+            </div>
+          <% end %>
         </div>
-      <% end %>
+        <div class="questions">
+          <p>Pour quelle occasion cherchez-vous un cadeau ? </p>
+        </div>
+      </div>
     </div>
+        <%= image_tag "image-bottom-vert", id:"home-bottom-image"%>
 
 
     <div class="card-grid">
@@ -21,8 +40,6 @@
         </div>
       <% end %>
     </div>
-
-
 
     <div class="card-grid-9">
       <% @third_tag.each do |tag| %>
@@ -47,8 +64,6 @@
         <%= submit_tag "Nouvelle Wishlist" %>
 
     </div>
-
-
 
   <% end %>
 
