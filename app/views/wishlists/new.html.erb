@@ -5,38 +5,49 @@
 
   <%# formulaire  %>
   <%= form_tag wishlists_path do %>
+
     <% @first_tag.each do |tag| %>
-      <div data-action= "click->tag-selection#firstcheck"><%= check_box_tag tag.name, true, false, class: 'd-done'%>
+      <div data-action= "click->tag-selection#firstcheck" data-tag-selection-target="first"><%= check_box_tag tag.name, true, false, class: 'd-done'%>
       <%= tag.name %></div>
     <% end %>
+
     <% @second_tag.each do |tag| %>
-      <div data-action= "click->tag-selection#secondcheck"><%= check_box_tag tag.name, true, false, class: 'd-done'%>
+      <div data-action= "click->tag-selection#secondcheck" data-tag-selection-target="second" class="d-none"><%= check_box_tag tag.name, true, false, class: 'd-done'%>
       <%= tag.name %></div>
     <% end %>
+
     <% @third_tag.each do |tag| %>
-      <div data-action= "click->tag-selection#thirdcheck"><%= check_box_tag tag.name, true, false, class: 'd-done'%>
+      <div data-action= "click->tag-selection#thirdcheck" data-tag-selection-target="third" class="d-none"><%= check_box_tag tag.name, true, false, class: 'd-done'%>
       <%= tag.name %></div>
     <% end %>
+
     <% @fourth_tag.each do |tag| %>
-      <div data-action= "click->tag-selection#fourthcheck"><%= check_box_tag tag.name, true, false, class: 'd-done'%>
+      <div data-action= "click->tag-selection#fourthcheck" data-tag-selection-target="fourth" class="d-none"><%= check_box_tag tag.name, true, false, class: 'd-done'%>
       <%= tag.name %></div>
     <% end %>
-    <%= submit_tag "Nouvelle Wishlist" %>
+
+    <div class="d-none">
+      <%= label_tag :wishlist_name, "Nom de la wishlist", class: 'd-none'%>
+      <%= text_field_tag :wishlist_name %>
+    </div>
+
+
+    <%= submit_tag "Nouvelle Wishlist", class: 'd-none' %>
   <% end %>
 
-  <div class="range_container" data-action="mousemove->tag-selection#changemin">
+  <div class="range_container" data-action="mousemove->tag-selection#changemin" data-action="mousemove->tag-selection#changemax">
     <div class="sliders_control">
-        <input id="fromSlider" type="range" value="10" min="0" max="100"/>
-        <input id="toSlider" type="range" value="40" min="0" max="100"/>
+        <input id="fromSlider" type="range" value="20" min="0" max="300"/>
+        <input id="toSlider" type="range" value="60" min="0" max="300"/>
     </div>
     <div class="form_control">
         <div class="form_control_container">
             <div class="form_control_container__time">Min</div>
-            <input class="form_control_container__time__input" type="number" id="fromInput" value="10" min="0" max="100" data-tag-selection-target="rangeinput"/>
+            <input class="form_control_container__time__input" type="number" id="fromInput" value="20" min="0" max="300" data-tag-selection-target="rangeinputmin"/>
         </div>
         <div class="form_control_container">
             <div class="form_control_container__time">Max</div>
-            <input class="form_control_container__time__input" type="number" id="toInput" value="40" min="0" max="100"/>
+            <input class="form_control_container__time__input" type="number" id="toInput" value="60" min="0" max="300" data-tag-selection-target="rangeinputmax"/>
         </div>
     </div>
 </div>

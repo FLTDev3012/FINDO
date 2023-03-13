@@ -1,3 +1,4 @@
+
  <!--------------------------NAVBAR---------------------------------->
 
  <div class="home-body">
@@ -15,7 +16,7 @@
         <ul class="navbar-nav me-auto">
           <% if user_signed_in? %>
             <li class="nav-item active-blanc">
-              <%= link_to "Mes wishlists", "#", class: "nav-link-wishlist-blanc" %>
+              <%= link_to "Mes wishlists", wishlists_path, class: "nav-link-wishlist-blanc" %>
             </li>
             <li class="nav-item-mesvotes-blanc">
               <%= link_to "Mes votes", "#", class: "nav-link-votes-blanc" %>
@@ -52,16 +53,17 @@
 
  <!--------------------------TOP---------------------------------->
 
-<div class="container">
-
 <!---Title & tag wishlist---->
 
-  <section class="wishlist-name-description">
+  <div class="wishlist-name-description">
 
     <div class="Text-wishlist-name">
       <h1 class="titre">
           <%= @wishlist.name %>
       </h1>
+
+
+
       <p class="text">
           Vote pour le cadeau qui correspond le mieux à la personne !
       </p>
@@ -96,21 +98,31 @@
       <p><%= link_to "toute mes wishlists" , wishlists_path %></p>
 
     <div class="card pillule">
-      <button class="pillule-category-show"> Anniversaire </button>
-      <button class="pillule-category-show"> Adulte </button>
-      <button class="pillule-category-show"> Lifestyle </button>
-      <button class="pillule-category-show"> 10€ - 15€ </button>
+      <% @wishlist.wishlists_tags.each do |tag| %>
+        <p class="pillule-category-show"><%= tag.tag.name %></p>
+      <% end %>
     </div>
+  </div>
 
-  </section>
+
 
  <!---END Title @ tag wishlist---->
 
 
  <!--------------------------BOTTOM---------------------------------->
 
- <!--- Avatard gauche ---->
 
+  <div class="avatar-cards">
+
+
+ <!--- Avatard gauche ---->
+    <div class="avatar-section">
+        <%= image_tag "avatar/Eva.jpeg", class:"avatar-rond"%>
+        <%= image_tag "avatar/Jernito.jpeg", class:"avatar-rond"%>
+        <%= image_tag "avatar/Dorian.jpeg", class:"avatar-rond"%>
+        <%= image_tag "avatar/Mathieu.jpeg", class:"avatar-rond"%>
+
+    </div>
 
 
  <!--- END Avatard gauche ---->
@@ -118,9 +130,56 @@
 
 
  <!--- Cards droite---->
+    <div class="cards">
+      <% @wishlist.wishlists_gifts.each do |wishlists_gift| %>
+        <div class="animated-card">
+          <div class="front-card">
+            <%= cl_image_tag wishlists_gift.gift.photo, height: 150, width: 200, crop: :fill %>
+          </div>
 
+          <div class="back-card">
+            <div class="back-card-info">
+              <p><%= wishlists_gift.gift.name %></p>
+              <p><%= wishlists_gift.gift.price %></p>
+            </div>
+              <%= link_to "voir" , wishlists_gift_path(wishlists_gift), class: "button-home" %>
+          </div>
+        </div>
+                <div class="animated-card">
+          <div class="front-card">
+            <%= cl_image_tag wishlists_gift.gift.photo, height: 150, width: 200, crop: :fill %>
+          </div>
+
+          <div class="back-card">
+            <div class="back-card-info">
+              <p><%= wishlists_gift.gift.name %></p>
+              <p><%= wishlists_gift.gift.price %></p>
+            </div>
+              <%= link_to "voir" , wishlists_gift_path(wishlists_gift), class: "button-home" %>
+          </div>
+        </div>
+                <div class="animated-card">
+          <div class="front-card">
+            <%= cl_image_tag wishlists_gift.gift.photo, height: 150, width: 200, crop: :fill %>
+          </div>
+
+          <div class="back-card">
+            <div class="back-card-info">
+              <p><%= wishlists_gift.gift.name %></p>
+              <p><%= wishlists_gift.gift.price %></p>
+            </div>
+              <%= link_to "voir" , wishlists_gift_path(wishlists_gift), class: "button-home" %>
+          </div>
+        </div>
+      <% end %>
+    </div>
 
 <!--- END Cards droite---->
+
+
+
+
+  </div>
 
 
 </div>
