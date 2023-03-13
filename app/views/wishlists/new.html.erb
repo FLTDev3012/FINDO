@@ -35,19 +35,19 @@
     <%= submit_tag "Nouvelle Wishlist" %>
   <% end %>
 
-  <div class="range_container" data-action="mousemove->tag-selection#changemin">
+  <div class="range_container" data-action="mousemove->tag-selection#changemin" data-action="mousemove->tag-selection#changemax">
     <div class="sliders_control">
-        <input id="fromSlider" type="range" value="10" min="0" max="100"/>
-        <input id="toSlider" type="range" value="40" min="0" max="100"/>
+        <input id="fromSlider" type="range" value="20" min="0" max="300"/>
+        <input id="toSlider" type="range" value="60" min="0" max="300"/>
     </div>
     <div class="form_control">
         <div class="form_control_container">
             <div class="form_control_container__time">Min</div>
-            <input class="form_control_container__time__input" type="number" id="fromInput" value="10" min="0" max="100" data-tag-selection-target="rangeinput"/>
+            <input class="form_control_container__time__input" type="number" id="fromInput" value="20" min="0" max="300" data-tag-selection-target="rangeinputmin"/>
         </div>
         <div class="form_control_container">
             <div class="form_control_container__time">Max</div>
-            <input class="form_control_container__time__input" type="number" id="toInput" value="40" min="0" max="100"/>
+            <input class="form_control_container__time__input" type="number" id="toInput" value="60" min="0" max="300" data-tag-selection-target="rangeinputmax"/>
         </div>
     </div>
 </div>

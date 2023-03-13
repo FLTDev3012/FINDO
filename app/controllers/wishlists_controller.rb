@@ -28,6 +28,7 @@ class WishlistsController < ApplicationController
   def create
     @wishlist = Wishlist.new
     @wishlist.user = current_user
+
     @wishlist.name = params[:wishlist_name]
 
     @wishlist.save

@@ -23,7 +23,11 @@ export default class extends Controller {
   }
 
   changemin(event) {
-    this.rangeresultTarget.innerHTML = this.rangeinputTarget.value
+    this.rangeresultminTarget.innerHTML = this.rangeinputminTarget.value
+  }
+
+  changemax(event) {
+    this.rangeresultmaxTarget.innerHTML = this.rangeinputmaxTarget.value
   }
 }
 
