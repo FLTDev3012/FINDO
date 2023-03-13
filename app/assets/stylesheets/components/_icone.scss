@@ -2,3 +2,18 @@
   width: 42px;
   height: 40px;
 }
+
+
+.selected {
+  background-color: $terra;
+}
+/* Hide the checkbox box */
+input[type="checkbox"].d-done {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  outline: none;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
