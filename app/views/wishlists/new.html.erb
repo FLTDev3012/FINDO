@@ -7,32 +7,32 @@
   <%= form_tag wishlists_path do %>
 
     <% @first_tag.each do |tag| %>
-      <div data-action= "click->tag-selection#firstcheck"><%= check_box_tag tag.name, true, false, class: 'd-done'%>
+      <div data-action= "click->tag-selection#firstcheck" data-tag-selection-target="first"><%= check_box_tag tag.name, true, false, class: 'd-done'%>
       <%= tag.name %></div>
     <% end %>
 
     <% @second_tag.each do |tag| %>
-      <div data-action= "click->tag-selection#secondcheck"><%= check_box_tag tag.name, true, false, class: 'd-done'%>
+      <div data-action= "click->tag-selection#secondcheck" data-tag-selection-target="second" class="d-none"><%= check_box_tag tag.name, true, false, class: 'd-done'%>
       <%= tag.name %></div>
     <% end %>
 
     <% @third_tag.each do |tag| %>
-      <div data-action= "click->tag-selection#thirdcheck"><%= check_box_tag tag.name, true, false, class: 'd-done'%>
+      <div data-action= "click->tag-selection#thirdcheck" data-tag-selection-target="third" class="d-none"><%= check_box_tag tag.name, true, false, class: 'd-done'%>
       <%= tag.name %></div>
     <% end %>
 
     <% @fourth_tag.each do |tag| %>
-      <div data-action= "click->tag-selection#fourthcheck"><%= check_box_tag tag.name, true, false, class: 'd-done'%>
+      <div data-action= "click->tag-selection#fourthcheck" data-tag-selection-target="fourth" class="d-none"><%= check_box_tag tag.name, true, false, class: 'd-done'%>
       <%= tag.name %></div>
     <% end %>
 
-    <div>
-      <%= label_tag :wishlist_name, "Nom de la wishlist" %>
+    <div class="d-none">
+      <%= label_tag :wishlist_name, "Nom de la wishlist", class: 'd-none'%>
       <%= text_field_tag :wishlist_name %>
     </div>
 
 
-    <%= submit_tag "Nouvelle Wishlist" %>
+    <%= submit_tag "Nouvelle Wishlist", class: 'd-none' %>
   <% end %>
 
   <div class="range_container" data-action="mousemove->tag-selection#changemin" data-action="mousemove->tag-selection#changemax">
