@@ -61,18 +61,21 @@
       <h1 class="titre">
           <%= @wishlist.name %>
       </h1>
+
+
+
       <p class="text">
           Vote pour le cadeau qui correspond le mieux à la personne !
       </p>
     </div>
 
     <div class="card pillule">
-      <button class="pillule-category-show"> Anniversaire </button>
-      <button class="pillule-category-show"> Adulte </button>
-      <button class="pillule-category-show"> Lifestyle </button>
-      <button class="pillule-category-show"> 10€ - 15€ </button>
+      <% @wishlist.wishlists_tags.each do |tag| %>
+        <p class="pillule-category-show"><%= tag.tag.name %></p>
+      <% end %>
     </div>
   </div>
+
 
 
  <!---END Title @ tag wishlist---->
@@ -144,6 +147,7 @@
     </div>
 
 <!--- END Cards droite---->
+
 
 
   </div>
