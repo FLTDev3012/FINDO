@@ -81,6 +81,12 @@ cinq = Tag.create!(name: "200+")
 
 p "------ Creating gift... ----------"
 #1
+
+gift_1 = Gift.create!(name: 'Bougies Carthage', price: 12.00, description: 'Nos bougies décoratives sont moulées individuellement en petite quantité dans notre studio à Paris. Nous utilisons la cire de soja 100% naturelle, végan et écoresponsable.', rating: 4.9, url: "https://www.etsy.com/listing/1395022433/the-carthage-pillars?ga_order=most_relevant&ga_search_type=all&ga_view_type=gallery&ga_search_query=bougies&ref=sr_gallery-1-7&organic_search_click=1", vote: 0, photo: 'https://i.etsystatic.com/40325058/r/il/a7fa98/4606306632/il_1588xN.4606306632_1t7x.jpg')
+# file = URI.open("https://i.etsystatic.com/40325058/r/il/a7fa98/4606306632/il_1588xN.4606306632_1t7x.jpg")
+# gift_1.gift_photo.attach(io: file, filename: "photo-bougie.jpg", content_type: "image/jpg")
+# gift_1.save
+
 bougie = Gift.create!(name: 'Bougies Carthage', price: 12.00, description: 'Nos bougies décoratives sont moulées individuellement en petite quantité dans notre studio à Paris. Nous utilisons la cire de soja 100% naturelle, végan et écoresponsable.', rating: 4.9, url: "https://www.etsy.com/listing/1395022433/the-carthage-pillars?ga_order=most_relevant&ga_search_type=all&ga_view_type=gallery&ga_search_query=bougies&ref=sr_gallery-1-7&organic_search_click=1", vote: 0, photo: 'https://i.etsystatic.com/40325058/r/il/a7fa98/4606306632/il_1588xN.4606306632_1t7x.jpg')
 GiftsTag.new(gift_id: bougie.id, tag_id: deco.id)
 GiftsTag.new(gift_id: bougie.id, tag_id: petit.id)
@@ -91,6 +97,7 @@ GiftsTag.new(gift_id: bougie.id, tag_id: life.id)
 GiftsTag.new(gift_id: bougie.id, tag_id: arti.id)
 GiftsTag.new(gift_id: bougie.id, tag_id: un.id)
 GiftsTag.new(gift_id: bougie.id, tag_id: six.id)
+
 
 
 #2
@@ -343,6 +350,7 @@ p "------ #{Gift.count} Gifts created ----------"
 wishlists_gift1 = WishlistsGift.create!(wishlist_id: Wishlist.first.id, gift_id: Gift.first.id)
 wishlists_gift2 = WishlistsGift.create!(wishlist_id: Wishlist.first.id, gift_id: Gift.second.id)
 wishlists_gift3 = WishlistsGift.create!(wishlist_id: Wishlist.first.id, gift_id: Gift.last.id)
+wishlist_gift4 = WishlistsGift.create!(wishlist_id: Wishlist.first.id, gift_id: Gift.third.id)
 
 
 p "------ #{WishlistsGift.count} wishlistsGifts created ----------"

@@ -1,51 +1,163 @@
+// .animated-card {
+//   position: relative;
+//   width: 280px;
+//   // height: 190px;
+//   height: 300px;
+//   background: white;
+//   border-radius: 20px;
+//   box-shadow: 0 35px 80px rgba(0,0,0,0.15);
+//   transition: 0.5s;
+// }
+// .animated-card:hover{
+//   // height: 450px;
+// }
+// .front-card{
+//   position: absolute;
+//   left: 50%;
+//   top: -30px;
+//   width: 200px;
+//   height: 150px;
+//   transform: translateX(-50%);
+//   background: black;
+//   border-radius: 20px;
+//   // overflow: hidden;
+//   transition: 0.5s;
+// }
+// .animated-card:hover .front-card{
+//   // height: 250px;
+//   // width: 250px;
+// }
+// .front-card .img{
+//   position: absolute;
+//   top:0;
+//   left:0;
+//   width: 100%;
+//   height: 100%;
+//   object-fit: cover;
+// }
+
+
+// .animated-card .back-card{
+// position: absolute;
+// width: 100%;
+// height: 100%;
+// display: flex;
+// justify-content: center;
+// align-items: flex-end;
+// // overflow: hidden;
+// }
+// .animated-card .back-card .back-card-info{
+// text-align: center;
+// // padding: 40px;
+// width: 100%;
+// transform: translateY(150px);
+// }
+// .animated-card:hover .back-card .back-card-info{
+//   // transform: translateY(0px);
+// }
+// .animated-card:hover .back-card .back-card-info.data{
+//   // display: flex;
+//   // justify-content: space-between;
+//   // margin: 20px 0;
+// }
+
 .animated-card {
   position: relative;
   background: white;
   border-radius: 30px;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
-  width:200px;
-  height: 350px;
+  width: 250px;
+  // height: 380px;
+  height: 300px;
   margin: 5px;
 
 
 }
-.front-card > img{
+.animated-card:hover{
+
+  height: 380px;
+  transition: 1s;
+  .front-card {
     height: 250px;
-    width: 200px;
+  }
+  .back-card-info{
+    visibility: hidden;
+  }
+  .data{
+    visibility: visible
+  }
+  .terminus{
+    visibility: visible
+  }
+
+  img {
+    transition: 0.5s ease-in-out;
+    height: 300px;
+  }
+
+}
+.front-card > img{
+    // height: 250px;
+    height: 200px;
+    width: 250px;
     object-fit: cover;
     border-radius: 30px;
+    background: red;
+    transition: 0.5s ease-in-out;
+
 
 }
-.back-card{
-  text-align: center;
 
+
+.animated-card .back-card{
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
 }
-.back-card .back-card-info{
+.data{
   display: flex;
   justify-content: space-between;
 }
-.back-card-info > button {
+.back-card-info > h2{
+  font-size: 20px;
   text-align: center;
 }
-// .back-card{
-//   display: none;
-// }
-// .background{
-//   background: #234;
-//   position:absolute;
-//   top:0;
-//   left:0;
-//   bottom:0;
-//   right:0;
-//   z-index: -1;
-//   transform: scale(.2, .9);
-//   transition:250ms;
-// }
-// .animated-card:hover{
-//   .background{
-//     transform: scale(1.5);
 
-//   }
+.back-card {
+  width: 100%;
+  margin: 0 auto;
+}
+.back-card-info {
+  width: 100%;
+  margin: 0 auto;
+  margin-top: 5px;
+  padding:0 8px ;
+
+}
+.data{
+  visibility: hidden;
+}
+
+.data > h3{
+font-size: 12px;
+}
+.terminus{
+  display: flex;
+  justify-content: center;
+  visibility: hidden;
+}
+.terminus .button-home{
+  font-size: 12px;
+  padding: 0;
+}
+
+// .back-card .back-card-info{
+//   display: flex;
+//   justify-content: space-between;
+// }
+// .back-card-info > button {
+//   text-align: center;
 // }
 .cards {
   display: grid;

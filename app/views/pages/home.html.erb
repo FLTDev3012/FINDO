@@ -18,7 +18,7 @@
         <ul class="navbar-nav me-auto blanc">
           <% if user_signed_in? %>
             <li class="nav-item active-blanc">
-              <%= link_to "Mes wishlists", "#", class: "nav-link-wishlist-blanc" %>
+              <%= link_to "Mes wishlists", wishlists_path, class: "nav-link-wishlist-blanc" %>
             </li>
             <li class="nav-item-mesvotes-blanc">
               <%= link_to "Mes votes", "#", class: "nav-link-votes-blanc" %>

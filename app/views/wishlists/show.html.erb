@@ -62,12 +62,16 @@
           <%= @wishlist.name %>
       </h1>
 
-
-
       <p class="text">
           Vote pour le cadeau qui correspond le mieux à la personne !
       </p>
     </div>
+
+
+
+
+      </div>
+
 
     <div class="card pillule">
       <% @wishlist.wishlists_tags.each do |tag| %>
@@ -103,50 +107,32 @@
 
  <!--- Cards droite---->
     <div class="cards">
-      <% @wishlist.wishlists_gifts.each do |wishlists_gift| %>
-        <div class="animated-card">
-          <div class="front-card">
-            <%= cl_image_tag wishlists_gift.gift.photo, height: 150, width: 200, crop: :fill %>
-          </div>
-
-          <div class="back-card">
-            <div class="back-card-info">
-              <p><%= wishlists_gift.gift.name %></p>
-              <p><%= wishlists_gift.gift.price %></p>
+        <% @wishlist.wishlists_gifts.each do |wishlists_gift| %>
+          <div class="animated-card">
+            <div class="front-card">
+             <img src="<%= wishlists_gift.gift.photo %>" alt="">
+              <%#= cl_image_tag wishlists_gift.gift.photo, height: 150, width: 200 , crop: :fill,class:"" %>
             </div>
-              <%= link_to "voir" , wishlists_gift_path(wishlists_gift), class: "button-home" %>
-          </div>
-        </div>
-                <div class="animated-card">
-          <div class="front-card">
-            <%= cl_image_tag wishlists_gift.gift.photo, height: 150, width: 200, crop: :fill %>
-          </div>
 
-          <div class="back-card">
-            <div class="back-card-info">
-              <p><%= wishlists_gift.gift.name %></p>
-              <p><%= wishlists_gift.gift.price %></p>
-            </div>
-              <%= link_to "voir" , wishlists_gift_path(wishlists_gift), class: "button-home" %>
-          </div>
-        </div>
-                <div class="animated-card">
-          <div class="front-card">
-            <%= cl_image_tag wishlists_gift.gift.photo, height: 150, width: 200, crop: :fill %>
-          </div>
+            <div class="back-card">
+              <div class="back-card-info">
+                <h2>mettre l'oeil</h2>
+                <div class="data">
+                  <h3><%= wishlists_gift.gift.name %></h3>
+                  <h3><%= wishlists_gift.gift.price %>€</h3>
+                </div>
+                <div class="terminus">
+                   <%= link_to "voir" , wishlists_gift_path(wishlists_gift), class: "button-home" %>
+                </div>
+              </div>
 
-          <div class="back-card">
-            <div class="back-card-info">
-              <p><%= wishlists_gift.gift.name %></p>
-              <p><%= wishlists_gift.gift.price %></p>
             </div>
-              <%= link_to "voir" , wishlists_gift_path(wishlists_gift), class: "button-home" %>
           </div>
-        </div>
-      <% end %>
+        <% end %>
     </div>
 
 <!--- END Cards droite---->
+
 
 
 
