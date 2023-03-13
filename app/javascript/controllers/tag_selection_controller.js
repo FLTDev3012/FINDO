@@ -2,7 +2,7 @@ import { Controller } from "@hotwired/stimulus"
 
 // Connects to data-controller="tag-selection"
 export default class extends Controller {
-  static targets = ["checkbox", "rangeinput", "rangeresult", "first", "second", "third", "fourth" ]
+  static targets = ["checkbox", "rangeinput", "rangeresult", "first", "second", "third", "thirdbutton", "fourth", "five" ]
   connect() {
   }
 
@@ -24,6 +24,7 @@ export default class extends Controller {
     this.thirdTargets.forEach(element => {
       element.classList.remove("d-none")
     });
+    this.thirdbuttonTarget.classList.remove("d-none");
   }
 
   thirdcheck(event) {
@@ -31,9 +32,29 @@ export default class extends Controller {
 
   }
 
+  thirdbuttoncheck(event) {
+
+    event.currentTarget
+    this.thirdTargets.forEach(element => {
+      element.classList.add("d-none")
+    });
+
+    this.thirdbuttonTarget.classList.add("d-none")
+    this.fourthTargets.forEach(element => {
+      element.classList.remove("d-none")
+    });
+  }
+
   fourthcheck(event) {
     event.currentTarget.firstChild.checked = true
+    this.fourthTargets.forEach(element => {
+      element.classList.add("d-none")
+    });
+    this.fiveTarget.classList.remove("d-none")
   }
+
+
+
 
   changemin(event) {
     this.rangeresultminTarget.innerHTML = this.rangeinputminTarget.value
