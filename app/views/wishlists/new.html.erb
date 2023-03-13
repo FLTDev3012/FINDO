@@ -7,25 +7,25 @@
   <%= form_tag wishlists_path do %>
 
     <% @first_tag.each do |tag| %>
-      <div data-action= "click->tag-selection#firstcheck" data-tag-selection-target="first"><%= check_box_tag tag.name, true, false, class:'d-done'%>
+      <div data-action= "click->tag-selection#firstcheck" data-tag-selection-target="first"><%= check_box_tag tag.name, true, false, class:'bestdnone'%>
       <%= tag.name %></div>
     <% end %>
 
     <% @second_tag.each do |tag| %>
-      <div data-action= "click->tag-selection#secondcheck" data-tag-selection-target="second" class="d-none"><%= check_box_tag tag.name, true, false, class: 'd-done'%>
+      <div data-action= "click->tag-selection#secondcheck" data-tag-selection-target="second" class="d-none"><%= check_box_tag tag.name, true, false, class: 'bestdnone'%>
       <%= tag.name %></div>
     <% end %>
 
     <div>
       <% @third_tag.each do |tag| %>
-        <div data-action= "click->tag-selection#thirdcheck" data-tag-selection-target="third" class="d-none"><%= check_box_tag tag.name, true, false, class: 'd-done'%>
+        <div data-action= "click->tag-selection#thirdcheck" data-tag-selection-target="third" class="d-none"><%= check_box_tag tag.name, true, false, class: 'bestdnone'%>
         <%= tag.name %></div>
       <% end %>
       <p data-action= "click->tag-selection#thirdbuttoncheck" data-tag-selection-target="thirdbutton"  class="d-none">Suivant</p>
     </div>
 
     <% @fourth_tag.each do |tag| %>
-      <div data-action= "click->tag-selection#fourthcheck" data-tag-selection-target="fourth" class="d-none"><%= check_box_tag tag.name, true, false, class: 'd-done'%>
+      <div data-action= "click->tag-selection#fourthcheck" data-tag-selection-target="fourth" class="d-none"><%= check_box_tag tag.name, true, false, class: 'bestdnone'%>
         <%= tag.name %>
       </div>
     <% end %>
@@ -49,8 +49,10 @@
     </div>
     <div class="form_control">
         <div class="form_control_container">
+            <!-- on met le notre nouveau resultat min basé sur rangeinput min qui est plus bas  -->
             <p data-tag-selection-target="rangeresultmin"></p>
             <div class="form_control_container__time">Min</div>
+            <!-- rangeinput min moche de base  -->
             <input class="form_control_container__time__input d-none" type="number" id="fromInput" value="20" min="0" max="300" data-tag-selection-target="rangeinputmin"/>
         </div>
         <div class="form_control_container">

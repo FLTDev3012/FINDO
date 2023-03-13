@@ -61,15 +61,15 @@ export default class extends Controller {
 
 
 // <----------- js pour le range -------------->
-
+  // quand on bouge sur le champ d action de changerange  (<div class="range_container" data-action="mousemove->tag-selection#changerange">) (new.html.erb)
+  // on appelle la fonction changemin et changemax pour modifier les valeurs
   changerange(event) {
-
     this.changemin()
     this.changemax()
   }
   changemin() {
+    //  notre nouveau rangeresultmin (innerhtml)  et egal a --------> l input etait le carre moche avec la valeur et les fleches
     this.rangeresultminTarget.innerHTML = this.rangeinputminTarget.value
-    console.log("changemin")
   }
 
   changemax() {
