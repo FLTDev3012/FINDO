@@ -53,7 +53,7 @@ Gift.destroy_all
 p "------ All Gift Destroyed ----------"
 
 #1
-Gift.create!(name: 'Bougies Carthage', price: 12.00, description: 'Nos bougies décoratives sont moulées individuellement en petite quantité dans notre studio à Paris. Nous utilisons la cire de soja 100% naturelle, végan et écoresponsable.', rating: 4.9, url: "https://www.etsy.com/listing/1395022433/the-carthage-pillars?ga_order=most_relevant&ga_search_type=all&ga_view_type=gallery&ga_search_query=bougies&ref=sr_gallery-1-7&organic_search_click=1", vote: 0, photo: 'https://i.etsystatic.com/40325058/r/il/a7fa98/4606306632/il_1588xN.4606306632_1t7x.jpg')
+bougie = Gift.create!(name: 'Bougies Carthage', price: 12.00, description: 'Nos bougies décoratives sont moulées individuellement en petite quantité dans notre studio à Paris. Nous utilisons la cire de soja 100% naturelle, végan et écoresponsable.', rating: 4.9, url: "https://www.etsy.com/listing/1395022433/the-carthage-pillars?ga_order=most_relevant&ga_search_type=all&ga_view_type=gallery&ga_search_query=bougies&ref=sr_gallery-1-7&organic_search_click=1", vote: 0, photo: 'https://i.etsystatic.com/40325058/r/il/a7fa98/4606306632/il_1588xN.4606306632_1t7x.jpg')
 
 #2
 Gift.create!(name: 'Montre vintage', price: 125, description: "Montre entièrement restaurée par un horloger. Le bracelet en cuir a été fabriqué à la main par un artisan de l'ouest de l'Ukraine. Nous garantissons toutes les montres pendant 1 an.", rating: 4.7, url: "https://www.etsy.com/listing/746765659/very-rare-soviet-vintage-watch-watches?ga_order=most_relevant&ga_search_type=all&ga_view_type=gallery&ga_search_query=homme&ref=sc_gallery-1-1&pro=1&frs=1&sts=1&plkey=db52dad727ad6797817cb49fe1fd631a60573e3a%3A746765659", vote: 0, photo: 'https://i.etsystatic.com/15663507/r/il/ab8111/2054609580/il_1588xN.2054609580_svpa.jpg')
@@ -166,7 +166,7 @@ wishlists_gift1.save!
 
 # tag
 
-Tag.create!(name: "Anniversaire")
+anniversaire = Tag.create!(name: "Anniversaire")
 Tag.create!(name: "Noël")
 Tag.create!(name: "Naissance")
 Tag.create!(name: "Petit cadeau")
@@ -174,7 +174,7 @@ Tag.create!(name: "Adulte")
 Tag.create!(name: "Bébé")
 Tag.create!(name: "Ado")
 Tag.create!(name: "Enfant")
-Tag.create!(name: "Décoration")
+deco = Tag.create!(name: "Décoration")
 Tag.create!(name: "Sport")
 Tag.create!(name: "Made in France")
 Tag.create!(name: "Lifestyle")
@@ -189,3 +189,7 @@ Tag.create!(name: "25-50")
 Tag.create!(name: "50-100")
 Tag.create!(name: "100-200")
 Tag.create!(name: "200+")
+
+
+GiftsTag.create(gift_id: bougie.id, tag_id: anniversaire.id)
+GiftsTag.create(gift_id: bougie.id, tag_id: deco.id)

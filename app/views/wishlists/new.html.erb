@@ -5,25 +5,34 @@
 
   <%# formulaire  %>
   <%= form_tag wishlists_path do %>
+
     <% @first_tag.each do |tag| %>
       <div data-action= "click->tag-selection#firstcheck"><%= check_box_tag tag.name, true, false, class: 'd-done'%>
       <%= tag.name %></div>
     <% end %>
+
     <% @second_tag.each do |tag| %>
       <div data-action= "click->tag-selection#secondcheck"><%= check_box_tag tag.name, true, false, class: 'd-done'%>
       <%= tag.name %></div>
     <% end %>
+
     <% @third_tag.each do |tag| %>
       <div data-action= "click->tag-selection#thirdcheck"><%= check_box_tag tag.name, true, false, class: 'd-done'%>
       <%= tag.name %></div>
     <% end %>
+
     <% @fourth_tag.each do |tag| %>
       <div data-action= "click->tag-selection#fourthcheck"><%= check_box_tag tag.name, true, false, class: 'd-done'%>
       <%= tag.name %></div>
     <% end %>
+
+    <div>
+      <%= label_tag :wishlist_name, "Nom de la wishlist" %>
+      <%= text_field_tag :wishlist_name %>
+    </div>
+
+
     <%= submit_tag "Nouvelle Wishlist" %>
-    <%# LINE BELOW TO REMOVE %>
-    <%= link_to "Nouvelle Wishlist", wishlist_path(18) %>
   <% end %>
 
   <div class="range_container" data-action="mousemove->tag-selection#changemin">
