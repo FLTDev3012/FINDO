@@ -13,6 +13,7 @@
       <% end %>
     </div>
 
+
     <div class="card-grid">
       <% @second_tag.each do |tag| %>
         <div data-action= "click->tag-selection#secondcheck" data-tag-selection-target="second" class="d-none"><%= check_box_tag tag.name, true, false, class: 'd-done'%>
@@ -22,16 +23,19 @@
     </div>
 
 
+
     <div class="card-grid-9">
       <% @third_tag.each do |tag| %>
+
         <div data-action= "click->tag-selection#thirdcheck" data-tag-selection-target="third" class="d-none"><%= check_box_tag tag.name, true, false, class: 'd-done'%>
           <div class="card-tag-9"><%= image_tag tag.image_path, class: "new--icones"%><%= tag.name %></div>
         </div>
+
       <% end %>
     </div>
 
     <% @fourth_tag.each do |tag| %>
-      <div data-action= "click->tag-selection#fourthcheck" data-tag-selection-target="fourth" class="d-none"><%= check_box_tag tag.name, true, false, class: 'd-done'%>
+      <div data-action= "click->tag-selection#fourthcheck" data-tag-selection-target="fourth" class="d-none"><%= check_box_tag tag.name, true, false, class: 'bestdnone'%>
         <%= tag.name %>
       </div>
     <% end %>
@@ -48,21 +52,26 @@
 
   <% end %>
 
-  <div class="range_container" data-action="mousemove->tag-selection#changemin" data-action="mousemove->tag-selection#changemax">
+  <div class="range_container" data-action="mousemove->tag-selection#changerange">
     <div class="sliders_control">
         <input id="fromSlider" type="range" value="20" min="0" max="300"/>
         <input id="toSlider" type="range" value="60" min="0" max="300"/>
     </div>
     <div class="form_control">
         <div class="form_control_container">
+            <!-- on met le notre nouveau resultat min basé sur rangeinput min qui est plus bas  -->
+            <p data-tag-selection-target="rangeresultmin"></p>
             <div class="form_control_container__time">Min</div>
-            <input class="form_control_container__time__input" type="number" id="fromInput" value="20" min="0" max="300" data-tag-selection-target="rangeinputmin"/>
+            <!-- rangeinput min moche de base  -->
+            <input class="form_control_container__time__input d-none" type="number" id="fromInput" value="20" min="0" max="300" data-tag-selection-target="rangeinputmin"/>
         </div>
         <div class="form_control_container">
+            <p data-tag-selection-target="rangeresultmax"></p>
             <div class="form_control_container__time">Max</div>
-            <input class="form_control_container__time__input" type="number" id="toInput" value="60" min="0" max="300" data-tag-selection-target="rangeinputmax"/>
+            <input class="form_control_container__time__input d-none" type="number" id="toInput" value="60" min="0" max="300" data-tag-selection-target="rangeinputmax"/>
         </div>
     </div>
 </div>
-<p data-tag-selection-target="rangeresult"></p>
+
+
 </div>
