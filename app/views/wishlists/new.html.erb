@@ -5,23 +5,29 @@
 
   <%# formulaire  %>
   <%= form_tag wishlists_path do %>
+    <div class="card-grid">
+      <% @first_tag.each do |tag| %>
+        <div data-action= "click->tag-selection#firstcheck" data-tag-selection-target="first"><%= check_box_tag tag.name, true, false, class: 'd-done'%>
+        <div class="card-tag"><%= tag.name %></div>
+        </div>
+      <% end %>
+    </div>
 
-    <% @first_tag.each do |tag| %>
-      <div data-action= "click->tag-selection#firstcheck" data-tag-selection-target="first"><%= check_box_tag tag.name, true, false, class: 'd-done'%>
-      <%= tag.name %></div>
-    <% end %>
+    <div class="card-grid">
+      <% @second_tag.each do |tag| %>
+        <div data-action= "click->tag-selection#secondcheck" data-tag-selection-target="second" class="d-none"><%= check_box_tag tag.name, true, false, class: 'd-done'%>
+        <div class="card-tag"><%= tag.name %></div>
+        </div>
+      <% end %>
+    </div>
 
-    <% @second_tag.each do |tag| %>
-      <div data-action= "click->tag-selection#secondcheck" data-tag-selection-target="second" class="d-none"><%= check_box_tag tag.name, true, false, class: 'd-done'%>
-      <%= tag.name %></div>
-    <% end %>
 
-    <div>
+    <div class="card-grid-9">
       <% @third_tag.each do |tag| %>
         <div data-action= "click->tag-selection#thirdcheck" data-tag-selection-target="third" class="d-none"><%= check_box_tag tag.name, true, false, class: 'd-done'%>
-        <%= tag.name %></div>
+          <div class="card-tag-9"><%= image_tag tag.image_path, class: "new--icones"%><%= tag.name %></div>
+        </div>
       <% end %>
-      <p data-action= "click->tag-selection#thirdbuttoncheck" data-tag-selection-target="thirdbutton"  class="d-none">Suivant</p>
     </div>
 
     <% @fourth_tag.each do |tag| %>
