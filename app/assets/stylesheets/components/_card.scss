@@ -5,13 +5,12 @@
   background-position: center;
   background-size: cover;
   transition: 0.5s ease-in-out;
-
 }
 .animated-card {
   position: relative;
   background: white;
   border-radius: 30px;
-  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
   width: 250px;
   // height: 380px;
   height: 250px;
@@ -20,51 +19,45 @@
   overflow: hidden;
 }
 
-.animated-card:hover{
-
+.animated-card:hover {
   height: 390px;
 
   .front-card {
     height: 250px;
     border-radius: 30px;
   }
-  .back-card-info .oeil{
+  .back-card-info .oeil {
     visibility: hidden;
     opacity: 0;
   }
-  .data{
-    opacity:1;
-    transition: 1s;
-
-  }
-  .terminus{
-    opacity:1;
+  .data {
+    opacity: 1;
     transition: 1s;
   }
-
+  .terminus {
+    opacity: 1;
+    transition: 1s;
+  }
 }
-.oeil{
+.oeil {
   background-color: $beige;
   border-radius: 50%;
 }
 
-
-.animated-card .back-card{
+.animated-card .back-card {
   position: absolute;
   display: flex;
   justify-content: center;
   align-items: flex-end;
 }
-.data{
+.data {
   display: flex;
   justify-content: space-between;
-
 }
-.back-card-info .oeil{
+.back-card-info .oeil {
   display: block;
   width: 15%;
   margin: auto;
-
 }
 
 .back-card {
@@ -75,26 +68,29 @@
   width: 100%;
   margin: 0 auto;
   margin-top: 5px;
-  padding:0 8px ;
-
+  padding: 0 8px;
 }
-.data{
-  opacity:0;
-  transition:visibility 0,5s linear,opacity 0,5s linear
-}
-
-.data > h3{
-font-size: 18px;
-padding-bottom: 3px;
-font-family: $text;
-}
-.terminus{
+.data {
+  opacity: 0;
+  transition: visibility 0, 5s linear, opacity 0, 5s linear;
   display: flex;
-  justify-content: center;
-  opacity:0;
-  transition:visibility 0,5s linear,opacity 0,5s linear
+  justify-content: space-around;
+  align-items: center;
 }
-.terminus .button-home{
+
+.data > h3 {
+  font-size: 18px;
+  padding-bottom: 3px;
+  font-family: $text;
+}
+.terminus {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  opacity: 0;
+  transition: visibility 0, 5s linear, opacity 0, 5s linear;
+}
+.terminus .button-home {
   font-size: 12px;
   padding: 0;
 }
@@ -141,7 +137,6 @@ font-family: $text;
   }
 }
 
-
 ///////////// card category for the form
 ///
 .card-tag {
@@ -160,8 +155,6 @@ font-family: $text;
   justify-content: center;
   position: relative;
 }
-
-
 
 .card-grid {
   display: grid;

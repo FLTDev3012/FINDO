@@ -1,4 +1,7 @@
 
+
+
+
  <!--------------------------NAVBAR---------------------------------->
 
  <div class="home-body">
@@ -104,12 +107,12 @@
 
 
  <!--- Cards droite---->
-    <div class="cards">
+    <div class="cards" data-controller="upvote">
         <% @wishlist.wishlists_gifts.each do |wishlists_gift| %>
           <div class="animated-card">
             <div class="front-card d-flex justify-content-end" style="background-image: url(<%= wishlists_gift.gift.photo %>)">
               <div class="p-4">
-                <p>12</p>
+                <p><%= wishlists_gift.vote %></p>
               </div>
               <%#= cl_image_tag wishlists_gift.gift.photo, height: 150, width: 200 , crop: :fill,class:"" %>
             </div>
@@ -123,13 +126,15 @@
                   <h3><%= wishlists_gift.gift.price %>€</h3>
                 </div>
                 <div class="terminus">
-                   <%= link_to "voir" , wishlists_gift_path(wishlists_gift), class: "button-home" %>
+                   <%= link_to "Détails" , wishlists_gift_path(wishlists_gift), class: "button-home variant1" %>
+                   <p class= "button-home variant2" data-action="click->upvote#addvote" data-wishlistgift=<%= wishlists_gift.id%>>Voter</p>
+
                 </div>
               </div>
 
             </div>
           </div>
-        <% end %>
+        <% end %>0
     </div>
 
 <!--- END Cards droite---->
