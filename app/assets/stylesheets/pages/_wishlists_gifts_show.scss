@@ -40,3 +40,19 @@
   align-items: center;
   margin-top: 600px;
 }
+
+.pillule-category-gift{
+  border: 1px solid black;
+  border-radius: 15px;
+  background:$vert;
+  color: white;
+  width: fit-content;
+  padding: 5px 10px;
+  margin-right: 15px;
+}
+.image-show{
+  border-radius: 50px;
+  background: white;
+  box-shadow: 5px 5px 10px hsl(0, 0%, 100%),
+    -5px -5px 10px #fffcfc
+}
