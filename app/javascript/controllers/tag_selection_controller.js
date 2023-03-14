@@ -17,20 +17,18 @@ export default class extends Controller {
     "rangeresultmax",
   ];
   connect() {
-    const fromSlider = document.querySelector("#fromSlider");
-    const toSlider = document.querySelector("#toSlider");
-    const fromInput = document.querySelector("#fromInput");
-    const toInput = document.querySelector("#toInput");
-    fillSlider(fromSlider, toSlider, "#C6C6C6", "#D49775", toSlider);
+    const fromSlider = document.querySelector('#fromSlider');
+    const toSlider = document.querySelector('#toSlider');
+    const fromInput = document.querySelector('#fromInput');
+    const toInput = document.querySelector('#toInput');
+    fillSlider(fromSlider, toSlider, '#C6C6C6', '#D49775', toSlider);
     setToggleAccessible(toSlider);
 
-    fromSlider.oninput = () =>
-      controlFromSlider(fromSlider, toSlider, fromInput);
+    fromSlider.oninput = () => controlFromSlider(fromSlider, toSlider, fromInput);
     toSlider.oninput = () => controlToSlider(fromSlider, toSlider, toInput);
-    fromInput.oninput = () =>
-      controlFromInput(fromSlider, fromInput, toInput, toSlider);
-    toInput.oninput = () =>
-      controlToInput(toSlider, fromInput, toInput, toSlider);
+    fromInput.oninput = () => controlFromInput(fromSlider, fromInput, toInput, toSlider);
+    toInput.oninput = () => controlToInput(toSlider, fromInput, toInput, toSlider);
+
   }
 
   firstcheck(event) {

@@ -22,7 +22,5 @@ class PagesController < ApplicationController
       @top_presents << WishlistsGift.top_votes_for_wishlist_gift(wishlist.id)
     end
 
-
-    raise
   end
 end

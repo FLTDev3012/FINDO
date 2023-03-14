@@ -1,0 +1,212 @@
+.dash-king{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+}
+
+.dashboard {
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+  display: flex;
+
+}
+
+.dashboard-nav {
+  display: flex;
+  width: 20%;
+  flex-direction: column;
+  align-items: center;
+}
+.dashboard-logo {
+
+
+  height: 50%;
+  display: flex;
+// width: 20%;
+// height: 50%;
+  flex-direction: column;
+// background-color: red;
+  // align-items: center;
+  justify-content: center;
+  align-items: center;
+  border-right: 1px solid $vert;
+}
+
+.dashboard-logo-vide {
+
+
+  height: 50%;
+}
+
+.dash-img-1 {
+  display: flex;
+  justify-content: center;
+}
+
+.dash-img-2 {
+  display: flex;
+  justify-content: center;
+}
+
+.dash-img-3 {
+  display: flex;
+  justify-content: center;
+}
+
+.dashboarddnone {
+  display: none;
+}
+
+.dashboard-page {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.dashboard-mon-profil {
+
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+.dashboard-title {
+  height: 50%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.dashboard-deux{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin-bottom: 70px;
+}
+
+.dashboard-quatre1 {
+  width: 100%;
+  // height: 25%;
+  // align-items: center;
+}
+// .dashboard-quatre2 {
+//   width: 50%;
+//   height: 25%;
+//   align-items: center;
+// }
+// .dashboard-quatre3 {
+//   width: 50%;
+//   height: 25%;
+//   align-items: center;
+// }
+// .dashboard-quatre4 {
+//   width: 50%;
+//   height: 25%;
+//   align-items: center;
+
+// }
+.dashboard-1 {
+  text-align: center;
+
+}
+
+.greypil {
+  background-color: #d9d9d956;
+  border-radius: 30px;
+  padding: 16px 100px;
+}
+.dashboard-2 {
+  text-align: center;
+}
+.dashboard-3 {
+  text-align: center;
+}
+.dashboard-4 {
+  text-align: center;
+}
+
+// wishlist
+
+.dashboard-mes-wishlists {
+
+  height: 100%;
+}
+
+.dashboard-title-wishlist {
+  height: 50%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.dashboard-all-wishlist {
+  display: flex;
+  flex-direction: column;
+
+}
+
+
+.dashboard-1-wishlist {
+  text-align: center;
+  margin-top: 2em;
+  margin-bottom: 0;
+
+}
+
+
+.dashboard-2-wishlist {
+  text-align: center;
+  margin-top: 2em;
+  margin-bottom: 0;
+
+
+
+}
+.dashboard-3-wishlist {
+  text-align: center;
+  margin-top: 2em;
+  margin-bottom: 0;
+
+}
+
+.dashboard-mon-top-cadeau {
+
+  height: 100%;
+  width: 100%;
+}
+
+.dashboard-title-top {
+  height: 50%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.top-bas {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.top-gauche {
+  margin-right: 40px;
+}
+
+.top-droite {
+  // background-color: #b53838;
+  // display: flex;
+  // align-items: center;
+  max-width: 500px;
+}

@@ -1,9 +1,129 @@
-<h1>dashboard</h1>
+<div class="dash-king">
+  <!-- dashboard -->
+  <div data-controller="dashboard" class="dashboard">
+    <!-- 3 logo a gauche -->
+    <div class="dashboard-nav">
+      <div class="dashboard-logo-vide">
 
-<p><%= current_user.email %></p>
 
-<% @wishlists.each do |wishlist| %>
-    <p><%= link_to wishlist.name, wishlist_path(wishlist) %></p>
-<% end %>
 
-<%  %>
+      </div>
+
+      <div class="dashboard-logo">
+
+        <div class="dash-img-1" data-action="click->dashboard#update1">
+          <%= image_tag "icones/poussin.png", class:"avatar-rond"%>
+        </div>
+
+        <div class="dash-img-2" data-action="click->dashboard#update2">
+          <%= image_tag "icones/feux-dartifice.png", class:"avatar-rond"%>
+        </div>
+
+        <div class="dash-img-3" data-action="click->dashboard#update3">
+          <%= image_tag "icones/message.png", class:"avatar-rond"%>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="dashboard-page">
+
+      <!-- premiere page(mon profil) -->
+      <div class="dashboard-mon-profil" data-dashboard-target="premierepage">
+      <!--supp classs none et mettre <div class="dashboard-mon-profil"> -->
+        <div class="dashboard-title">
+          <h2>Mon profil</h2>
+        </div>
+
+        <div class="dashboard-quatre1">
+          <div class="dashboard-deux">
+
+            <p class="greypil"><%= current_user.username %></p>
+
+
+            <p class="greypil"><%= current_user.email %></p>
+
+          </div>
+
+          <div class="dashboard-deux">
+
+            <p class="greypil"><%= current_user.username %></p>
+
+
+            <p class="greypil"><%= current_user.email %></p>
+
+          </div>
+
+
+        </div>
+
+
+
+
+
+          <!-- <%= image_tag "avatar/Dorian.jpeg", class:"avatar-rond"%> -->
+
+
+      </div>
+
+
+      <!-- deuxieme page(mes wishlist) -->
+      <div class="dashboard-mes-wishlists d-none" data-dashboard-target="deuxiemepage">
+        <!-- <div class="dashboarddnone"> -->
+      <!--supp classs none et mettre <div class="dashboard-mes-wishlists"> -->
+
+
+        <div class="dashboard-title-wishlist">
+          <h2>Mes wishlists</h2>
+        </div>
+
+        <div class="dashboard-all-wishlist">
+            <p class="dashboard-1-wishlist greypil"><%= current_user.email %></p>
+
+            <p class="dashboard-2-wishlist greypil"><%= current_user.email %></p>
+
+            <p class="dashboard-3-wishlist greypil"><%= current_user.email %></p>
+
+
+        </div>
+
+
+          <!-- <%= image_tag "avatar/Dorian.jpeg", class:"avatar-rond"%> -->
+
+
+      </div>
+
+
+      <!-- troisieme page(mes wishlists) -->
+      <div class="dashboard-mon-top-cadeau d-none"  data-dashboard-target="troisiemepage">
+
+        <div class="dashboard-title-top">
+          <h2>Top cadeau</h2>
+        </div>
+
+        <div class="top-bas">
+          <div class="top-gauche">
+            <div class="top-img">
+              <%= image_tag "icones/poussin.png"%>
+            </div>
+          </div>
+
+          <div class="top-droite">
+
+            <div class="top-votes">
+              <h3>Votess</h3>
+            </div>
+
+
+            <div class="top-p">
+              <p>le paragraphe blablabla blabla blablabal blablabl blablablablable paragraphe blablabla blabla blablabal blablabl blablablablable paragraphe blablabla blabla blablabal blablabl blablablablable paragraphe blablabla blabla blablabal blablabl blablablablabl</p>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+</div>
