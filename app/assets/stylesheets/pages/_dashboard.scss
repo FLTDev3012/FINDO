@@ -150,5 +150,35 @@ justify-content: flex-end
 .dashboard-mon-top-cadeau {
 
   height: 100%;
+  width: 100%;
   background-color: orange;
+}
+
+.dashboard-title-top {
+  height: 50%;
+  width: 100%;
+  background-color: rgba(0, 128, 0, 0.485);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.top-bas {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.top-gauche {
+  background-color: #4b2323;
+  margin-right: 40px;
+}
+
+.top-droite {
+  // background-color: #b53838;
+  // display: flex;
+  // align-items: center;
+  max-width: 500px;
 }
