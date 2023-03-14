@@ -14,10 +14,10 @@ p "------ All wishlistsGift Destroyed ----------"
 Tag.destroy_all
 p "------ All Tag Destroyed ----------"
 
-dorian = User.create(email: "dorian@gmail.com", password: 'coucou', username: "Dorian l'éléphant")
-jernito = User.create(email: "jernito@gmail.com", password: 'coucou', username: 'Jernito le rigolo')
-eva = User.create(email: "eva@gmail.com", password: 'coucou', username: 'Eva la catha')
-mathieu = User.create(email: "mathieu@gmail.com", password: 'coucou', username: 'Mathieu le mieleux')
+dorian = User.create(email: "dorian@gmail.com", password: 'coucou', username: "Dorian l'éléphant", prenom: "Dorian", nom: "Fiolet")
+jernito = User.create(email: "jernito@gmail.com", password: 'coucou', username: 'Jernito le rigolo', prenom: "Jernito", nom: "Le Goat")
+eva = User.create(email: "eva@gmail.com", password: 'coucou', username: 'Eva la catha', prenom: "Eva", nom: "Queen")
+mathieu = User.create(email: "mathieu@gmail.com", password: 'coucou', username: 'Mathieu le mieleux', prenom: "Mathieu", nom: "Accessory")
 
 p "------ #{User.count} user created ----------"
 

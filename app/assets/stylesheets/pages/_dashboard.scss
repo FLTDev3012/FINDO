@@ -46,16 +46,19 @@
 .dash-img-1 {
   display: flex;
   justify-content: center;
+  cursor: pointer;
 }
 
 .dash-img-2 {
   display: flex;
   justify-content: center;
+  cursor: pointer;
 }
 
 .dash-img-3 {
   display: flex;
   justify-content: center;
+  cursor: pointer;
 }
 
 .dashboarddnone {
@@ -122,6 +125,7 @@
   background-color: #d9d9d956;
   border-radius: 30px;
   padding: 16px 100px;
+
 }
 .dashboard-2 {
   text-align: center;
@@ -131,6 +135,12 @@
 }
 .dashboard-4 {
   text-align: center;
+}
+
+.avatar-dash {
+  width: 300px;
+  border-radius: 50%;
+  border: #d9d9d956 5px solid;
 }
 
 // wishlist
