@@ -80,7 +80,7 @@
 
 .data > h3 {
   font-size: 18px;
-  padding-bottom: 3px;
+  padding-bottom: 15px;
   font-family: $text;
 }
 .terminus {
@@ -89,6 +89,7 @@
   align-items: center;
   opacity: 0;
   transition: visibility 0, 5s linear, opacity 0, 5s linear;
+  margin-top: -10px;
 }
 .terminus .button-home {
   font-size: 12px;
