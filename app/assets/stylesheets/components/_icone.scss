@@ -39,12 +39,39 @@ input[type="checkbox"].d-done {
 
 .left-fleche {
   position: absolute;
-  left: 9px;
-  top: 382px;
+  left: 51px;
+  top: 394px;
 }
 
 .right-trait {
   position: absolute;
-  right: 50px;
-  top: 325px;
+  right: 115px;
+  top: 299px;
+}
+
+.graf-chien {
+  position: absolute;
+  left: -474px;
+  bottom: -36px;
+}
+
+.graf-tour {
+  position: absolute;
+  left: 189px;
+  bottom: 49px;
+}
+
+.btn-suivant {
+  padding: 12px;
+  width: 26px;
+  background: #F2D1C2;
+  border-radius: 50%;
+  display: flex;
+  font-family: "Noto Serif Lao", serif;
+  color: black;
+  height: 26px;
+  text-align: center;
+  position: absolute;
+  right: 888px;
+  bottom: 330px;
 }
