@@ -12,3 +12,6 @@ application.register("hello", HelloController)
 
 import TagSelectionController from "./tag_selection_controller"
 application.register("tag-selection", TagSelectionController)
+
+import UpvoteController from "./upvote_controller"
+application.register("upvote", UpvoteController)

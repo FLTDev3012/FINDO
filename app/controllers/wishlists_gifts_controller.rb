@@ -4,6 +4,22 @@ class WishlistsGiftsController < ApplicationController
     @wishlists_gift = WishlistsGift.find(params[:id])
     @wishlist = @wishlists_gift.wishlist
     @gift = @wishlists_gift.gift
+    @gift_tags = @gift.tags
+    @wishlist_tags = @wishlist.tags
+
+    @tags = []
+    @wishlist_tags.each do |tag|
+    @tags << tag if @gift_tags.include?(tag)
+    end
+    # @tags1 = []
+    # @tags2 = []
+    # @tags.each_with_index do|tag, index|
+    #   if index == 0 || index == 1
+    #     @tags1 << tag
+    #   else
+    #     @tags2 << tag
+    #   end
+    # end
     authorize @wishlists_gift
   end
 

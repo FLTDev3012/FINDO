@@ -11,3 +11,19 @@
   bottom: 0px;
   right: 0;
 }
+
+#home-bottom-image-category {
+  position: absolute;
+  bottom: -30px;
+  right: 0;
+  background-image: "grafitis/bas";
+  z-index: -1;
+}
+
+#home-bottom-image-category-rev {
+  position: absolute;
+  bottom: -10px;
+  right: 0;
+  background-image: "grafitis/bas-rev";
+  z-index: -1;
+}

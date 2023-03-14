@@ -1,0 +1,14 @@
+p-2 {
+  position: relative;
+  right: 1em;
+}
+
+.rank {
+position: absolute;
+top: -6px;
+right: 27px;
+padding: .5em .5em .75em;
+clip-path: polygon(100% 0%, 100% 100%, 50% 85%, 0 100%, 0 0);
+background: linear-gradient(#F2D1C2, #F2D6C2, #F3D6C2);
+font-weight: bold;
+}

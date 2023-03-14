@@ -1,57 +1,84 @@
 <h1>METTRE LA NAVBAR</h1>
 
-
+<%# </--------- partie 1 des questions ---------------> %>
 <div data-controller= "tag-selection">
 
   <%# formulaire  %>
   <%= form_tag wishlists_path do %>
-
-    <div class="container">
-      <div data-tag-selection-target="first" class="div-question">
-        <div class="card-grid">
-          <% @first_tag.each do |tag| %>
-            <div data-action= "click->tag-selection#firstcheck"><%= check_box_tag tag.name, true, false, class: 'd-done'%>
-
+  <div class="container">
+    <div data-tag-selection-target="first" class="div-question">
+      <div class="card-grid">
+        <% @first_tag.each do |tag| %>
+          <div data-action= "click->tag-selection#firstcheck"><%= check_box_tag tag.name, true, false, class: 'd-done'%>
             <div class="card-tag"><%= tag.name %>
-
-             <% if @first_tag.index(tag) == 1 %>
+              <% if @first_tag.index(tag) == 1 %>
                 <%= image_tag "grafitis/trait-y", class: "top-left-icon" %>
+              <% end %>
+              <% if @first_tag.index(tag) == 2 %>
+                <%= image_tag "grafitis/trait-c", class: "top-right-icon" %>
+              <% end %>
+            </div>
+          </div>
+        <% end %>
+      </div>
+      <div class="questions">
+        <p>Pour quelle occasion cherchez-vous un cadeau ? </p>
+      </div>
+      <%= image_tag "grafitis/bas", id:"home-bottom-image-category"%>
+    </div>
+  </div>
 
-            <% end %>
-
-           <% if @first_tag.index(tag) == 2 %>
-              <%= image_tag "grafitis/trait-c", class: "top-right-icon" %>
-            <% end %></div>
+<%# </--------- partie 2 des questions ---------------> %>
+  <div class="container">
+    <div data-tag-selection-target="second" class="d-none">
+      <div class="div-question">
+        <div class="questions">
+          <p>Qui sera l'heureux élu ? </p>
+          <%= image_tag "grafitis/fleche", class: "left-fleche" %>
+        </div>
+        <div class="card-grid-2">
+          <% @second_tag.each do |tag| %>
+            <div data-action= "click->tag-selection#secondcheck" class="card-tag-2"><%= tag.name %>
+                <%= check_box_tag tag.name, true, false, class: 'd-none'%>
+              <% if @second_tag.index(tag) == 2 %>
+                <%= image_tag "grafitis/trait", class: "bottom-right-icon" %>
+              <% end %>
             </div>
           <% end %>
         </div>
-        <div class="questions">
-          <p>Pour quelle occasion cherchez-vous un cadeau ? </p>
-        </div>
+        <%= image_tag "grafitis/bas-rev", id:"home-bottom-image-category-rev"%>
       </div>
     </div>
-        <%= image_tag "image-bottom-vert", id:"home-bottom-image"%>
+  </div>
+<%# </--------- partie 3 des questions ---------------> %>
+<div class="container">
+  <div data-tag-selection-target="third" class="d-none">
+    <div class="div-question-9">
+      <div class="card-grid-9">
+        <% @third_tag.each do |tag| %>
 
-
-    <div class="card-grid">
-      <% @second_tag.each do |tag| %>
-        <div data-action= "click->tag-selection#secondcheck" data-tag-selection-target="second" class="d-none"><%= check_box_tag tag.name, true, false, class: 'd-done'%>
-        <div class="card-tag"><%= tag.name %></div>
-        </div>
-      <% end %>
+          <div data-action= "click->tag-selection#thirdcheck", class="card-tag-9">
+            <%= check_box_tag tag.name, true, false, class: 'd-none'%>
+            <%= image_tag tag.image_path, class: "new--icones"%><%= tag.name %>
+            <% if @third_tag.index(tag) == 2 %>
+                <%= image_tag "grafitis/trait-e", class: "graf-chien" %>
+                <%= image_tag "grafitis/trait-c", class: "graf-tour" %>
+            <% end %>
+          </div>
+        <% end %>
+      </div>
+      <div class="questions-9">
+        <p>Quels sont ses centres d'interêts ? </p>
+        <%= image_tag "grafitis/trait-f", class: "right-trait" %>
+      </div>
     </div>
-
-    <div class="card-grid-9">
-      <% @third_tag.each do |tag| %>
-
-        <div data-action= "click->tag-selection#thirdcheck" data-tag-selection-target="third" class="d-none"><%= check_box_tag tag.name, true, false, class: 'd-done'%>
-          <div class="card-tag-9"><%= image_tag tag.image_path, class: "new--icones"%><%= tag.name %></div>
-        </div>
-
-      <% end %>
-      <p data-action= "click->tag-selection#thirdbuttoncheck" data-tag-selection-target="thirdbutton"  class="d-none">Suivant</p>
-
-    </div>
+    <div class="btn-suivant">
+    <p data-action= "click->tag-selection#thirdbuttoncheck" data-tag-selection-target="thirdbutton"  class="d-none">ok !</p>
+      </div>
+      <%= image_tag "grafitis/bas", id:"home-bottom-image-category"%>
+  </div>
+</div>
+<%# </--------- partie 4 des questions ---------------> %>
 
     <% @fourth_tag.each do |tag| %>
       <div data-action= "click->tag-selection#fourthcheck" data-tag-selection-target="fourth" class="d-none"><%= check_box_tag tag.name, true, false, class: 'bestdnone'%>
@@ -59,15 +86,17 @@
       </div>
     <% end %>
 
+<%# </--------- partie 5 des questions ---------------> %>
+
     <div data-tag-selection-target="five" class="d-none">
       <%= label_tag :wishlist_name, "Nom de la wishlist"%>
-      <%= text_field_tag :wishlist_name %>
-
-        <%= submit_tag "Nouvelle Wishlist" %>
-
+        <%= text_field_tag :wishlist_name %>
+          <%= submit_tag "Nouvelle Wishlist" %>
     </div>
 
   <% end %>
+
+<%# </--------- range des prix ---------------> %>
 
   <div class="range_container" data-action="mousemove->tag-selection#changerange">
     <div class="sliders_control">
