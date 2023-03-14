@@ -12,43 +12,83 @@
     <div class="dashboard-page">
 
       <!-- premiere page(mon profil) -->
-      <div class="dashboard-mon-profil">
+      <div class="dashboarddnone">
+      <!--supp classs none et mettre <div class="dashboard-mon-profil"> -->
         <div class="dashboard-title">
           <h2>Mon profil</h2>
         </div>
 
-        <div class="dashboard-quatre">
+        <div class="dashboard-quatre1">
+
           <div class="dashboard-1">
             <p><%= current_user.username %></p>
           </div>
+
+        </div>
+
+        <div class="dashboard-quatre2">
+
           <div class="dashboard-2">
             <p><%= current_user.email %></p>
           </div>
+
+        </div>
+
+        <div class="dashboard-quatre3">
+
           <div class="dashboard-3">
             <p><%= current_user.username %></p>
           </div>
+
+        </div>
+
+        <div class="dashboard-quatre4">
+
           <div class="dashboard-4">
             <p><%= current_user.username %></p>
           </div>
+        </div>
 
           <!-- <%= image_tag "avatar/Dorian.jpeg", class:"avatar-rond"%> -->
-        </div>
+
 
       </div>
 
 
       <!-- deuxieme page(mes wishlist) -->
       <div class="dashboarddnone">
-        <h2>Mes wishlist</h2>
+        <!-- <div class="dashboarddnone"> -->
+      <!--supp classs none et mettre <div class="dashboard-mes-wishlists"> -->
 
-        <% @my_wishlists.each do |wishlist| %>
-            <p><%= link_to wishlist.name, wishlist_path(wishlist) %></p>
-        <% end %>
+
+        <div class="dashboard-title-wishlist">
+          <h2>Mes wishlists</h2>
+        </div>
+
+        <div class="dashboard-all-wishlist">
+            <p class="dashboard-1-wishlist"><%= current_user.email %></p>
+
+            <p class="dashboard-2-wishlist"><%= current_user.email %></p>
+
+            <p class="dashboard-3-wishlist"><%= current_user.email %></p>
+
+
+        </div>
+
+
+          <!-- <%= image_tag "avatar/Dorian.jpeg", class:"avatar-rond"%> -->
+
+
       </div>
 
-      <!-- troisieme page(mon profil) -->
-      <div class="dashboarddnone">
-        <h2>Top cadeau</h2>
+
+      <!-- troisieme page(mes wishlists) -->
+      <div class="dashboard-mon-top-cadeau">
+
+        <div class="dashboard-title-wishlist">
+          <h2>Top cadeau</h2>
+        </div>
+
       </div>
     </div>
 
