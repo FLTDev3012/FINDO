@@ -2,20 +2,28 @@
   <!-- dashboard -->
   <div data-controller="dashboard" class="dashboard">
     <!-- 3 logo a gauche -->
-    <div class="dashboard-logo">
+    <div class="dashboard-nav">
+      <div class="dashboard-logo-vide">
 
-      <div class="dash-img-1" data-action="click->dashboard#update1">
-        <%= image_tag "icones/poussin.png", class:"avatar-rond"%>
+
+
       </div>
 
-      <div class="dash-img-2" data-action="click->dashboard#update2">
-        <%= image_tag "icones/feux-dartifice.png", class:"avatar-rond"%>
-      </div>
+      <div class="dashboard-logo">
 
-      <div class="dash-img-3" data-action="click->dashboard#update3">
-        <%= image_tag "icones/message.png", class:"avatar-rond"%>
-      </div>
+        <div class="dash-img-1" data-action="click->dashboard#update1">
+          <%= image_tag "icones/poussin.png", class:"avatar-rond"%>
+        </div>
 
+        <div class="dash-img-2" data-action="click->dashboard#update2">
+          <%= image_tag "icones/feux-dartifice.png", class:"avatar-rond"%>
+        </div>
+
+        <div class="dash-img-3" data-action="click->dashboard#update3">
+          <%= image_tag "icones/message.png", class:"avatar-rond"%>
+        </div>
+
+      </div>
     </div>
 
     <div class="dashboard-page">
@@ -28,35 +36,30 @@
         </div>
 
         <div class="dashboard-quatre1">
+          <div class="dashboard-deux">
 
-          <div class="dashboard-1">
-            <p><%= current_user.username %></p>
+            <p class="greypil"><%= current_user.username %></p>
+
+
+            <p class="greypil"><%= current_user.email %></p>
+
           </div>
+
+          <div class="dashboard-deux">
+
+            <p class="greypil"><%= current_user.username %></p>
+
+
+            <p class="greypil"><%= current_user.email %></p>
+
+          </div>
+
 
         </div>
 
-        <div class="dashboard-quatre2">
 
-          <div class="dashboard-2">
-            <p><%= current_user.email %></p>
-          </div>
 
-        </div>
 
-        <div class="dashboard-quatre3">
-
-          <div class="dashboard-3">
-            <p><%= current_user.username %></p>
-          </div>
-
-        </div>
-
-        <div class="dashboard-quatre4">
-
-          <div class="dashboard-4">
-            <p><%= current_user.username %></p>
-          </div>
-        </div>
 
           <!-- <%= image_tag "avatar/Dorian.jpeg", class:"avatar-rond"%> -->
 
@@ -75,11 +78,11 @@
         </div>
 
         <div class="dashboard-all-wishlist">
-            <p class="dashboard-1-wishlist"><%= current_user.email %></p>
+            <p class="dashboard-1-wishlist greypil"><%= current_user.email %></p>
 
-            <p class="dashboard-2-wishlist"><%= current_user.email %></p>
+            <p class="dashboard-2-wishlist greypil"><%= current_user.email %></p>
 
-            <p class="dashboard-3-wishlist"><%= current_user.email %></p>
+            <p class="dashboard-3-wishlist greypil"><%= current_user.email %></p>
 
 
         </div>
