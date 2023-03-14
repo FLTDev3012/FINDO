@@ -280,3 +280,11 @@ font-family: $text;
   align-items: center;
   margin-top: 40px;
 }
+
+.card-grid-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  // flex-grow: 2;
+  margin-left: 40px;
+  grid-gap: 70px;
+}

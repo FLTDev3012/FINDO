@@ -5,47 +5,45 @@
 
   <%# formulaire  %>
   <%= form_tag wishlists_path do %>
-    <div class="container">
-      <div data-tag-selection-target="first" class="div-question">
-        <div class="card-grid">
-          <% @first_tag.each do |tag| %>
-            <div data-action= "click->tag-selection#firstcheck"><%= check_box_tag tag.name, true, false, class: 'd-done'%>
-              <div class="card-tag"><%= tag.name %>
-                <% if @first_tag.index(tag) == 1 %>
-                  <%= image_tag "grafitis/trait-y", class: "top-left-icon" %>
-                <% end %>
-                <% if @first_tag.index(tag) == 2 %>
-                  <%= image_tag "grafitis/trait-c", class: "top-right-icon" %>
-                <% end %>
-              </div>
+  <div class="container">
+    <div data-tag-selection-target="first" class="div-question">
+      <div class="card-grid">
+        <% @first_tag.each do |tag| %>
+          <div data-action= "click->tag-selection#firstcheck"><%= check_box_tag tag.name, true, false, class: 'd-done'%>
+            <div class="card-tag"><%= tag.name %>
+              <% if @first_tag.index(tag) == 1 %>
+                <%= image_tag "grafitis/trait-y", class: "top-left-icon" %>
+              <% end %>
+              <% if @first_tag.index(tag) == 2 %>
+                <%= image_tag "grafitis/trait-c", class: "top-right-icon" %>
+              <% end %>
             </div>
-          <% end %>
-        </div>
-        <div class="questions">
-          <p>Pour quelle occasion cherchez-vous un cadeau ? </p>
-        </div>
+          </div>
+        <% end %>
+      </div>
+      <div class="questions">
+        <p>Pour quelle occasion cherchez-vous un cadeau ? </p>
       </div>
     </div>
+  </div>
       <%= image_tag "image-bottom-vert", id:"home-bottom-image"%>
 
 <%# </--------- partie 2 des questions ---------------> %>
   <div class="container">
     <div data-action= "click->tag-selection#secondcheck" data-tag-selection-target="second" class="d-none"><%= check_box_tag tag.name, true, false, class: 'd-done'%>
       <div class="div-question">
-        <div class="card-grid">
+        <div class="questions">
+          <p>Qui sera l'heureux élu ? </p>
+          <%= image_tag "grafitis/fleche", class: "left-fleche" %>
+        </div>
+        <div class="card-grid-2">
           <% @second_tag.each do |tag| %>
             <div class="card-tag"><%= tag.name %>
-              <% if @second_tag.index(tag) == 1 %>
-                <%= image_tag "grafitis/trait-y", class: "top-left-icon" %>
-              <% end %>
               <% if @second_tag.index(tag) == 2 %>
-                <%= image_tag "grafitis/trait-c", class: "top-right-icon" %>
+                <%= image_tag "grafitis/trait", class: "bottom-right-icon" %>
               <% end %>
             </div>
           <% end %>
-        </div>
-        <div class="questions">
-          <p>Qui sera l'heureux élu ? </p>
         </div>
       </div>
     </div>
