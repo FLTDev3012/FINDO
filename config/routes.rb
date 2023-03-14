@@ -7,7 +7,6 @@ Rails.application.routes.draw do
   resources :wishlists_gifts, only: [:show]
   resources :votes, only: [:create]
 
-  post 'upvotes', to: "votes#upvote"
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
   # Defines the root path route ("/")
