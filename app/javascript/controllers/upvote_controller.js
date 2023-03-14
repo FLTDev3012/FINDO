@@ -7,8 +7,10 @@ export default class extends Controller {
   addvote(event) {
     const id = event.currentTarget.dataset.wishlistgift;
     const url = `${window.location.origin}/votes`;
+    const nbVotes = document.getElementById(`vote-${id}`)
 
-    console.log(url);
+    const element = event.currentTarget
+    console.log(nbVotes);
 
     console.log(id);
     const token = document.getElementsByName("csrf-token")[0].content;
@@ -19,7 +21,9 @@ export default class extends Controller {
     })
       .then((response) => response.json())
       .then((data) => {
-        console.log(data);
+        console.log(data.nb);
+        nbVotes.innerHTML = data.nb
+        element.classList.add("d-none")
       });
   }
 }

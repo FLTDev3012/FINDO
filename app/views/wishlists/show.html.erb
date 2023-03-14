@@ -112,7 +112,7 @@
           <div class="animated-card">
             <div class="front-card d-flex justify-content-end" style="background-image: url(<%= wishlists_gift.gift.photo %>)">
               <div class="p-4">
-                <p><%= wishlists_gift.vote %></p>
+                <p id="vote-<%=wishlists_gift.id%>"><%= wishlists_gift.vote %></p>
               </div>
               <%#= cl_image_tag wishlists_gift.gift.photo, height: 150, width: 200 , crop: :fill,class:"" %>
             </div>
@@ -127,14 +127,16 @@
                 </div>
                 <div class="terminus">
                    <%= link_to "Détails" , wishlists_gift_path(wishlists_gift), class: "button-home variant1" %>
-                   <p class= "button-home variant2" data-action="click->upvote#addvote" data-wishlistgift=<%= wishlists_gift.id%>>Voter</p>
 
+                   <% if Vote.where('wishlists_gift_id=? and user_id=?', wishlists_gift.id, current_user.id).size < 1  %>
+                    <p class= "button-home variant2" data-action="click->upvote#addvote" data-wishlistgift=<%= wishlists_gift.id%>>Voter</p>
+                   <% end %>
                 </div>
               </div>
 
             </div>
           </div>
-        <% end %>0
+        <% end %>
     </div>
 
 <!--- END Cards droite---->
