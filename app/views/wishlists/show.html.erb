@@ -76,10 +76,15 @@
 
     <div class="card pillule">
       <% @wishlist.wishlists_tags.each do |tag| %>
-        <p class="pillule-category-show"><%= tag.tag.name %>
+        <% if !tag.tag.image_path.nil? %>
+          <p class="card-tag-9"><%= image_tag tag.tag.image_path, class: "new--icones"%><%= tag.tag.name %>
+        <% else %>
+          <p class="card-tag-9"><%= tag.tag.name %>
+        <% end %>
       <% end %>
     </div>
   </div>
+
 
 
 
