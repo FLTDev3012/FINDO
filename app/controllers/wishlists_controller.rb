@@ -11,7 +11,7 @@ class WishlistsController < ApplicationController
     @tags = @wishlist.tags
     @gifts = []
     WishlistsGift.where(wishlist: @wishlist).each do |wishlistgift|
-     @gifts << Gift.find(wishlistgift.gift_id)
+      @gifts << Gift.find(wishlistgift.gift_id)
     end
     # @gifts = Gift.all.select { |gift| gift.tags.include?(@tags) }
     #@gifts = Gift.joins(:tags).where(tags: { id: @tags.pluck(:id) }).distinct
