@@ -97,7 +97,7 @@
 
 <%# </--------- range des prix ---------------> %>
 
-  <div class="range_container" data-action="mousemove->tag-selection#changerange">
+  <div class="range_container d-none" data-action="mousemove->tag-selection#changerange">
     <div class="sliders_control">
         <input id="fromSlider" type="range" value="20" min="0" max="300"/>
         <input id="toSlider" type="range" value="60" min="0" max="300"/>
@@ -116,7 +116,7 @@
             <input class="form_control_container__time__input d-none" type="number" id="toInput" value="60" min="0" max="300" data-tag-selection-target="rangeinputmax"/>
         </div>
     </div>
-</div>
+  </div>
 
 
 </div>
