@@ -24,13 +24,13 @@
       <div class="questions">
         <p>Pour quelle occasion cherchez-vous un cadeau ? </p>
       </div>
+      <%= image_tag "grafitis/bas", id:"home-bottom-image-category"%>
     </div>
   </div>
-      <%= image_tag "image-bottom-vert", id:"home-bottom-image"%>
 
 <%# </--------- partie 2 des questions ---------------> %>
   <div class="container">
-    <div data-action= "click->tag-selection#secondcheck" data-tag-selection-target="second" class="d-none"><%= check_box_tag tag.name, true, false, class: 'd-done'%>
+    <div data-tag-selection-target="second" class="d-none">
       <div class="div-question">
         <div class="questions">
           <p>Qui sera l'heureux élu ? </p>
@@ -38,27 +38,41 @@
         </div>
         <div class="card-grid-2">
           <% @second_tag.each do |tag| %>
-            <div class="card-tag"><%= tag.name %>
+            <div data-action= "click->tag-selection#secondcheck" class="card-tag"><%= tag.name %>
+                <%= check_box_tag tag.name, true, false, class: 'd-none'%>
               <% if @second_tag.index(tag) == 2 %>
                 <%= image_tag "grafitis/trait", class: "bottom-right-icon" %>
               <% end %>
             </div>
           <% end %>
         </div>
+        <%= image_tag "grafitis/bas-rev", id:"home-bottom-image-category-rev"%>
       </div>
     </div>
   </div>
 <%# </--------- partie 3 des questions ---------------> %>
+<div class="container">
+  <div data-tag-selection-target="third" class="d-none">
+    <div class="div-question-9">
+      <div class="card-grid-9">
+        <% @third_tag.each do |tag| %>
 
-    <div class="card-grid-9">
-      <% @third_tag.each do |tag| %>
-        <div data-action= "click->tag-selection#thirdcheck" data-tag-selection-target="third" class="d-none"><%= check_box_tag tag.name, true, false, class: 'd-done'%>
-          <div class="card-tag-9"><%= image_tag tag.image_path, class: "new--icones"%><%= tag.name %></div>
-        </div>
-      <% end %>
-        <p data-action= "click->tag-selection#thirdbuttoncheck" data-tag-selection-target="thirdbutton"  class="d-none">Suivant</p>
+          <div data-action= "click->tag-selection#thirdcheck", class="card-tag-9">
+            <%= check_box_tag tag.name, true, false, class: ''%>
+
+            <%= image_tag tag.image_path, class: "new--icones"%><%= tag.name %>
+          </div>
+        <% end %>
+      </div>
+      <div class="questions-9">
+        <p>Quels sont ses centres d'interêts ? </p>
+        <%= image_tag "grafitis/trait-f", class: "right-trait" %>
+      </div>
     </div>
-
+    <p data-action= "click->tag-selection#thirdbuttoncheck" data-tag-selection-target="thirdbutton"  class="d-none">Suivant</p>
+      <%= image_tag "grafitis/bas", id:"home-bottom-image-category"%>
+  </div>
+</div>
 <%# </--------- partie 4 des questions ---------------> %>
 
     <% @fourth_tag.each do |tag| %>

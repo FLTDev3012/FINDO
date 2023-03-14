@@ -23,7 +23,10 @@ export default class extends Controller {
   }
 
   secondcheck(event) {
-    event.currentTarget.firstChild.checked = true
+    const input = event.currentTarget.querySelector("input")
+    console.log(input)
+
+    input.checked = true
     this.secondTargets.forEach(element => {
       element.classList.add("d-none")
     });
@@ -35,12 +38,14 @@ export default class extends Controller {
 
   thirdcheck(event) {
     // on inverse la valeur actuelle
-    event.currentTarget.firstChild.checked = !event.currentTarget.firstChild.checked
-    if (event.currentTarget.firstChild.checked) {
-      event.currentTarget.querySelector(".card-tag-9").classList.add("selected")
+    const input = event.currentTarget.querySelector("input")
+    input.checked = !input.checked
+    if (input.checked) {
+      event.currentTarget.classList.add("selected")
     }
     else {
-      event.currentTarget.querySelector(".card-tag-9").classList.remove("selected")
+
+      event.currentTarget.classList.remove("selected")
     }
   }
 
