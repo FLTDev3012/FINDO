@@ -9,15 +9,21 @@
     <div class="titre-image">
       <div class="title">
         <h1><%= @wishlists_gift.gift.name %></h1>
+        <div class="d-flex mt-3 mb-3">
+         <% @tags.each do |tag| %>
+          <div class="pillule-category-gift"><%= tag.name %></div>
+        <% end %>
+
+        </div>
       </div>
-    <div class="$text">
-      <p>
-        <%= @wishlists_gift.gift.description %>
-      </p>
-      <div class="bouton">
+      <div class="$text">
+        <p>
+          <%= @wishlists_gift.gift.description %>
+        </p>
+        <div class="bouton">
           <%= link_to "Offrir !", new_wishlist_path, class:"button-home" %>
+        </div>
       </div>
-    </div>
     </div>
     <div class="image-show">
       <img src="<%= @wishlists_gift.gift.photo %>" >
@@ -27,16 +33,14 @@
     </div>
   </div>
 
-
-
 <div class="avis-rating">
   <div class="$text">
     <%= @wishlists_gift.gift.rating %>/5
   </div>
 </div>
   <div class="avis-findos">
-    <p class="text">Avis sur cet article</p>
-    <p class="text">Avis des Findoos</p>
+    <p class="text">Avis sur cet article is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum</p>
+    <p class="text">Avis des Findoos is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum</p>
   </div>
 
 
