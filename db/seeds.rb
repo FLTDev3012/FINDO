@@ -250,7 +250,7 @@ GiftsTag.create!(gift_id: poster.id, tag_id: un.id)
 GiftsTag.create!(gift_id: poster.id, tag_id: six.id)
 
 #13
-bracelet = Gift.create!(name: 'Bracelet personnalisable', price: 14.50, description: "Bracelet personnalisé en cordon Liberty avec médailles d'or à graver.", rating: 5, url: "https://www.etsy.com/listing/1245121736/personalized-bracelet-in-liberty-cord?ga_order=most_relevant&ga_search_type=all&ga_view_type=gallery&ga_search_query=bijoux&ref=sr_gallery-1-37&bes=1&sts=1&organic_search_click=1", vote: 0, photo: 'https://i.etsystatic.com/36391808/r/il/d0744b/4248340812/il_1588xN.4248340812_79nv.jpg')
+bracelet = Gift.create!(name: 'Bracelet liberty', price: 14.50, description: "Bracelet personnalisé en cordon Liberty avec médailles d'or à graver.", rating: 5, url: "https://www.etsy.com/listing/1245121736/personalized-bracelet-in-liberty-cord?ga_order=most_relevant&ga_search_type=all&ga_view_type=gallery&ga_search_query=bijoux&ref=sr_gallery-1-37&bes=1&sts=1&organic_search_click=1", vote: 0, photo: 'https://i.etsystatic.com/36391808/r/il/d0744b/4248340812/il_1588xN.4248340812_79nv.jpg')
 GiftsTag.create!(gift_id: bracelet.id, tag_id: anniv.id)
 GiftsTag.create!(gift_id: bracelet.id, tag_id: noel.id)
 GiftsTag.create!(gift_id: bracelet.id, tag_id: adulte.id)
