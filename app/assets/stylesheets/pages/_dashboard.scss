@@ -219,6 +219,26 @@
   justify-content: center;
 }
 
+.dashboard-title {
+  // height: 50%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 2em;
+}
+
+
+.dashboard-title-w {
+  // height: 50%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 2em;
+  margin-bottom: 5em;
+}
+
 .dashboard-all-wishlist-and-all-team {
   display: flex;
   flex-direction: column;
@@ -229,8 +249,9 @@
   display: flex;
   justify-content: center;
   border-bottom: solid 1px rgba(0, 0, 0, 0.087);
-  padding-bottom: 3em;
-  margin-bottom: 3em;
+  // padding-bottom: 3em;
+  // margin-bottom: 3em;
+  align-items: center;
 }
 
 .dash-row {
