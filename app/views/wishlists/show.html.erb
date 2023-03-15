@@ -25,23 +25,19 @@
           Vote pour le cadeau qui correspond le mieux à la personne !
       </p>
     </div>
-
-
-
-
-      </div>
+  </div>
 
 
     <div class="card pillule">
       <% @wishlist.wishlists_tags.each do |tag| %>
         <% if !tag.tag.image_path.nil? %>
-          <p class="card-tag-9"><%= image_tag tag.tag.image_path, class: "new--icones"%><%= tag.tag.name %>
+          <p class="card-tag-9"><%= image_tag tag.tag.image_path, class: "new--icones"%><%= tag.tag.name %></p>
         <% else %>
-          <p class="card-tag-9"><%= tag.tag.name %>
+          <p class="card-tag-9"><%= tag.tag.name %></p>
         <% end %>
       <% end %>
     </div>
-  </div>
+
 
 
 
@@ -52,7 +48,7 @@
  <!--------------------------BOTTOM---------------------------------->
 
 
-  <div class="avatar-cards">
+<div class="avatar-cards">
 
 
  <!--- Avatard gauche ---->
@@ -61,7 +57,6 @@
         <%= image_tag "avatar/Jernito.jpeg", class:"avatar-rond"%>
         <%= image_tag "avatar/Dorian.jpeg", class:"avatar-rond"%>
         <%= image_tag "avatar/Mathieu.jpeg", class:"avatar-rond"%>
-
     </div>
 
 
@@ -72,6 +67,7 @@
  <!--- Cards droite---->
     <div class="cards" data-controller="upvote">
         <% @wishlist.wishlists_gifts.each do |wishlists_gift| %>
+
           <div class="animated-card">
             <div class="front-card d-flex justify-content-end" style="background-image: url(<%= wishlists_gift.gift.photo %>)">
               <div class="p-2">
@@ -101,13 +97,10 @@
           </div>
         <% end %>
     </div>
+</div>
 
 <!--- END Cards droite---->
 
-
-
-
-  </div>
 
 
 </div>
