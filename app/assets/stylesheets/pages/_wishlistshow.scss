@@ -5,7 +5,7 @@
 }
 
 .wishlist-name-description {
-  margin-top: 387px;
+  margin-top: 316px;
 }
 
 .Text-wishlist-name {
@@ -18,10 +18,11 @@
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
+  width:76%;
   gap: 1em;
   margin-top: 70px;
   margin-bottom: 74px;
-  margin-left: 12%;
+  margin-left: 11%;
 }
 
 .pillule-category-show {
@@ -52,11 +53,21 @@
   border-radius: 50%;
   width: 30%;
   margin-bottom: 40px;
+  margin-right: 20px;
 }
+
+
+.vote-avatar{
+  display:flex;
+  justify-content: center;
+  align-items: center;
+}
+
 
 .cards {
   place-items: center;
   place-content: flex-start;
+  margin-right: 40px;
   grid-template-rows: 320px repeat(auto-fill, 320px);
   grid-auto-rows: minmax(320px, 344px);
 }

@@ -14,6 +14,7 @@
 .text-home {
   font-family: $text;
   font-size: large;
+  font-size: 19px;
 }
 
 .text-para {
@@ -23,5 +24,11 @@
 
 .titre-para {
   font-family: $text;
-  font-size: large;
+  font-size: 30px;
+}
+
+.titre.home {
+font-weight: 900;
+line-height: 55px;
+font-size: 40px;
 }
