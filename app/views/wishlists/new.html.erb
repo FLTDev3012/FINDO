@@ -1,6 +1,6 @@
 <h1>METTRE LA NAVBAR</h1>
 
-<%# </--------- partie 1 des questions ---------------> %>
+<%# </--------- partie 1 des questions EVENT ---------------> %>
 <div data-controller= "tag-selection">
 
   <%# formulaire  %>
@@ -28,7 +28,7 @@
     </div>
   </div>
 
-<%# </--------- partie 2 des questions ---------------> %>
+<%# </--------- partie 2 des questions AGE---------------> %>
   <div class="container">
     <div data-tag-selection-target="second" class="d-none">
       <div class="div-question">
@@ -50,7 +50,7 @@
       </div>
     </div>
   </div>
-<%# </--------- partie 3 des questions ---------------> %>
+<%# </--------- partie 3 des questions TAGS---------------> %>
 <div class="container">
   <div data-tag-selection-target="third" class="d-none">
     <div class="div-question-9">
@@ -77,7 +77,8 @@
       <%= image_tag "grafitis/bas", id:"home-bottom-image-category"%>
   </div>
 </div>
-<%# </--------- partie 4 des questions ---------------> %>
+<%# </--------- partie 4 des questions BUDGET---------------> %>
+
 <div class="container">
   <div data-tag-selection-target="fourth" class="d-none">
     <div class="div-question-6">
@@ -100,15 +101,17 @@
   </div>
 </div>
 
-<%# </--------- partie 5 des questions ---------------> %>
-
-    <div data-tag-selection-target="five" class="d-none">
-      <%= label_tag :wishlist_name, "Nom de la wishlist"%>
-        <%= text_field_tag :wishlist_name %>
-          <%= submit_tag "Nouvelle Wishlist" %>
+<%# </--------- partie 5 des questions NOM---------------> %>
+<div class="container">
+    <div data-tag-selection-target="five" class="d-none wishlist-en-cours">
+      <%= label_tag :wishlist_name, "Nouvelle wishlist en cours ..."%>
+        <div class="ecrire">
+          <%= text_field_tag :wishlist_name%>
+        </div>
+          <%= submit_tag "Créer !", class: "btn-creation"%>
     </div>
-
   <% end %>
+</div>
 
 <%# </--------- range des prix ---------------> %>
 

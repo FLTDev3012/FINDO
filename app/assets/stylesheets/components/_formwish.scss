@@ -1,0 +1,28 @@
+.wishlist-en-cours{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.btn-creation{
+  padding: 9px 23px;
+  background: $beige;
+  border-radius: 30px;
+  width: 155px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  font-family: $titre;
+  color: black;
+  position: relative;
+  margin-top: 40px;
+}
+
+.ecrire {
+  border-bottom: dotted $vert;
+  border-top: white;
+  border-left: white;
+  border-right: white;
+}
