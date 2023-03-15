@@ -1,7 +1,7 @@
 <div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
   <div class="container-fluid">
-    <%= link_to "#", class: "navbar-brand" do %>
-      <h1 class="titre-logo">Findo</h1>
+    <%= link_to "/", class: "navbar-brand" do %>
+      <h1 class="titre">Findo</h1>
     <% end %>
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -12,17 +12,19 @@
       <ul class="navbar-nav me-auto">
         <% if user_signed_in? %>
           <li class="nav-link3">
-            <%= link_to "Mes wishlists", "#", class: "nav-link3" %>
+            <%= link_to "Mes wishlists", wishlists_path, class: "nav-link3" %>
           </li>
           <li class="nav-item">
-            <%= link_to "Dashboard", dashboard_path, class: "nav-link" %>
+            <%= link_to "Mon profil", dashboard_path, class: "nav-link4" %>
           </li>
           <li class="nav-item dropdown">
-            <%= image_tag "https://images.unsplash.com/photo-1574466853640-8557d3e4ab2c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2340&q=80", class: "avatar"%>
+              <% if current_user.photo.attached? %>
+              <%= cl_image_tag current_user.photo.key, crop: :fill, class: "avatar1 dropdown-toggle", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
+              <% else %>
+              <%= image_tag "avatar_vide" %>
+              <% end %>
             <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-              <%= link_to "Mon profil", "#", class: "dropdown-item" %>
-              <%= link_to "Nouvelle wishlist", "#", class: "dropdown-item" %>
-              <%= link_to "Déconnexion", destroy_user_session_path, data: {turbo_method: :delete}, class: "dropdown-item" %>
+              <%= link_to "Se déconnecter", destroy_user_session_path, data: {turbo_method: :delete}, class: "dropdown-item" %>
             </div>
           </li>
         <% else %>

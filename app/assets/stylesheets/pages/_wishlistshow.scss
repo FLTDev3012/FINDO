@@ -57,4 +57,6 @@
 .cards {
   place-items: center;
   place-content: flex-start;
+  grid-template-rows: 320px repeat(auto-fill, 320px);
+  grid-auto-rows: minmax(320px, 344px);
 }

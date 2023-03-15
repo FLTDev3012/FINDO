@@ -1,52 +1,10 @@
-
-
+ <div class="home-body">
 
 
  <!--------------------------NAVBAR---------------------------------->
 
- <div class="home-body">
-  <div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
-    <div class="container-fluid">
-      <%= link_to "/", class: "navbar-brand" do %>
-        <h1 class="titre">Findo</h1>
-      <% end %>
 
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav me-auto">
-          <% if user_signed_in? %>
-            <li class="nav-item active-blanc">
-              <%= link_to "Mes wishlists", wishlists_path, class: "nav-link-wishlist-blanc" %>
-            </li>
-            <li class="nav-item-mesvotes-blanc">
-              <%= link_to "Mes votes", "#", class: "nav-link-votes-blanc" %>
-            </li>
-            <li class="nav-item dropdown">
-              <% if current_user.photo.attached? %>
-              <%= cl_image_tag current_user.photo.key, crop: :fill, class: "avatar dropdown-toggle", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
-              <% else %>
-              <%= image_tag "avatar_vide" %>
-              <% end %>
-              <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-                <%= link_to "Se déconnecter", destroy_user_session_path, data: {turbo_method: :delete}, class: "dropdown-item" %>
-              </div>
-            </li>
-          <% else %>
-            <li class="nav-item">
-              <%= link_to "S'inscrire", new_user_session_path, class: "nav-link-btn" %>
-            </li>
-            <li class="nav-item">
-              <%= link_to "Se connecter", new_user_session_path, class: "nav-link-blanc" %>
-            </li>
-          <% end %>
-        </ul>
-      </div>
-    </div>
-  </div>
-
+ <%= render "shared/navbargreen" %>
 
  <!--------------------------END NAVBAR---------------------------------->
 
@@ -67,23 +25,19 @@
           Vote pour le cadeau qui correspond le mieux à la personne !
       </p>
     </div>
-
-
-
-
-      </div>
+  </div>
 
 
     <div class="card pillule">
       <% @wishlist.wishlists_tags.each do |tag| %>
         <% if !tag.tag.image_path.nil? %>
-          <p class="card-tag-9"><%= image_tag tag.tag.image_path, class: "new--icones"%><%= tag.tag.name %>
+          <p class="card-tag-9"><%= image_tag tag.tag.image_path, class: "new--icones"%><%= tag.tag.name %></p>
         <% else %>
-          <p class="card-tag-9"><%= tag.tag.name %>
+          <p class="card-tag-9"><%= tag.tag.name %></p>
         <% end %>
       <% end %>
     </div>
-  </div>
+
 
 
 
@@ -94,7 +48,7 @@
  <!--------------------------BOTTOM---------------------------------->
 
 
-  <div class="avatar-cards">
+<div class="avatar-cards">
 
 
  <!--- Avatard gauche ---->
@@ -103,7 +57,6 @@
         <%= image_tag "avatar/Jernito.jpeg", class:"avatar-rond"%>
         <%= image_tag "avatar/Dorian.jpeg", class:"avatar-rond"%>
         <%= image_tag "avatar/Mathieu.jpeg", class:"avatar-rond"%>
-
     </div>
 
 
@@ -114,6 +67,7 @@
  <!--- Cards droite---->
     <div class="cards" data-controller="upvote">
         <% @wishlist.wishlists_gifts.each do |wishlists_gift| %>
+
           <div class="animated-card">
             <div class="front-card d-flex justify-content-end" style="background-image: url(<%= wishlists_gift.gift.photo %>)">
               <div class="p-2">
@@ -143,13 +97,10 @@
           </div>
         <% end %>
     </div>
+</div>
 
 <!--- END Cards droite---->
 
-
-
-
-  </div>
 
 
 </div>
