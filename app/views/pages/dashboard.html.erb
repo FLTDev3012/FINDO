@@ -78,7 +78,10 @@
 
         <div class="dashboard-title-w">
           <h2>Mes wishlists</h2>
+
+
         </div>
+        <%= image_tag "grafitis/trait-g", class:"trait-mes-wish" %>
 
         <div class="dashboard-all-wishlist-and-all-team">
 
@@ -86,10 +89,17 @@
           <% @my_wishlists.each do |wishlist| %>
               <div class="dashboard-one-wishlist-and-one-team">
 
+                <%= image_tag "grafitis/top", class: "imgcup" %>
+                <%= image_tag "grafitis/undraw_flower", class: "imgflower" %>
+
+
+
+
                 <div class="dash-cadeau">
                   <% top_gift = wishlist.wishlists_gifts.top_votes_for_wishlist_gift(wishlist.id) %>
                   <% if top_gift.present? %>
-                    <p>Le cadeau le plus voté est :</p>
+                    <p>Le cadeau le plus voté</p>
+
                     <%= image_tag(top_gift.gift.photo) %>
                     <p><%= top_gift.gift.name %></p>
                   <% else %>
@@ -104,9 +114,9 @@
                 <div class="dash-team">
                   <% User.joins(:votes).where(votes: { wishlists_gift_id: wishlist.wishlists_gifts.pluck(:id) }).uniq.each do |user| %>
 
-                    <p>
+
                         <%= image_tag user.photo, class: "avatar-dash-team" %>
-                    </p>
+
                   <% end %>
                 </div>
 

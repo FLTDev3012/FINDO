@@ -24,8 +24,8 @@ class PagesController < ApplicationController
     end
 
     # votes , si un user a vote sur un wishlists_gift de notre wishlist
-     @users_who_voted = User.where(id: Vote.where(wishlists_gift_id: @my_wishlists.map(&:wishlists_gifts).flatten.map(&:id)).pluck(:user_id))
-     @users_who_votedtwo = User.joins(:votes).where(votes: {wishlists_gift_id: @my_wishlists.map(&:wishlists_gifts).flatten.map(&:id)}).uniq
+     #@users_who_voted = User.where(id: Vote.where(wishlists_gift_id: @my_wishlists.map(&:wishlists_gifts).flatten.map(&:id)).pluck(:user_id))
+     #@users_who_votedtwo = User.joins(:votes).where(votes: {wishlists_gift_id: @my_wishlists.map(&:wishlists_gifts).flatten.map(&:id)}).uniq
 
      # @user_voter = User.joins(:votes).where(votes: { wishlists_gift_id: wishlist.wishlists_gifts.pluck(:id) }).uniq
     # @users_who_votedf = User.joins(:votes).where(votes: { wishlists_gift_id: wishlist.id }).distinct

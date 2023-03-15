@@ -211,6 +211,11 @@
   height: 40%;
 }
 
+.trait-mes-wish {
+  translate: 400px -67px;
+  opacity: 0.3;
+}
+
 .dashboard-title-wishlist {
   height: 50%;
   width: 100%;
@@ -247,12 +252,51 @@
 
 .dashboard-one-wishlist-and-one-team {
   display: flex;
-  justify-content: center;
+  //justify-content: center;
   border-bottom: solid 1px rgba(0, 0, 0, 0.087);
-  // padding-bottom: 3em;
-  // margin-bottom: 3em;
   align-items: center;
+  margin-left: 150px;
+  // justify content etait center
 }
+.imgcup {
+  height: 50px;
+  width: 50px;
+  opacity: 0.1;
+  translate: 62px -26px;
+  rotate: -16deg;
+
+
+}
+.imgflower {
+  height: 50px;
+  width: 50px;
+  opacity: 0.1;
+  translate: 62px -26px;
+}
+.imgstar{
+  height: 50px;
+  width: 50px;
+  opacity: 0.1;
+  translate: 55px -27px;
+  rotate: 59deg;
+
+}
+
+.dashboard-one-wishlist-and-one-team:nth-child(even) .imgflower {
+  display: none;
+}
+
+.dashboard-one-wishlist-and-one-team:nth-child(odd) .imgcup {
+  display: none;
+}
+
+
+
+
+// .dashboard-one-wishlist-and-one-team:-child .imgtwo
+// {
+//   display: none;
+// }
 
 .dash-row {
   display: flex;
@@ -311,8 +355,8 @@
 
 
 .avatar-dash-team {
-  width: 30px;
-  height: 30px;
+  width: 40px;
+  height: 40px;
   border-radius: 50%;
   border: #d9d9d956 5px solid;
   text-align: center;
