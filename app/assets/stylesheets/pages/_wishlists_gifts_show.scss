@@ -52,12 +52,16 @@
   display: flex;
   flex-direction: row;
   align-items: flex-start;
-  justify-content: space-evenly;
   margin-top: 100px;
 }
 
+.avis-findos h3{
+margin-bottom: 30px;
+}
+
+
 .avis-findos .text {
-  width: 35%;
+  width: 75%;
 }
 
 .retour-wishlist {
@@ -129,4 +133,22 @@
     align-items: end;
     font-weight: bold;
   }
+}
+
+.vote-show {
+  margin-top: 2px;
+}
+
+.avis-article {
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+}
+
+.avis-findoos {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
