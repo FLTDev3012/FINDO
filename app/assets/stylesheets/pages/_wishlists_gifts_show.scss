@@ -4,6 +4,25 @@
   box-sizing: content-box;
 }
 
+
+.background-green-show {
+  position: relative;
+}
+
+.titre.blanc {
+  color: white;
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 10px;
+}
+
+.navbar-green-show {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
 .description-text {
   display: flex;
   justify-content: space-evenly;
