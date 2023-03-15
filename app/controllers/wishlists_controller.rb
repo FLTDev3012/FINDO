@@ -31,7 +31,7 @@ class WishlistsController < ApplicationController
 
     @third_tag = Tag.all.select { |tag| tag.name == "Décoration" || tag.name == "Sport" || tag.name == "Made in France" || tag.name == "Lifestyle" || tag.name == "Beauté" || tag.name == "Zéro déchet" || tag.name == "Artisanal" || tag.name == "DIY" || tag.name == "High-Tech"}
 
-    @fourth_tag = Tag.all.select { |tag| tag.name == "0-200+" || tag.name == "0-25" || tag.name == "25-50" || tag.name == "50-100" || tag.name == "100-200" || tag.name == "200+" }
+    @fourth_tag = Tag.all.select { |tag| tag.name == "0...500€" || tag.name == "0...25€" || tag.name == "25...50€" || tag.name == "50...100€" || tag.name == "100...200€" || tag.name == "200...500€" }
 
     authorize @wishlist
   end
