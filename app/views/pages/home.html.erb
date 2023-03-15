@@ -21,7 +21,7 @@
               <%= link_to "Mes wishlists", wishlists_path, class: "nav-link-wishlist-blanc" %>
             </li>
             <li class="nav-item-mesvotes-blanc">
-              <%= link_to "Mon profil", "#", class: "nav-link-votes-blanc" %>
+              <%= link_to "Mon profil", dashboard_path, class: "nav-link-votes-blanc" %>
             </li>
             <li class="nav-item dropdown">
               <% if current_user.photo.attached? %>
