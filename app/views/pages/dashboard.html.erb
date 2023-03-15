@@ -2,7 +2,7 @@
   <!-- dashboard -->
   <div data-controller="dashboard" class="dashboard">
     <!-- 3 logo a gauche -->
-    <div class="dashboard-nav">
+    <div class="dashboard-nav ">
       <div class="dashboard-logo-vide">
 
 
@@ -79,51 +79,70 @@
         <div class="dashboard-all-wishlist-and-all-team">
 
 
-            <% @my_wishlists.each do |wishlist| %>
-
-                <div class="dashboard-all-wishlist dash-row">
-                  <%= link_to wishlist.name , wishlist_path(wishlist), class: "dashboard-1-wishlist greypil"%>
-                </div>
-
-                <div class="dash-row dash-team ">
-                  <% @users_who_voted.each do |user| %>
-                    <p class="avatar-dash-team"><%= user.prenom %></p>
-                  <% end %>
-                </div>
+          <% @my_wishlists.each do |wishlist| %>
+              <div class="dashboard-one-wishlist-and-one-team">
 
                 <div class="dash-cadeau">
                   <% top_gift = wishlist.wishlists_gifts.top_votes_for_wishlist_gift(wishlist.id) %>
                   <% if top_gift.present? %>
-                    <p>Le cadeau le plus voté est : <%= top_gift.gift.name %></p>
+                    <p>Le cadeau le plus voté est :</p>
+                    <%= image_tag(top_gift.gift.photo) %>
+                    <p><%= top_gift.gift.name %></p>
                   <% else %>
                     <p>Aucun cadeau n'a encore été voté pour cette wishlist</p>
                   <% end %>
                 </div>
 
-            <% end %>
+                <div class="dashboard-all-wishlist">
+                  <%= link_to wishlist.name , wishlist_path(wishlist), class: "dashboard-1-wishlist greypil"%>
+                </div>
+
+                <div class="dash-team">
+                  <% @users_who_voted.each do |user| %>
+                    <p class="avatar-dash-team"><%= user.prenom %></p>
+                  <% end %>
+                </div>
+
+
+
+              </div>
+
+
+              <!-- -->
+
+
+              <div class="dashboard-one-wishlist-and-one-team">
+
+                <div class="dash-cadeau">
+                  <% top_gift = wishlist.wishlists_gifts.top_votes_for_wishlist_gift(wishlist.id) %>
+                  <% if top_gift.present? %>
+                    <p>Le cadeau le plus voté est :</p>
+                    <%= image_tag(top_gift.gift.photo) %>
+                    <p><%= top_gift.gift.name %></p>
+                  <% else %>
+                    <p>Aucun cadeau n'a encore été voté pour cette wishlist</p>
+                  <% end %>
+                </div>
+
+                <div class="dashboard-all-wishlist">
+                  <%= link_to wishlist.name , wishlist_path(wishlist), class: "dashboard-1-wishlist greypil"%>
+                </div>
+
+                <div class="dash-team">
+                  <% @users_who_voted.each do |user| %>
+                    <p class="avatar-dash-team"><%= user.prenom %></p>
+                  <% end %>
+                </div>
+
+
+
+              </div>
+
+              <!-- -->
+
+
+          <% end %>
         </div>
-
-
-
-
-
-
-
-
-
-
-
-
-        </div>
-
-
-
-
-
-
-          <!-- <%= image_tag "avatar/Dorian.jpeg", class:"avatar-rond"%> -->
-
-
       </div>
 
 

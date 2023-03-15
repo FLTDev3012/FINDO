@@ -21,6 +21,10 @@
   width: 20%;
   flex-direction: column;
   align-items: center;
+  //position: sticky;
+  //top: 0px;
+  height: 100vh;
+
 }
 .dashboard-logo {
 
@@ -35,6 +39,10 @@
   justify-content: center;
   align-items: center;
   border-right: 1px solid $vert;
+  position: sticky;
+  bottom: 0px;
+  background-color: red;
+
 }
 
 .dashboard-logo-vide {
@@ -166,10 +174,41 @@
   flex-direction: column;
 
 }
+
+.dashboard-one-wishlist-and-one-team {
+  display: flex;
+  justify-content: center;
+  border-bottom: solid 1px rgba(0, 0, 0, 0.087);
+  padding-bottom: 3em;
+  margin-bottom: 3em;
+}
+
 .dash-row {
   display: flex;
   flex-direction: row;
 }
+
+.dash-cadeau {
+
+
+  text-align: center;
+  margin-top: 2.6em;
+  margin-bottom: 0;
+  margin-right: 2.6em;
+  max-width: 20%;
+}
+
+.dash-cadeau img{
+
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: #d9d9d956 5px solid;
+  margin-bottom: 1em;
+}
+
+
+
 
 
 
@@ -180,6 +219,23 @@
 
 }
 
+.dashboard-all-wishlist a:hover {
+
+  background-color: #e1e1e156;
+  border-radius: 30px;
+  padding: 16px 100px;
+}
+
+
+
+.dashboard-all-wishlist a{
+  text-decoration: none;
+
+}
+
+.dash-team {
+  display: flex;
+}
 
 
 .avatar-dash-team {
