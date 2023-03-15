@@ -144,6 +144,8 @@
   border: #d9d9d956 5px solid;
 }
 
+
+
 // wishlist
 
 .dashboard-mes-wishlists {
@@ -159,10 +161,42 @@
   justify-content: center;
 }
 
+.dashboard-all-wishlist-and-all-team {
+  display: flex;
+  flex-direction: column;
+
+}
+.dash-row {
+  display: flex;
+  flex-direction: row;
+}
+
+
+
+
 .dashboard-all-wishlist {
   display: flex;
   flex-direction: column;
 
+}
+
+
+
+.avatar-dash-team {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: #d9d9d956 5px solid;
+  text-align: center;
+  margin-top: 2.6em;
+  margin-bottom: 0;
+  margin-left: 2.6em;
+}
+
+
+
+.dashboard-all-wishlist p a{
+  text-decoration: none;
 }
 
 

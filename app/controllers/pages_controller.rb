@@ -22,5 +22,46 @@ class PagesController < ApplicationController
       @top_presents << WishlistsGift.top_votes_for_wishlist_gift(wishlist.id)
     end
 
+    # votes , si un user a vote sur un wishlists_gift de notre wishlist
+    @users_who_voted = User.where(id: Vote.where(wishlists_gift_id: @my_wishlists.map(&:wishlists_gifts).flatten.map(&:id)).pluck(:user_id))
+
+    # ------------ EXPLICATION ------------------
+
+    # ------------ 1 ------------------
+
+
+    # 1 Tout d'abord, nous utilisons la méthode pluck pour extraire les ID des wishlists_gifts qui appartiennent aux wishlists de l'utilisateur connecté. Nous faisons cela en appelant map sur @my_wishlists pour extraire les wishlists_gifts associées à chaque wishlist, en utilisant la méthode flatten pour les regrouper dans un seul tableau, puis en appelant à nouveau map avec &:id pour extraire les ID des wishlists_gifts.
+
+    # 1 RESULT
+    #@my_wishlists.map(&:wishlists_gifts).flatten.map(&:id)
+
+    # ------------ 2 ------------------
+
+
+    # 2 Ensuite, nous utilisons where pour récupérer tous les votes qui sont associés à ces wishlists_gifts. Nous filtrons les votes en utilisant la condition wishlists_gift_id:, qui permet de ne récupérer que les votes pour les wishlists_gifts dont les ID ont été extraits à l'étape précédente.
+
+    # 2 RESULT
+
+    # Vote.where(wishlists_gift_id: @my_wishlists.map(&:wishlists_gifts).flatten.map(&:id))
+
+    # ------------ 3 ------------------
+
+
+    # 3 Enfin, nous utilisons pluck pour extraire les ID des utilisateurs qui ont voté pour ces wishlists_gifts, et where pour récupérer les utilisateurs correspondants. Nous faisons cela en utilisant pluck avec :user_id pour extraire les ID des utilisateurs, puis en utilisant where pour récupérer tous les utilisateurs dont les ID correspondent à ceux extraits à l'étape précédente.
+
+    # 3 RESULT
+
+    # User.where(id: Vote.where(wishlists_gift_id: @my_wishlists.map(&:wishlists_gifts).flatten.map(&:id)).pluck(:user_id))
+
+    # ------------ PLUCK C EST QUOI ? ------------------
+
+    # pluck est une méthode de Rails qui permet d'extraire une colonne ou une liste de colonnes d'une table de la base de données sous forme d'un tableau. La méthode retourne un tableau contenant les valeurs de la ou des colonnes spécifiées.
+
+    # Par exemple, si nous avons un modèle User avec une colonne name, nous pouvons utiliser la méthode pluck pour extraire tous les noms d'utilisateurs sous forme de tableau comme ceci :
+
+
+    # User.pluck(:name)
+    # User.where("age > ?", 30).pluck(:name)
+    # Cela renverra un tableau contenant les noms des utilisateurs dont l'âge est supérieur à 30 ans.
   end
 end
