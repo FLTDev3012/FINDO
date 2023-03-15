@@ -2,8 +2,8 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  display: flex;
-  align-items: center;
+  // display: flex;
+  // align-items: center;
   // height: 100vh;
   width: 100vw;
   height: 60vh;
@@ -88,10 +88,10 @@
 
 .dashboard-page {
   width: 80%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  // display: flex;
+  // flex-direction: column;
+  // align-items: center;
+  // justify-content: center;
 }
 
 .dashboard-mon-profil {
@@ -102,11 +102,29 @@
   flex-wrap: wrap;
 }
 .dashboard-title {
-  height: 50%;
+  // height: 50%;
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-top: 2em;
+}
+
+.dash-big-image-profil {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.avatar-dash {
+  width: 210px;
+  height: 210px;
+  border-radius: 50%;
+  border: #d9d9d956 5px solid;
+  margin-top: 3em;
+  margin-bottom: 5em;
+
 }
 
 .dashboard-deux{
@@ -148,6 +166,30 @@
   padding: 16px 100px;
 
 }
+
+.greypil-count-profil {
+  background-color: #d9d9d956;
+  border-radius: 30px;
+  padding: 16px 80px;
+}
+
+
+
+.nombre-de-wishlist {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+.nombre-de-vote {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 0;
+}
+
+
 .dashboard-2 {
   text-align: center;
 }
@@ -158,12 +200,7 @@
   text-align: center;
 }
 
-.avatar-dash {
-  width: 260px;
-  height: 260px;
-  border-radius: 50%;
-  border: #d9d9d956 5px solid;
-}
+
 
 
 

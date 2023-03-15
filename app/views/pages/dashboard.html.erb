@@ -37,7 +37,13 @@
           <h2>Mon profil</h2>
         </div>
 
+        <div class="dash-big-image-profil">
+          <%= image_tag "https://images.unsplash.com/photo-1574466853640-8557d3e4ab2c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2340&q=80", class: "avatar-dash", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
+        </div>
+
+
         <div class="dashboard-quatre1">
+
           <div class="dashboard-deux">
 
             <p class="greypil"><%= current_user.prenom %></p>
@@ -50,18 +56,14 @@
 
             <p class="greypil"><%= current_user.email %></p>
 
-
-            <%= image_tag "https://images.unsplash.com/photo-1574466853640-8557d3e4ab2c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2340&q=80", class: "avatar-dash", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
+            <div class="greypil-count-profil">
+              <p class="nombre-de-wishlist">Nombre de Wishlist: <%= @my_wishlists.count %></p>
+              <p class="nombre-de-vote">Nombre de Votes: <%= @current_user_votes.count %></p>
+            </div>
 
           </div>
 
-
         </div>
-
-
-
-
-
           <!-- <%= image_tag "avatar/Dorian.jpeg", class:"avatar-rond"%> -->
 
 
@@ -74,7 +76,7 @@
       <!--supp classs none et mettre <div class="dashboard-mes-wishlists"> -->
 
 
-        <div class="dashboard-title-wishlist">
+        <div class="dashboard-title">
           <h2>Mes wishlists</h2>
         </div>
 
