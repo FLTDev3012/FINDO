@@ -52,6 +52,13 @@
 
 ///////////////////////// Une fois logué
 
+.avatar {
+  border-radius: 50%;
+  border: 1px solid white;
+  margin: 10px;
+  height: 44px;
+  width: 44px;
+}
 /// mes wishslists
 
 .nav-link-wishlist-blanc {
@@ -96,41 +103,78 @@
 
 //// background blanc  ------------------------
 
-//// s'inscrire
-.nav-link1 {
-  border: 1px solid white;
-  border-radius: 30px;
-  text-decoration: none;
-  font-family: $text;
-  padding: 10px;
-  margin-right: 12px;
-  color: $vert;
-  background-color: white;
-}
-
-//// se connecter
-.nav-link2 {
-  text-decoration: none;
-  font-family: $text;
-  padding: 10px;
-  margin-right: 16px;
-  color: $vert;
-}
-
-.avatar {
+//avatar
+.avatar1 {
   border-radius: 50%;
-  border: 1px solid white;
+  border: 1px solid $vert;
   margin: 10px;
   height: 44px;
   width: 44px;
 }
 
+
+//// s'inscrire
+.nav-link1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid $vert;
+  border-radius: 30px;
+  background: white;
+  text-decoration: none;
+
+  margin-right: 15px;
+  width: 85px;
+  transition: transform 0.5s;
+  color: white;
+  background-color: $vert;
+}
+
+    .nav-link1 {
+      transform: scale(1) translateY(-8px);
+    }
+
+//// se connecter
+.nav-link2 {
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  margin-top: 1px;
+  margin-right: 23px;
+  transition: transform 0.5s;
+  color: $vert;
+}
+
+  .nav-link2 {
+    transform: scale(1) translateY(-8px);
+  }
+
+
 ///// mes wishlists
 .nav-link3 {
   text-decoration: none;
-  font-family: $text;
-  padding: 10px;
-  margin-right: 10px;
+  display: flex;
+  justify-content: center;
   margin-top: 10px;
+  margin-right: 8px;
+  transition: transform 0.5s;
   color: $vert;
+}
+
+.nav-link3:hover {
+  transform: scale(1) translateY(-5px);
+}
+
+.nav-link4 {
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  margin-right: 4px;
+  transition: transform 0.5s;
+  color: $vert;
+}
+
+.nav-link4:hover {
+  transform: scale(1) translateY(-8px);
 }
