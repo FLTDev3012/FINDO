@@ -64,5 +64,9 @@ class PagesController < ApplicationController
     # User.pluck(:name)
     # User.where("age > ?", 30).pluck(:name)
     # Cela renverra un tableau contenant les noms des utilisateurs dont l'âge est supérieur à 30 ans.
+
+
+    @current_user_votes = Vote.where(user_id: current_user.id)
+    # @current_user_wishlists = Wishlist.where(user_id: current_user.id)   EN FAITE CEST @my_wishlists ^^'
   end
 end

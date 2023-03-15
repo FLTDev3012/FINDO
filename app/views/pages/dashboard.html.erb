@@ -17,11 +17,11 @@
       <div class="dashboard-logo fixed-bottom">
 
         <div class="dash-img-1" data-action="click->dashboard#update1">
-          <%= image_tag "icones/poussin.png", class:"avatar-rond"%>
+          <%= image_tag "icones/poussin.png", class:"dash-avatar-rond"%>
         </div>
 
         <div class="dash-img-2" data-action="click->dashboard#update2">
-          <%= image_tag "icones/feux-dartifice.png", class:"avatar-rond"%>
+          <%= image_tag "icones/feux-dartifice.png", class:"dash-avatar-rond"%>
         </div>
 
 
@@ -37,7 +37,13 @@
           <h2>Mon profil</h2>
         </div>
 
+        <div class="dash-big-image-profil">
+          <%= image_tag "https://images.unsplash.com/photo-1574466853640-8557d3e4ab2c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2340&q=80", class: "avatar-dash", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
+        </div>
+
+
         <div class="dashboard-quatre1">
+
           <div class="dashboard-deux">
 
             <p class="greypil"><%= current_user.prenom %></p>
@@ -50,18 +56,14 @@
 
             <p class="greypil"><%= current_user.email %></p>
 
-
-            <%= image_tag "https://images.unsplash.com/photo-1574466853640-8557d3e4ab2c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2340&q=80", class: "avatar-dash", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
+            <div class="greypil-count-profil">
+              <p class="nombre-de-wishlist">Nombre de Wishlist: <%= @my_wishlists.count %></p>
+              <p class="nombre-de-vote">Nombre de Votes: <%= @current_user_votes.count %></p>
+            </div>
 
           </div>
 
-
         </div>
-
-
-
-
-
           <!-- <%= image_tag "avatar/Dorian.jpeg", class:"avatar-rond"%> -->
 
 
@@ -74,7 +76,7 @@
       <!--supp classs none et mettre <div class="dashboard-mes-wishlists"> -->
 
 
-        <div class="dashboard-title-wishlist">
+        <div class="dashboard-title-w">
           <h2>Mes wishlists</h2>
         </div>
 
@@ -101,7 +103,9 @@
 
                 <div class="dash-team">
                   <% @users_who_voted.each do |user| %>
-                    <p class="avatar-dash-team"><%= user.prenom %></p>
+                    <p>
+                        <%= image_tag user.photo, class: "avatar-dash-team" %>
+                    </p>
                   <% end %>
                 </div>
 
@@ -110,37 +114,7 @@
               </div>
 
 
-              <!-- -->
 
-
-              <div class="dashboard-one-wishlist-and-one-team">
-
-                <div class="dash-cadeau">
-                  <% top_gift = wishlist.wishlists_gifts.top_votes_for_wishlist_gift(wishlist.id) %>
-                  <% if top_gift.present? %>
-                    <p>Le cadeau le plus voté est :</p>
-                    <%= image_tag(top_gift.gift.photo) %>
-                    <p><%= top_gift.gift.name %></p>
-                  <% else %>
-                    <p>Aucun cadeau n'a encore été voté pour cette wishlist</p>
-                  <% end %>
-                </div>
-
-                <div class="dashboard-all-wishlist">
-                  <%= link_to wishlist.name , wishlist_path(wishlist), class: "dashboard-1-wishlist greypil"%>
-                </div>
-
-                <div class="dash-team">
-                  <% @users_who_voted.each do |user| %>
-                    <p class="avatar-dash-team"><%= user.prenom %></p>
-                  <% end %>
-                </div>
-
-
-
-              </div>
-
-              <!-- -->
 
 
           <% end %>
