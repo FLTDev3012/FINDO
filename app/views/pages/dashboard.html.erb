@@ -80,8 +80,8 @@
 
 
             <% @my_wishlists.each do |wishlist| %>
-              <div class="dash-row">
-                <div class="dashboard-all-wishlist">
+
+                <div class="dashboard-all-wishlist dash-row">
                   <%= link_to wishlist.name , wishlist_path(wishlist), class: "dashboard-1-wishlist greypil"%>
                 </div>
 
@@ -90,10 +90,23 @@
                     <p class="avatar-dash-team"><%= user.prenom %></p>
                   <% end %>
                 </div>
-              </div>
+
+                <div class="dash-cadeau">
+                  <% top_gift = wishlist.wishlists_gifts.top_votes_for_wishlist_gift(wishlist.id) %>
+                  <% if top_gift.present? %>
+                    <p>Le cadeau le plus voté est : <%= top_gift.gift.name %></p>
+                  <% else %>
+                    <p>Aucun cadeau n'a encore été voté pour cette wishlist</p>
+                  <% end %>
+                </div>
 
             <% end %>
         </div>
+
+
+
+
+
 
 
 

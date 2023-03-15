@@ -17,9 +17,10 @@ class PagesController < ApplicationController
 
 
 
-    @top_presents = []
+    @top_presents = {}
     @my_wishlists.each do |wishlist|
-      @top_presents << WishlistsGift.top_votes_for_wishlist_gift(wishlist.id)
+      top_gift = wishlist.wishlists_gifts.top_votes_for_wishlist_gift(wishlist.id)
+      @top_presents[wishlist] = top_gift if top_gift.present?
     end
 
     # votes , si un user a vote sur un wishlists_gift de notre wishlist
