@@ -156,6 +156,11 @@
   position: relative;
 }
 
+.card-tag:hover {
+  cursor: pointer;
+  background-color: $terra-hover;
+}
+
 .card-tag-2 {
   border: solid 1px $terra;
   border-radius: 30px;
@@ -174,6 +179,10 @@
   margin-top: 28px;
 }
 
+.card-tag-2:hover {
+  cursor: pointer;
+  background-color: $terra-hover;
+}
 
 
 .card-grid {
@@ -201,6 +210,11 @@
   font-family: $titre;
   color: black;
   position: relative;
+}
+
+.card-tag-9:hover {
+  cursor: pointer;
+  background-color: $terra;
 }
 
 .questions {

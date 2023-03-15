@@ -73,7 +73,12 @@ input[type="checkbox"].d-done {
   text-align: center;
   position: absolute;
   right: 888px;
-  bottom: 220px;
+  bottom: 200px;
+}
+
+.btn-suivant:hover {
+  cursor: pointer;
+  background-color: $terra;
 }
 
 .budget {
