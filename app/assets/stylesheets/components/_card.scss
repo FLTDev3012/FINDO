@@ -236,5 +236,29 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-top: 115px;
+  margin-top: 200px;
+}
+
+.div-question-6 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 260px;
+}
+
+.card-grid-6 {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  margin-left: 120px;
+  grid-gap: 29px;
+  margin-right: 70px;
+}
+
+.questions-6 {
+  display: flex;
+  font-size: x-large;
+  margin-top: 41px;
+  text-align: center;
+  padding-left: 50px;
+  margin-left: 30px;
 }

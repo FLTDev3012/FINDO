@@ -72,12 +72,12 @@ zero = Tag.create!(name: "Zéro déchet", image_path: "icones/durabilite.png")
 arti = Tag.create!(name: "Artisanal", image_path: "icones/echecs.png")
 diy = Tag.create!(name: "DIY", image_path: "icones/couture.png")
 ht = Tag.create!(name: "High-Tech", image_path: "icones/regarder.png")
-six = Tag.create!(name: "0-200+")
-un = Tag.create!(name: "0-25")
-deux = Tag.create!(name: "25-50")
-trois = Tag.create!(name: "50-100")
-quatre = Tag.create!(name: "100-200")
-cinq = Tag.create!(name: "200+")
+six = Tag.create!(name: "0...500€")
+un = Tag.create!(name: "0...25€")
+deux = Tag.create!(name: "25...50€")
+trois = Tag.create!(name: "50...100€")
+quatre = Tag.create!(name: "100...200€")
+cinq = Tag.create!(name: "200...500€")
 
 p "------ Creating gift... ----------"
 #1
