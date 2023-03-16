@@ -56,8 +56,9 @@
     <div class="vote-avatar">
 
     <% User.joins(votes: { wishlists_gift: :wishlist }).where(wishlists: { id: @wishlist.id }).distinct.each do |user| %>
-    <% if user.votes.exists?(wishlists_gift_id: @wishlist.wishlists_gifts.pluck(:id)) %>
-        <%= image_tag user.photo, class:"avatar-rond"%> <p><%= user.votes.where(wishlists_gift_id: @wishlist.wishlists_gifts.pluck(:id)).count %> Votes</p>
+      <% if user.votes.exists?(wishlists_gift_id: @wishlist.wishlists_gifts.pluck(:id)) %>
+          <%= image_tag user.photo, class:"avatar-rond"%> <p class="show-votes"><%= user.votes.where(wishlists_gift_id: @wishlist.wishlists_gifts.pluck(:id)).count %> Votes</p>
+      <% end %>
     <% end %>
     </div>
  </div>
@@ -65,7 +66,7 @@
 
 
 
-<% end %>
+
 
 
  <!--- END Avatard gauche ---->
