@@ -59,6 +59,9 @@
             <% else %>
             <%= image_tag "avatar/avatar_vide", class: "avatar-dash" %>
             <% end %>
+          <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+              <%= link_to "Se déconnecter", destroy_user_session_path, data: {turbo_method: :delete}, class: "dropdown-item" %>
+          </div>
 
         </div>
 
