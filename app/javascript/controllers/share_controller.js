@@ -10,6 +10,8 @@ export default class extends Controller {
 
   share(event) {
     console.log(this.data.get("urlValue"))
+    navigator.clipboard.writeText(this.data.get("urlValue"));
+
     Swal.fire({
       icon: 'success',
       title: 'Le lien a bien été copié',
