@@ -272,11 +272,80 @@
 .dashboard-mes-wishlists {
 
   height: 40%;
+  position: relative;
 }
+
+.dash-star-1 {
+  position: absolute;
+  translate: -75px 50px;
+  rotate: 161deg;
+}
+
+.dash-star-2 {
+  position: absolute;
+  translate: 417px 119px;
+  rotate: -2deg;
+}
+
+.dash-star-3 {
+  position: absolute;
+  translate: 243px 35px;
+  rotate: -2deg;
+}
+
+.dash-star-4 {
+  position: absolute;
+  translate: 816px 113px;
+  rotate: 382deg;
+  height: 55px;
+
+}
+
+.dash-star-5 {
+  position: absolute;
+  translate: 982px 0px;
+  rotate: 18deg;
+}
+
+.dash-star-6 {
+  position: absolute;
+  translate: -45px 20px;
+  rotate: 161deg;
+  height: 31px;
+}
+
+.dash-star-7 {
+  position: absolute;
+  translate: 648px -11px;
+  rotate: -2deg;
+  height: 19px;
+}
+
+.dash-star-8 {
+  position: absolute;
+  translate: 2px 47px;
+  rotate: 330deg;
+  height: 23px;
+}
+
+.dash-star-9 {
+  position: absolute;
+  translate: 941px 131px;
+  rotate: 163deg;
+  height: 29px;
+}
+
+.dash-star-10 {
+  position: absolute;
+  translate: 936px -23px;
+  rotate: 163deg;
+  height: 30px;
+}
+
 
 .trait-mes-wish {
   translate: 400px -67px;
-  opacity: 0.3;
+  opacity: 0;
 }
 
 .dashboard-title-wishlist {
