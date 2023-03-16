@@ -1,0 +1,3 @@
+<div id="user-<%=user.id%>">
+            <%= image_tag user.photo, class:"avatar-rond"%> <p class="show-votes"><%= user.votes.where(wishlists_gift_id: wishlist.wishlists_gifts.pluck(:id)).count %> Votes</p>
+</div>

@@ -18,7 +18,8 @@
 
 <!---Title & tag wishlist---->
 
-  <div class="wishlist-name-description">
+  <div class="wishlist-name-description" data-controller="wishlist-subscription"
+  data-wishlist-subscription-wishlist-id-value="<%= @wishlist.id %>">
 
     <div class="Text-wishlist-name">
       <h1 class="titre">
@@ -65,7 +66,8 @@
 
     <% User.joins(votes: { wishlists_gift: :wishlist }).where(wishlists: { id: @wishlist.id }).distinct.each do |user| %>
       <% if user.votes.exists?(wishlists_gift_id: @wishlist.wishlists_gifts.pluck(:id)) %>
-          <%= image_tag user.photo, class:"avatar-rond"%> <p class="show-votes"><%= user.votes.where(wishlists_gift_id: @wishlist.wishlists_gifts.pluck(:id)).count %> Votes</p>
+        <%= render "shared/avatar", user: user, wishlist: @wishlist %>
+
       <% end %>
     <% end %>
     </div>

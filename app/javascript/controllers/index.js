@@ -18,3 +18,6 @@ application.register("tag-selection", TagSelectionController)
 
 import UpvoteController from "./upvote_controller"
 application.register("upvote", UpvoteController)
+
+import WishlistSubscriptionController from "./wishlist_subscription_controller"
+application.register("wishlist-subscription", WishlistSubscriptionController)
