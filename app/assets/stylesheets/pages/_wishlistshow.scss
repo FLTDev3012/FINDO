@@ -18,9 +18,9 @@
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
-  width:76%;
+  width: 76%;
   gap: 1em;
-  margin-top: 70px;
+  margin-top: 130px;
   margin-bottom: 74px;
   margin-left: 11%;
 }
@@ -43,7 +43,7 @@
 .avatar-section {
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   height: 100vh;
   position: sticky;
   top: 0;
@@ -59,8 +59,6 @@
   align-items: center;
 }
 
-
-
 .show-votes {
   display: flex;
   justify-content: center;
@@ -68,14 +66,12 @@
   margin-bottom: 50px;
 }
 
-
-.vote-avatar{
+.vote-avatar {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
 }
-
 
 .cards {
   place-items: center;
