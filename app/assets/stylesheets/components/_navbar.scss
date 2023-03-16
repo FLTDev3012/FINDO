@@ -69,11 +69,13 @@
   margin-top: 20px;
   margin-right: 13px;
   transition: transform 0.5s;
+  font-size: 20px;
 }
 
 .nav-link-wishlist-blanc:hover {
   transform: scale(1) translateY(-8px);
   color: white;
+
 }
 
 /// mes votes
@@ -86,6 +88,7 @@
   margin-top: 20px;
   margin-right: 5px;
   transition: transform 0.5s;
+  font-size: 20px;
 }
 
 .nav-link-votes-blanc:hover {
@@ -159,6 +162,7 @@
   margin-right: 8px;
   transition: transform 0.5s;
   color: $vert;
+  font-size: 20px;
 }
 
 .nav-link3:hover {
@@ -173,6 +177,7 @@
   margin-right: 4px;
   transition: transform 0.5s;
   color: $vert;
+  font-size: 20px;
 }
 
 .nav-link4:hover {
