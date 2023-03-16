@@ -24,7 +24,16 @@ class PagesController < ApplicationController
     end
 
     # votes , si un user a vote sur un wishlists_gift de notre wishlist
-    @users_who_voted = User.where(id: Vote.where(wishlists_gift_id: @my_wishlists.map(&:wishlists_gifts).flatten.map(&:id)).pluck(:user_id))
+     #@users_who_voted = User.where(id: Vote.where(wishlists_gift_id: @my_wishlists.map(&:wishlists_gifts).flatten.map(&:id)).pluck(:user_id))
+     #@users_who_votedtwo = User.joins(:votes).where(votes: {wishlists_gift_id: @my_wishlists.map(&:wishlists_gifts).flatten.map(&:id)}).uniq
+
+     # @user_voter = User.joins(:votes).where(votes: { wishlists_gift_id: wishlist.wishlists_gifts.pluck(:id) }).uniq
+    # @users_who_votedf = User.joins(:votes).where(votes: { wishlists_gift_id: wishlist.id }).distinct
+
+
+    # @users_who_votedtwo = User.joins(:votes).where(votes: {wishlist_gift_id: @my_wishlists})
+
+    # users_who_votedtr = wishlist.votes.map(&:user).uniq
 
     # ------------ EXPLICATION ------------------
 
@@ -68,5 +77,10 @@ class PagesController < ApplicationController
 
     @current_user_votes = Vote.where(user_id: current_user.id)
     # @current_user_wishlists = Wishlist.where(user_id: current_user.id)   EN FAITE CEST @my_wishlists ^^'
+
+
+
+    # je recupere les whislists ou j ai vote meme si je ne les ai pas cree (et je fais attention de ne pas recuper une whislist que j ai cree car je lai deja recupere au dessus)
+
   end
 end

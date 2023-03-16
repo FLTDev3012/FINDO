@@ -20,9 +20,14 @@
           <%= image_tag "icones/poussin.png", class:"dash-avatar-rond"%>
         </div>
 
+
         <div class="dash-img-2" data-action="click->dashboard#update2">
           <%= image_tag "icones/feux-dartifice.png", class:"dash-avatar-rond"%>
         </div>
+
+        <%= image_tag "grafitis/click.svg", class:"dash-avatar-click"%>
+        <%= image_tag "grafitis/pointer.svg", class:"dash-avatar-pointer"%>
+
 
 
       </div>
@@ -63,8 +68,8 @@
             <p class="greypil"><%= current_user.email %></p>
 
             <div class="greypil-count-profil">
-              <p class="nombre-de-wishlist">Nombre de Wishlist: <%= @my_wishlists.count %></p>
-              <p class="nombre-de-vote">Nombre de Votes: <%= @current_user_votes.count %></p>
+              <p class="nombre-de-wishlist">Nombre de Wishlist: <%= @my_wishlists.count %><%= image_tag "grafitis/wishlist.svg", class:"dash-dash" %> </p>
+              <p class="nombre-de-vote"><%= image_tag "grafitis/coeur.svg", class:"dash-coeur" %>Nombre de Votes: <%= @current_user_votes.count %></p>
             </div>
 
           </div>
@@ -84,7 +89,10 @@
 
         <div class="dashboard-title-w">
           <h2>Mes wishlists</h2>
+
+
         </div>
+        <%= image_tag "grafitis/trait-g", class:"trait-mes-wish" %>
 
         <div class="dashboard-all-wishlist-and-all-team">
 
@@ -92,10 +100,17 @@
           <% @my_wishlists.each do |wishlist| %>
               <div class="dashboard-one-wishlist-and-one-team">
 
+                <%= image_tag "grafitis/top", class: "imgcup" %>
+                <%= image_tag "grafitis/undraw_flower", class: "imgflower" %>
+
+
+
+
                 <div class="dash-cadeau">
                   <% top_gift = wishlist.wishlists_gifts.top_votes_for_wishlist_gift(wishlist.id) %>
                   <% if top_gift.present? %>
-                    <p>Le cadeau le plus voté est :</p>
+                    <p>Le cadeau le plus voté</p>
+
                     <%= image_tag(top_gift.gift.photo) %>
                     <p><%= top_gift.gift.name %></p>
                   <% else %>
@@ -108,10 +123,11 @@
                 </div>
 
                 <div class="dash-team">
-                  <% @users_who_voted.each do |user| %>
-                    <p>
+                  <% User.joins(:votes).where(votes: { wishlists_gift_id: wishlist.wishlists_gifts.pluck(:id) }).uniq.each do |user| %>
+
+
                         <%= image_tag user.photo, class: "avatar-dash-team" %>
-                    </p>
+
                   <% end %>
                 </div>
 
