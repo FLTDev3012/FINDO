@@ -99,3 +99,32 @@
   box-shadow: #422800 2px 2px 0 0;
   transform: translate(2px, 2px);
 }
+
+.btn-share {
+    background-color: $terra;
+    border: 2px solid #422800;
+    border-radius: 30px;
+    box-shadow: #422800 4px 4px 0 0;
+    color: white;
+    cursor: pointer;
+    display: inline-block;
+    font-weight: 600;
+    font-size: 18px;
+    padding: 0 18px;
+    line-height: 50px;
+    text-align: center;
+    text-decoration: none;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    margin-top: 5px;
+}
+
+.btn-share:hover {
+  background-color: rgba(224, 148, 123, 0.808);
+}
+
+.btn-share:active {
+  box-shadow: #422800 2px 2px 0 0;
+  transform: translate(2px, 2px);
+}
