@@ -149,7 +149,7 @@
   text-decoration: none;
   font-family: $card;
   color: white;
-  font-size: 40px;
+  font-size: 60px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -171,7 +171,7 @@
   text-decoration: none;
   font-family: $card;
   color: white;
-  font-size: 40px;
+  font-size: 60px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -196,20 +196,22 @@
 .card-grid-9 {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  margin-left: 120px;
+  margin-left: 100px;
   grid-gap: 29px;
 }
 .card-tag-9 {
   padding: 9px 23px;
   background: $beige;
   border-radius: 30px;
-  width: 155px;
+  width: 178px;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
   font-family: $titre;
   color: black;
   position: relative;
+  height: 52px;
+  font-size: 19px;
 }
 
 .card-tag-9:hover {
@@ -219,7 +221,7 @@
 
 .questions {
   display: flex;
-  font-size: x-large;
+  font-size: xx-large;
   margin-top: 41px;
   text-align: center;
   padding-left: 50px;
@@ -242,8 +244,10 @@
 
 .questions-9 {
   display: flex;
-  font-size: x-large;
-  margin-right: 70px;
+  font-size: xx-large;
+  margin-right: 42px;
+  /* justify-content: center; */
+  text-align: center;
 }
 
 .div-question-9 {
@@ -270,8 +274,8 @@
 
 .questions-6 {
   display: flex;
-  font-size: x-large;
-  margin-top: 41px;
+  font-size: xx-large;
+  margin-top: 14px;
   text-align: center;
   padding-left: 50px;
   margin-left: 30px;
