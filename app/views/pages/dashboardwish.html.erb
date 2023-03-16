@@ -57,7 +57,7 @@
             <% if current_user.photo.attached? %>
             <%= cl_image_tag current_user.photo.key, crop: :fill, class: "avatar-dash" %>
             <% else %>
-            <%= image_tag "avatar_vide", class: "avatar-dash" %>
+            <%= image_tag "avatar/avatar_vide", class: "avatar-dash" %>
             <% end %>
 
         </div>
