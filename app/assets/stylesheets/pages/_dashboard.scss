@@ -152,6 +152,15 @@
   width: 100%;
   display: flex;
   flex-wrap: wrap;
+  position: relative;
+}
+
+.fonddashprofil {
+  position: absolute;
+translate: -260px -180px;
+width: 1473px;
+height: 932px;
+opacity: 1;
 }
 .dashboard-title {
   // height: 50%;
@@ -176,6 +185,7 @@
   border: #d9d9d956 5px solid;
   margin-top: 3em;
   margin-bottom: 5em;
+  z-index: 10;
 
 }
 
