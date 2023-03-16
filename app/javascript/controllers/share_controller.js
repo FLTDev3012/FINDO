@@ -10,8 +10,16 @@ export default class extends Controller {
 
   share(event) {
     console.log(this.data.get("urlValue"))
-    navigator.clipboard.writeText(this.data.get("urlValue"));
 
+    document.body.appendChild(textArea);
+    textArea.focus();
+    textArea.select();
+    try {
+      document.execCommand('copy');
+    } catch (err) {
+      console.error('Unable to copy to clipboard', err);
+    }
+    document.body.removeChild(textArea);
     Swal.fire({
       icon: 'success',
       title: 'Le lien a bien été copié',
@@ -20,4 +28,11 @@ export default class extends Controller {
       timer: 40000
     })
   }
+
+
+  function unsecuredCopyToClipboard(text) {
+  const textArea = document.createElement("textarea");
+  textArea.value = text;
+
+}
 }
