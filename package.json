@@ -6,6 +6,7 @@
     "@hotwired/stimulus-webpack-helpers": "^1.0.1",
     "@hotwired/turbo-rails": "^7.3.0",
     "@popperjs/core": "^2.11.6",
+    "@rails/actioncable": "^7.0.4-3",
     "bootstrap": "^5.2.3",
     "sweetalert": "^2.1.2",
     "webpack": "^5.75.0",
