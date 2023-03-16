@@ -54,24 +54,73 @@
     <div class="image-show">
       <div class="photo-gift" style="background-image: url(<%= @wishlists_gift.gift.photo %>)"></div>
       <p class="vote-show">
-        A été voté <%= @wishlists_gift.gift.vote %> fois depuis sa création
+        A été voté <%= @wishlists_gift.gift.vote %> fois par les findoos
       </p>
     </div>
   </div>
 
-  <div class="avis-findos">
-    <div class="avis-article">
-      <h3>Avis sur cet article</h3>
-      <p class="text">Avis sur cet article is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum</p>
-    </div>
-    <div class="avis-findoos">
-      <h3>Avis des findoos</h3>
-      <p class="text">Avis des Findoos is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum</p>
+
+
+
+<div class="testimonial-container" data-controller="swiper">
+  <h2 class="heading"> Avis sur <span>cet article</span></h2>
+  <div class="testimonial-wrapper">
+    <div class="testimonial-box mySwiper">
+      <div class="testimonial-content swiper-wrapper">
+        <div class="testimonial-slide swiper-slide">
+          <h5>Marie Dupont</h5>
+          <p class="text">Avis sur cet article is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
+        </div>
+        <div class="testimonial-slide swiper-slide">
+          <h5>George Michael</h5>
+          <p class="text">Avis sur cet article is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,</p>
+        </div>
+        <div class="testimonial-slide swiper-slide">
+          <h5>Tony Par Coeur</h5>
+          <p class="text">Avis sur cet article is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, </p>
+        </div>
+        <div class="testimonial-slide swiper-slide">
+          <h5>Michael Jackson</h5>
+          <p class="text">Avis sur cet article is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, </p>
+        </div>
+        <div class="testimonial-slide swiper-slide">
+          <h5>Elvis Presley</h5>
+          <p class="text">Avis sur cet article is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,</p>
+        </div>
+      </div>
+      <div class="swiper-button-next" data-action="click->swiper#swipe"></div>
+      <div class="swiper-button-prev" data-action="click->swiper#swipe"></div>
     </div>
   </div>
 
 
-  <p class="retour-wishlist"><%= link_to "retour a la wishlist",  wishlist_path(@wishlists_gift.wishlist)%></p>
+
+
+
+
 
 
 </div>
+
+
+  </div>
+
+
+  </div>
+
+  <p class="retour-wishlist"><%= link_to "retour à la wishlist",  wishlist_path(@wishlists_gift.wishlist)%></p>
+
+
+</div>
+
+
+
+
+
+    <%# <div class="avis-findoos">
+      <h3>Avis des findoos</h3>
+      <div class="bloc-findos">
+        <h5>George Michael</h5>
+        <p class="text">Avis des Findoos is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum</p>
+        </div>
+      </div> %>
