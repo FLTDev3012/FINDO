@@ -9,10 +9,11 @@ class WishlistsController < ApplicationController
     @wishlist = Wishlist.find(params[:id])
     # filter les gifts en fonction des tags # récupérer la valeur du champ de saisie
     @tags = @wishlist.tags
-    @gifts = []
-    WishlistsGift.where(wishlist: @wishlist).each do |wishlistgift|
-      @gifts << Gift.find(wishlistgift.gift_id)
-    end
+    # @gifts = []
+    # WishlistsGift.where(wishlist: @wishlist).each do |wishlistgift|
+    #   @gifts << Gift.find(wishlistgift.gift_id)
+    # end
+    @gifts = @wishlist.wishlists_gifts.order(vote: :DESC)
     # @gifts = Gift.all.select { |gift| gift.tags.include?(@tags) }
     #@gifts = Gift.joins(:tags).where(tags: { id: @tags.pluck(:id) }).distinct
     # Gift.joins(:tags) : Cette partie de la ligne de code effectue une jointure entre les tables gifts et tags. En utilisant joins, nous demandons à ActiveRecord d'effectuer une jointure interne entre les tables en fonction de leur relation, ce qui signifie que seuls les cadeaux ayant au moins un tag seront inclus dans la requête.

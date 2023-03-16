@@ -83,8 +83,7 @@
 
  <!--- Cards droite---->
     <div class="cards" data-controller="upvote">
-        <% @wishlist.wishlists_gifts.each do |wishlists_gift| %>
-
+        <% @gifts.each do |wishlists_gift| %>
           <div class="animated-card">
             <div class="front-card d-flex justify-content-end" style="background-image: url(<%= wishlists_gift.gift.photo %>)">
               <div class="p-2">
