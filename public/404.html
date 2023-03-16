@@ -5,20 +5,18 @@
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <style>
   .rails-default-error-page {
-    background-color: #EFEFEF;
-    color: #2E2F30;
-    text-align: center;
-    font-family: arial, sans-serif;
-    margin: 0;
+  min-height: 100vh;
+  background-image: url("/notfound.png");
   }
 
-  .rails-default-error-page div.dialog {
+
+  /* .rails-default-error-page div.dialog {
     width: 95%;
     max-width: 33em;
     margin: 4em auto 0;
-  }
+  } */
 
-  .rails-default-error-page div.dialog > div {
+  /* .rails-default-error-page div.dialog > div {
     border: 1px solid #CCC;
     border-right-color: #999;
     border-left-color: #999;
@@ -29,39 +27,29 @@
     background-color: white;
     padding: 7px 12% 0;
     box-shadow: 0 3px 8px rgba(50, 50, 50, 0.17);
-  }
+  } */
 
-  .rails-default-error-page h1 {
-    font-size: 100%;
-    color: #730E15;
-    line-height: 1.5em;
-  }
-
-  .rails-default-error-page div.dialog > p {
-    margin: 0 0 1em;
-    padding: 1em;
-    background-color: #F7F7F7;
-    border: 1px solid #CCC;
-    border-right-color: #999;
-    border-left-color: #999;
-    border-bottom-color: #999;
-    border-bottom-left-radius: 4px;
-    border-bottom-right-radius: 4px;
-    border-top-color: #DADADA;
-    color: #666;
-    box-shadow: 0 3px 8px rgba(50, 50, 50, 0.17);
+  .dialog{
+    display: flex;
+    justify-content: center;
+    border-radius: 30px;
+    box-shadow: 0 3px 8px rgb(50 50 50 / 7%);
+    align-content: space-around;
+    flex-direction: column;
+    text-align: center;
+    color: #2C504A;
   }
   </style>
 </head>
 
 <body class="rails-default-error-page">
   <!-- This file lives in public/404.html -->
-  <div class="dialog">
-    <div>
-      <h1>The page you were looking for doesn't exist.</h1>
-      <p>You may have mistyped the address or the page may have moved.</p>
+  <div class="container">
+    <div class="dialog">
+      <h1>ERREUR 404</h1>
+      <p>Je crois que tu n'as pas invitez assez d'amis pour t'aider a <strong>findo</strong> ton cadeau.</p>
+      <p>L'equipe t'invite a cliquer sur la loupe afin de repartir a la conquete du cadeau parfait</p>
     </div>
-    <p>If you are the application owner check the logs for more information.</p>
   </div>
 </body>
 </html>
