@@ -10,6 +10,7 @@
 
 
 
+
  <!--------------------------TOP---------------------------------->
 
 <!---Title & tag wishlist---->
@@ -21,9 +22,13 @@
           <%= @wishlist.name %>
       </h1>
 
+
       <p class="text">
           Vote pour le cadeau qui correspond le mieux à la personne !
       </p>
+      <div data-controller="share" data-share-url-value="<%=wishlists_gift_url%>">
+        <button class="btn-share" data-action="click->share#share"> Partager</button>
+      </div>
     </div>
   </div>
 
@@ -109,7 +114,6 @@
 </div>
 
 <!--- END Cards droite---->
-
 
 
 </div>

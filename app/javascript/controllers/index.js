@@ -10,6 +10,9 @@ application.register("dashboard", DashboardController)
 import HelloController from "./hello_controller"
 application.register("hello", HelloController)
 
+import ShareController from "./share_controller"
+application.register("share", ShareController)
+
 import TagSelectionController from "./tag_selection_controller"
 application.register("tag-selection", TagSelectionController)
 
