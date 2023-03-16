@@ -54,18 +54,19 @@
  <!--- Avatard gauche ---->
   <div class="avatar-section">
     <div class="vote-avatar">
-        <%= image_tag "avatar/Eva.jpeg", class:"avatar-rond"%> <p>X votes</p>
-    </div>
-    <div class="vote-avatar">
-        <%= image_tag "avatar/Jernito.jpeg", class:"avatar-rond"%> <p>X votes</p>
-    </div>
-    <div class="vote-avatar">
-        <%= image_tag "avatar/Dorian.jpeg", class:"avatar-rond"%> <p>X votes</p>
-    </div>
-    <div class="vote-avatar">
-        <%= image_tag "avatar/Mathieu.jpeg", class:"avatar-rond"%> <p>X votes</p>
+
+    <% User.joins(votes: { wishlists_gift: :wishlist }).where(wishlists: { id: @wishlist.id }).distinct.each do |user| %>
+      <% if user.votes.exists?(wishlists_gift_id: @wishlist.wishlists_gifts.pluck(:id)) %>
+          <%= image_tag user.photo, class:"avatar-rond"%> <p class="show-votes"><%= user.votes.where(wishlists_gift_id: @wishlist.wishlists_gifts.pluck(:id)).count %> Votes</p>
+      <% end %>
+    <% end %>
     </div>
  </div>
+
+
+
+
+
 
 
  <!--- END Avatard gauche ---->

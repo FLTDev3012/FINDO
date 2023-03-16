@@ -42,7 +42,7 @@
 
 .avatar-section {
   display: flex;
-  flex-direction: column;
+  justify-content: center;
   align-items: center;
   height: 100vh;
   position: sticky;
@@ -51,16 +51,29 @@
 
 .avatar-rond {
   border-radius: 50%;
-  width: 30%;
-  margin-bottom: 40px;
-  margin-right: 20px;
+  width: 65px;
+  margin-bottom: 10px;
+  // margin-right: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+
+.show-votes {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 50px;
 }
 
 
 .vote-avatar{
-  display:flex;
+  display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
 }
 
 
