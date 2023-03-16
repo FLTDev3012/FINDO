@@ -13,7 +13,35 @@ class WishlistsController < ApplicationController
     # WishlistsGift.where(wishlist: @wishlist).each do |wishlistgift|
     #   @gifts << Gift.find(wishlistgift.gift_id)
     # end
-    @gifts = @wishlist.wishlists_gifts.order(vote: :DESC)
+    # @max_draw = Drawing.where("drawing_number ~* ?", '^A\d{4}$')
+
+
+
+    # --------je trie les tags par ordre alphab ------------
+    # --------je garde seulement le 1er ------------
+    # --------car il commence par 0, 1, 2 ou 5 ------------
+    # --------donc c'est le tag du prix ------------
+    @tag_price = @tags.sort_by{|tag| tag.name}.first
+
+    # --------on recupère le prix min et max du range ------------
+    @min_price = @tag_price.name.match(/\A.*\./).to_s.split(".")[0].to_i
+    @max_price = @tag_price.name.match(/\...\w*/).to_s.split(".").last.to_i
+
+    # --------on garde seulement les cadeaux inclus dans ce range ------------
+    @wish_gifts = @wishlist.wishlists_gifts.select do |w_gift|
+      w_gift.gift.price > @min_price && w_gift.gift.price < @max_price
+    end
+
+    # --------on les trie en fonction du nb  de votes ------------
+    @gifts = @wish_gifts.sort_by {|w_g| w_g.vote}.reverse
+
+
+
+    # --------SOLUTION JORDANE SI BESOIN ------------
+    # @gifts = @wishlist.wishlists_gifts.order(vote: :DESC)
+
+
+
     # @gifts = Gift.all.select { |gift| gift.tags.include?(@tags) }
     #@gifts = Gift.joins(:tags).where(tags: { id: @tags.pluck(:id) }).distinct
     # Gift.joins(:tags) : Cette partie de la ligne de code effectue une jointure entre les tables gifts et tags. En utilisant joins, nous demandons à ActiveRecord d'effectuer une jointure interne entre les tables en fonction de leur relation, ce qui signifie que seuls les cadeaux ayant au moins un tag seront inclus dans la requête.
@@ -32,7 +60,7 @@ class WishlistsController < ApplicationController
 
     @third_tag = Tag.all.select { |tag| tag.name == "Décoration" || tag.name == "Sport" || tag.name == "Made in France" || tag.name == "Lifestyle" || tag.name == "Beauté" || tag.name == "Zéro déchet" || tag.name == "Artisanal" || tag.name == "DIY" || tag.name == "High-Tech"}
 
-    @fourth_tag = Tag.all.select { |tag| tag.name == "0...500€" || tag.name == "0...25€" || tag.name == "25...50€" || tag.name == "50...100€" || tag.name == "100...200€" || tag.name == "200...500€" }
+     @fourth_tag = Tag.all.select { |tag| tag.name == "0...500€" || tag.name == "0...25€" || tag.name == "25...50€" || tag.name == "50...100€" || tag.name == "100...200€" || tag.name == "200...500€" }
 
     authorize @wishlist
   end

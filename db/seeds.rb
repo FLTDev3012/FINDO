@@ -40,7 +40,6 @@ mathieu.save
 p "------ 4 pictures avatar created ----------"
 
 wishlist_1 = Wishlist.create(name: 'Anniversaire Pablo', user_id: dorian.id)
-
 wishlist_2 = Wishlist.create(name: 'Anniversaire Jose', user_id: jernito.id)
 
 
@@ -78,6 +77,11 @@ deux = Tag.create!(name: "25...50€")
 trois = Tag.create!(name: "50...100€")
 quatre = Tag.create!(name: "100...200€")
 cinq = Tag.create!(name: "200...500€")
+
+
+
+WishlistsTag.create!(tag_id: deux.id, wishlist_id: wishlist_1.id)
+WishlistsTag.create!(tag_id: trois.id, wishlist_id: wishlist_2.id)
 
 p "------ Creating gift... ----------"
 #1
