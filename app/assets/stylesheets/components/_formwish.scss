@@ -24,6 +24,12 @@
   position: relative;
   margin-top: 40px;
   font-size: 20px;
+  border: 1px solid $terra;
+}
+
+.btn-creation:hover {
+  cursor: pointer;
+  background-color: $terra;
 }
 
 .ecrire {

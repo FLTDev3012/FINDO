@@ -40,25 +40,25 @@ input[type="checkbox"].d-done {
 .left-fleche {
   position: absolute;
   left: 51px;
-  top: 394px;
+  top: 425px;
 }
 
 .right-trait {
   position: absolute;
-  right: 115px;
-  top: 405px;
+  right: 132px;
+  top: 455px;
 }
 
 .graf-chien {
   position: absolute;
-  left: -474px;
+  left: -521px;
   bottom: -36px;
 }
 
 .graf-tour {
   position: absolute;
-  left: 189px;
-  bottom: 49px;
+  left: 225px;
+  bottom: 63px;
 }
 
 .btn-suivant {
@@ -74,6 +74,7 @@ input[type="checkbox"].d-done {
   position: absolute;
   right: 888px;
   bottom: 200px;
+  border: 1px solid $terra;
 }
 
 .btn-suivant:hover {
@@ -83,13 +84,13 @@ input[type="checkbox"].d-done {
 
 .budget {
   position: absolute;
-  left: 388px;
-  top: 400px;
+  left: 319px;
+  top: 439px;
 }
 
 .budget-trait {
   position: absolute;
-  right: 208px;
+  right: 237px;
   top: -12px;
 }
 
