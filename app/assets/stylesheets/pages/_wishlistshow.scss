@@ -42,7 +42,7 @@
 
 .avatar-section {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
   height: 100vh;
   position: sticky;
@@ -51,7 +51,7 @@
 
 .avatar-rond {
   border-radius: 50%;
-  width: 30%;
+  width: 65px;
   margin-bottom: 40px;
   margin-right: 20px;
 }
