@@ -4,11 +4,8 @@
   box-sizing: content-box;
 }
 
-
 .background-green-show {
   position: relative;
-
-
 }
 
 .titre.blanc {
@@ -47,7 +44,6 @@
   justify-content: flex-start;
   margin-bottom: 30px;
   margin-top: -40px;
-
 }
 
 .avis-findos {
@@ -55,28 +51,26 @@
   flex-direction: row;
   align-items: flex-start;
   margin-top: 100px;
+  padding: 5rem 1rem;
 }
 
-.avis-findos h3{
-margin-bottom: 30px;
+.avis-findos h3 {
+  margin-bottom: 30px;
 }
-
 
 .avis-findos .text {
-  width: 75%;
 }
 
 .retour-wishlist {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  margin-top: 600px;
 }
 
-.pillule-category-gift{
+.pillule-category-gift {
   border: 1px solid black;
   border-radius: 15px;
-  background:$vert;
+  background: $vert;
   color: white;
   width: fit-content;
   padding: 5px 10px;
@@ -90,24 +84,23 @@ margin-bottom: 30px;
   background-position: center;
   background-size: cover;
 
-  box-shadow: 5px 5px 10px hsl(0, 0%, 100%),
-    -5px -5px 10px #fffcfc
+  box-shadow: 5px 5px 10px hsl(0, 0%, 100%), -5px -5px 10px #fffcfc;
 }
 .container-title {
   display: flex;
   justify-content: center;
   margin-top: -110px;
   padding-bottom: 45px;
-    .title {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-    }
-    .title > h1{
-      text-align: center;
-    }
+  .title {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .title > h1 {
+    text-align: center;
+  }
 }
-.wishlist-description{
+.wishlist-description {
   text-align: center;
   font-size: 20px;
   margin-bottom: 4rem;
@@ -123,13 +116,13 @@ margin-bottom: 30px;
 //   display: flex;
 //   justify-content: center;
 // }
-.fa-star.gold{
-  color: #ffdc0f
+.fa-star.gold {
+  color: #ffdc0f;
 }
 .wishlist-order {
   display: flex;
   justify-content: space-between;
-  .price-gift{
+  .price-gift {
     display: flex;
     justify-content: center;
     align-items: end;
@@ -141,16 +134,78 @@ margin-bottom: 30px;
   margin-top: 2px;
 }
 
-.avis-article {
-display: flex;
-flex-direction: column;
-justify-content: center;
-align-items: center;
+// .avis-findoos {
+//   display: flex;
+//   flex-direction: column;
+//   justify-content: center;
+//   align-items: center;
+// }
+
+.testimonial-container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  padding: 5rem 1rem;
 }
 
-.avis-findoos {
+.testimonial-container .testimonial-wrapper {
+  position: relative;
+  max-width: 75rem;
+  width: 100%;
+  padding: 5rem;
+}
+
+.testimonial-wrapper .testimonial-box {
+  padding: 1rem;
+  border-radius: 2rem;
+  overflow: hidden;
+  height: 165px;
+}
+
+.testimonial-container .testimonial-slide {
   display: flex;
+  align-items: center;
   flex-direction: column;
+  border-radius: 2rem;
+  box-shadow: 0 0.1rem 0.5rem;
+  // padding: 3rem 5rem;
+  border-top: 0.4rem solid $beige;
+  border-bottom: 0.4rem solid $beige;
+  margin-right: 30px;
+  // padding: 24px 48px;
+}
+
+.bloc-article h5 {
+  font-size: 2rem;
+  margin: 2rem 0;
+}
+
+.bloc-article p {
+  font-size: 1.1rem;
+
+  // padding: 0px 100px;
+}
+
+.testimonial-box .swiper-button-next,
+.testimonial-box .swiper-button-prev {
+  color: $vert;
+}
+
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+  display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.testimonial-slide swiper-slide swiper-slide-active {
+  width: 1000px;
 }
