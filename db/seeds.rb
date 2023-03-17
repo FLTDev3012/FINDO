@@ -75,8 +75,6 @@ cinq = Tag.create!(name: "200...500€")
 
 
 
-WishlistsTag.create!(tag_id: deux.id, wishlist_id: wishlist_1.id)
-WishlistsTag.create!(tag_id: trois.id, wishlist_id: wishlist_2.id)
 
 p "------ Creating gift... ----------"
 #1
