@@ -84,7 +84,7 @@ gift_1 = Gift.create!(name: 'Bougies Carthage', price: 12.00, description: 'Nos 
 # gift_1.gift_photo.attach(io: file, filename: "photo-bougie.jpg", content_type: "image/jpg")
 # gift_1.save
 
-bougie = Gift.create!(name: 'Bougies Carthage', price: 12.00, description: 'Nos bougies décoratives sont moulées individuellement en petite quantité dans notre studio à Paris. Nous utilisons la cire de soja 100% naturelle, végan et écoresponsable.', rating: 4.9, url: "https://www.etsy.com/listing/1395022433/the-carthage-pillars?ga_order=most_relevant&ga_search_type=all&ga_view_type=gallery&ga_search_query=bougies&ref=sr_gallery-1-7&organic_search_click=1", vote: 0, photo: 'https://i.etsystatic.com/40325058/r/il/a7fa98/4606306632/il_1588xN.4606306632_1t7x.jpg')
+bougie = Gift.create!(name: 'Bougies Carthage', price: 50.00, description: 'Nos bougies décoratives sont moulées individuellement en petite quantité dans notre studio à Paris. Nous utilisons la cire de soja 100% naturelle, végan et écoresponsable.', rating: 4.9, url: "https://www.etsy.com/listing/1395022433/the-carthage-pillars?ga_order=most_relevant&ga_search_type=all&ga_view_type=gallery&ga_search_query=bougies&ref=sr_gallery-1-7&organic_search_click=1", vote: 0, photo: 'https://i.etsystatic.com/40325058/r/il/a7fa98/4606306632/il_1588xN.4606306632_1t7x.jpg')
 GiftsTag.create!(gift_id: bougie.id, tag_id: deco.id)
 GiftsTag.create!(gift_id: bougie.id, tag_id: petit.id)
 GiftsTag.create!(gift_id: bougie.id, tag_id: noel.id)
@@ -98,7 +98,7 @@ GiftsTag.create!(gift_id: bougie.id, tag_id: six.id)
 
 
 #2
-montre = Gift.create!(name: 'Montre vintage', price: 125, description: "Montre entièrement restaurée par un horloger. Le bracelet en cuir a été fabriqué à la main par un artisan de l'ouest de l'Ukraine. Nous garantissons toutes les montres pendant 1 an.", rating: 4.7, url: "https://www.etsy.com/listing/746765659/very-rare-soviet-vintage-watch-watches?ga_order=most_relevant&ga_search_type=all&ga_view_type=gallery&ga_search_query=homme&ref=sc_gallery-1-1&pro=1&frs=1&sts=1&plkey=db52dad727ad6797817cb49fe1fd631a60573e3a%3A746765659", vote: 0, photo: 'https://i.etsystatic.com/15663507/r/il/ab8111/2054609580/il_1588xN.2054609580_svpa.jpg')
+montre = Gift.create!(name: 'Montre vintage', price: 100, description: "Montre entièrement restaurée par un horloger. Le bracelet en cuir a été fabriqué à la main par un artisan de l'ouest de l'Ukraine. Nous garantissons toutes les montres pendant 1 an.", rating: 4.7, url: "https://www.etsy.com/listing/746765659/very-rare-soviet-vintage-watch-watches?ga_order=most_relevant&ga_search_type=all&ga_view_type=gallery&ga_search_query=homme&ref=sc_gallery-1-1&pro=1&frs=1&sts=1&plkey=db52dad727ad6797817cb49fe1fd631a60573e3a%3A746765659", vote: 0, photo: 'https://i.etsystatic.com/15663507/r/il/ab8111/2054609580/il_1588xN.2054609580_svpa.jpg')
 GiftsTag.create!(gift_id: montre.id, tag_id: anniv.id)
 GiftsTag.create!(gift_id: montre.id, tag_id: adulte.id)
 GiftsTag.create!(gift_id: montre.id, tag_id: ado.id)
@@ -108,7 +108,7 @@ GiftsTag.create!(gift_id: montre.id, tag_id: quatre.id)
 GiftsTag.create!(gift_id: montre.id, tag_id: six.id)
 
 #3
-cle = Gift.create!(name: 'Porte-clé', price: 35.00 , description: "Élégant porte-clés en cuir avec gravure. C'est un cadeau tout simplement sensationnel pour un être cher. Grâce à la belle rose des vents placée au centre du cercle en acier hautement poli, il devient un bijou de caractère.", rating: 4.1 , url: "https://www.etsy.com/listing/1381749398/unique-custom-coordinates-keychain?ga_order=most_relevant&ga_search_type=all&ga_view_type=gallery&ga_search_query=&ref=sc_gallery-1-13&frs=1&sts=1&plkey=159c4c12e5429332ea72dc1f2a420c710ce9127d%3A1381749398", vote: 0, photo: 'https://i.etsystatic.com/38174537/r/il/a505ee/4531898162/il_1588xN.4531898162_nk5e.jpg')
+cle = Gift.create!(name: 'Porte-clé', price: 55.00 , description: "Élégant porte-clés en cuir avec gravure. C'est un cadeau tout simplement sensationnel pour un être cher. Grâce à la belle rose des vents placée au centre du cercle en acier hautement poli, il devient un bijou de caractère.", rating: 4.1 , url: "https://www.etsy.com/listing/1381749398/unique-custom-coordinates-keychain?ga_order=most_relevant&ga_search_type=all&ga_view_type=gallery&ga_search_query=&ref=sc_gallery-1-13&frs=1&sts=1&plkey=159c4c12e5429332ea72dc1f2a420c710ce9127d%3A1381749398", vote: 0, photo: 'https://i.etsystatic.com/38174537/r/il/a505ee/4531898162/il_1588xN.4531898162_nk5e.jpg')
 GiftsTag.create!(gift_id: cle.id, tag_id: noel.id)
 GiftsTag.create!(gift_id: cle.id, tag_id: adulte.id)
 GiftsTag.create!(gift_id: cle.id, tag_id: ado.id)
@@ -119,7 +119,7 @@ GiftsTag.create!(gift_id: cle.id, tag_id: deux.id)
 GiftsTag.create!(gift_id: cle.id, tag_id: six.id)
 
 #4
-hat = Gift.create!(name: 'Hatdad', price: 54.20 , description: "Vous êtes à la recherche d'une casquette de baseball élégante, old school et vintage ? Alors vous allez adorer cette casquette en velours côtelé des années 90 avec sa broderie Fairywren unique ! Faites-vous remarquer et portez cette magnifique casquette à 6 panneaux au look rétro en toute occasion. Nos casquettes en velours côtelé 100 % coton, inspirées des années 90, sont de véritables must-haves et donneront immédiatement du piquant à votre style !", rating: 4.9 , url: "https://www.etsy.com/listing/1125334669/the-fairywren-corduroy-6-panel-hat-dad?ga_order=most_relevant&ga_search_type=all&ga_view_type=gallery&ga_search_query=&ref=sc_gallery-1-5&frs=1&etp=1&sts=1&plkey=b397e24f6f0b6a5b60a706dc5496c9c7d28c902e%3A1125334669", vote: 0, photo: 'https://i.etsystatic.com/25974753/r/il/d75cf8/4655527520/il_1588xN.4655527520_d9gq.jpg')
+hat = Gift.create!(name: 'Hatdad', price: 59.20 , description: "Vous êtes à la recherche d'une casquette de baseball élégante, old school et vintage ? Alors vous allez adorer cette casquette en velours côtelé des années 90 avec sa broderie Fairywren unique ! Faites-vous remarquer et portez cette magnifique casquette à 6 panneaux au look rétro en toute occasion. Nos casquettes en velours côtelé 100 % coton, inspirées des années 90, sont de véritables must-haves et donneront immédiatement du piquant à votre style !", rating: 4.9 , url: "https://www.etsy.com/listing/1125334669/the-fairywren-corduroy-6-panel-hat-dad?ga_order=most_relevant&ga_search_type=all&ga_view_type=gallery&ga_search_query=&ref=sc_gallery-1-5&frs=1&etp=1&sts=1&plkey=b397e24f6f0b6a5b60a706dc5496c9c7d28c902e%3A1125334669", vote: 0, photo: 'https://i.etsystatic.com/25974753/r/il/d75cf8/4655527520/il_1588xN.4655527520_d9gq.jpg')
 GiftsTag.create!(gift_id: hat.id, tag_id: anniv.id)
 GiftsTag.create!(gift_id: hat.id, tag_id: noel.id)
 GiftsTag.create!(gift_id: hat.id, tag_id: adulte.id)
@@ -129,7 +129,7 @@ GiftsTag.create!(gift_id: hat.id, tag_id: trois.id)
 GiftsTag.create!(gift_id: hat.id, tag_id: six.id)
 
 #5
-fruit = Gift.create!(name:'Fruits du démon', price: 26.40 , description: "Poster One Piece Anime - Akuma no mi. Le cadeau One Piece le plus cool pour tous les amateurs d'anime !", rating: 5, url: "https://www.etsy.com/listing/1419351371/one-piece-poster-devil-fruit-akuma-no-mi?ga_order=most_relevant&ga_search_type=all&ga_view_type=gallery&ga_search_query=one+piece&ref=sr_gallery-1-15&organic_search_click=1", vote: 0, photo: 'https://i.etsystatic.com/39097143/r/il/b83d1d/4681319376/il_1588xN.4681319376_kalw.jpg')
+fruit = Gift.create!(name:'Fruits du démon', price: 60, description: "Poster One Piece Anime - Akuma no mi. Le cadeau One Piece le plus cool pour tous les amateurs d'anime !", rating: 5, url: "https://www.etsy.com/listing/1419351371/one-piece-poster-devil-fruit-akuma-no-mi?ga_order=most_relevant&ga_search_type=all&ga_view_type=gallery&ga_search_query=one+piece&ref=sr_gallery-1-15&organic_search_click=1", vote: 0, photo: 'https://i.etsystatic.com/39097143/r/il/b83d1d/4681319376/il_1588xN.4681319376_kalw.jpg')
 GiftsTag.create!(gift_id: fruit.id, tag_id: anniv.id)
 GiftsTag.create!(gift_id: fruit.id, tag_id: noel.id)
 GiftsTag.create!(gift_id: fruit.id, tag_id: adulte.id)
@@ -141,7 +141,7 @@ GiftsTag.create!(gift_id: fruit.id, tag_id: deux.id)
 GiftsTag.create!(gift_id: fruit.id, tag_id: six.id)
 
 #6
-neon = Gift.create!(name: 'Néon', price: 21.38 , description: "Obtenez votre enseigne néon personnalisée pour n'importe quelle occasion ! Les enseignes lumineuses que nous fabriquons peuvent être personnalisées comme vous le souhaitez, que ce soit pour un mariage, un bureau, un magasin, une maison ou une fête. Nous pouvons le faire.", rating: 5, url: "https://www.etsy.com/listing/965245133/custom-neon-sign-neon-sign-wedding-neon?ga_order=most_relevant&ga_search_type=all&ga_view_type=gallery&ga_search_query=&ref=sc_gallery-1-8&pro=1&frs=1&sts=1&plkey=04091d0b2860592402861ee6aaac2452bb77a1ae%3A965245133", vote: 0, photo: 'https://i.etsystatic.com/27519419/r/il/1b2443/3522827430/il_1588xN.3522827430_lo4f.jpg')
+neon = Gift.create!(name: 'Néon', price: 78, description: "Obtenez votre enseigne néon personnalisée pour n'importe quelle occasion ! Les enseignes lumineuses que nous fabriquons peuvent être personnalisées comme vous le souhaitez, que ce soit pour un mariage, un bureau, un magasin, une maison ou une fête. Nous pouvons le faire.", rating: 5, url: "https://www.etsy.com/listing/965245133/custom-neon-sign-neon-sign-wedding-neon?ga_order=most_relevant&ga_search_type=all&ga_view_type=gallery&ga_search_query=&ref=sc_gallery-1-8&pro=1&frs=1&sts=1&plkey=04091d0b2860592402861ee6aaac2452bb77a1ae%3A965245133", vote: 0, photo: 'https://i.etsystatic.com/27519419/r/il/1b2443/3522827430/il_1588xN.3522827430_lo4f.jpg')
 GiftsTag.create!(gift_id: neon.id, tag_id: anniv.id)
 GiftsTag.create!(gift_id: neon.id, tag_id: noel.id)
 GiftsTag.create!(gift_id: neon.id, tag_id: petit.id)
@@ -168,7 +168,7 @@ GiftsTag.create!(gift_id: hochet.id, tag_id: un.id)
 GiftsTag.create!(gift_id: hochet.id, tag_id: six.id)
 
 #8
-kit = Gift.create!(name: 'Kit de broderie', price: 18.76 , description: "Le kit comprend
+kit = Gift.create!(name: 'Kit de broderie', price: 87, description: "Le kit comprend
 
 - 1 cercle à broder
 - 1 Tissu de lin illustré
@@ -205,7 +205,7 @@ GiftsTag.create!(gift_id: affiche.id, tag_id: un.id)
 GiftsTag.create!(gift_id: affiche.id, tag_id: six.id)
 
 #10
-trousse = Gift.create!(name: 'Trousse de toilettes', price: 28.10 , description: "Trousse de toilette en simili-cuir brodée d'initiales. Capacité de 3 litres.", rating: 5, url: "https://www.etsy.com/listing/1083997666/personalised-embroidered-mens-leather?ga_order=most_relevant&ga_search_type=all&ga_view_type=gallery&ga_search_query=homme&ref=sr_gallery-1-5&pop=1&organic_search_click=1", vote: 0, photo: 'https://i.etsystatic.com/27931246/r/il/a0932c/3380069678/il_1588xN.3380069678_dlot.jpg')
+trousse = Gift.create!(name: 'Trousse de toilettes', price: 66 , description: "Trousse de toilette en simili-cuir brodée d'initiales. Capacité de 3 litres.", rating: 5, url: "https://www.etsy.com/listing/1083997666/personalised-embroidered-mens-leather?ga_order=most_relevant&ga_search_type=all&ga_view_type=gallery&ga_search_query=homme&ref=sr_gallery-1-5&pop=1&organic_search_click=1", vote: 0, photo: 'https://i.etsystatic.com/27931246/r/il/a0932c/3380069678/il_1588xN.3380069678_dlot.jpg')
 GiftsTag.create!(gift_id: trousse.id, tag_id: adulte.id)
 GiftsTag.create!(gift_id: trousse.id, tag_id: ado.id)
 GiftsTag.create!(gift_id: trousse.id, tag_id: anniv.id)
@@ -216,7 +216,7 @@ GiftsTag.create!(gift_id: trousse.id, tag_id: deux.id)
 GiftsTag.create!(gift_id: trousse.id, tag_id: six.id)
 
 #11
-jeu = Gift.create!(name: 'Jeu en bois', price: 25, description: "Ce jeu de billes arc-en-ciel 4 couleurs est le cadeau idéal pour un bébé ou un enfant : à la fois éducatif et ludique, il apprend la représentation dans l'espace à l'enfant mais lui permet aussi d'être plus agile et alerte !
+jeu = Gift.create!(name: 'Jeu en bois', price: 76, description: "Ce jeu de billes arc-en-ciel 4 couleurs est le cadeau idéal pour un bébé ou un enfant : à la fois éducatif et ludique, il apprend la représentation dans l'espace à l'enfant mais lui permet aussi d'être plus agile et alerte !
 
 Ses couleurs pastel et son design en forme d'arc-en-ciel font de ce jouet pour enfant un excellent objet de décoration pour votre chambre d'enfant.", rating: 5, url: "https://www.etsy.com/listing/1224361768/custom-montessori-rainbow-toy-of-wooden?ga_order=most_relevant&ga_search_type=all&ga_view_type=gallery&ga_search_query=jeu&ref=sc_gallery-3-4&sts=1&plkey=105059765898a20687787a653bb812a1941fdf89%3A1224361768", vote: 0, photo: 'https://i.etsystatic.com/33092522/r/il/67fcb1/3940662397/il_1588xN.3940662397_sj85.jpg')
 GiftsTag.create!(gift_id: jeu.id, tag_id: anniv.id)
@@ -230,7 +230,7 @@ GiftsTag.create!(gift_id: jeu.id, tag_id: trois.id)
 GiftsTag.create!(gift_id: jeu.id, tag_id: six.id)
 
 #12
-poster = Gift.create!(name: 'Poster Marrakech', price: 15.00, description: 'Souk des Tapis, Marrakech
+poster = Gift.create!(name: 'Poster Marrakech', price: 50.00, description: 'Souk des Tapis, Marrakech
 
 Illustration minimaliste et colorée pour apporter un bout du Maroc dans votre intérieur.', rating: 5, url: "https://www.etsy.com/listing/1066740749/marrakech-morocco?ga_order=most_relevant&ga_search_type=all&ga_view_type=gallery&ga_search_query=lifestyle&ref=sc_gallery-1-2&frs=1&plkey=fc6a418e933fac91d89b52b06e1bf52870ff820b%3A1066740749", vote: 0, photo: 'https://i.etsystatic.com/23478732/r/il/969e52/3261025834/il_1588xN.3261025834_4jwk.jpg')
 GiftsTag.create!(gift_id: poster.id, tag_id: anniv.id)
@@ -245,7 +245,7 @@ GiftsTag.create!(gift_id: poster.id, tag_id: un.id)
 GiftsTag.create!(gift_id: poster.id, tag_id: six.id)
 
 #13
-bracelet = Gift.create!(name: 'Bracelet liberty', price: 14.50, description: "Bracelet personnalisé en cordon Liberty avec médailles d'or à graver.", rating: 5, url: "https://www.etsy.com/listing/1245121736/personalized-bracelet-in-liberty-cord?ga_order=most_relevant&ga_search_type=all&ga_view_type=gallery&ga_search_query=bijoux&ref=sr_gallery-1-37&bes=1&sts=1&organic_search_click=1", vote: 0, photo: 'https://i.etsystatic.com/36391808/r/il/d0744b/4248340812/il_1588xN.4248340812_79nv.jpg')
+bracelet = Gift.create!(name: 'Bracelet liberty', price: 87, description: "Bracelet personnalisé en cordon Liberty avec médailles d'or à graver.", rating: 5, url: "https://www.etsy.com/listing/1245121736/personalized-bracelet-in-liberty-cord?ga_order=most_relevant&ga_search_type=all&ga_view_type=gallery&ga_search_query=bijoux&ref=sr_gallery-1-37&bes=1&sts=1&organic_search_click=1", vote: 0, photo: 'https://i.etsystatic.com/36391808/r/il/d0744b/4248340812/il_1588xN.4248340812_79nv.jpg')
 GiftsTag.create!(gift_id: bracelet.id, tag_id: anniv.id)
 GiftsTag.create!(gift_id: bracelet.id, tag_id: noel.id)
 GiftsTag.create!(gift_id: bracelet.id, tag_id: adulte.id)
@@ -257,7 +257,7 @@ GiftsTag.create!(gift_id: bracelet.id, tag_id: un.id)
 GiftsTag.create!(gift_id: bracelet.id, tag_id: six.id)
 
 #14
-bague = Gift.create!(name: 'Bagues minimalistes', price: 18, description: "Bague SOLO avec chaîne boule plaquée or, remplie d'or, pierre fine, perle, bijoux fins", rating: 5, url: "https://www.etsy.com/listing/537650866/solo-ring-with-gold-plated-ball-chain?ga_order=most_relevant&ga_search_type=all&ga_view_type=gallery&ga_search_query=&ref=sr_gallery-1-11&organic_search_click=1", vote: 0, photo: 'https://i.etsystatic.com/15505273/r/il/19a76e/4536588022/il_1588xN.4536588022_dmrk.jpg')
+bague = Gift.create!(name: 'Bagues minimalistes', price: 76, description: "Bague SOLO avec chaîne boule plaquée or, remplie d'or, pierre fine, perle, bijoux fins", rating: 5, url: "https://www.etsy.com/listing/537650866/solo-ring-with-gold-plated-ball-chain?ga_order=most_relevant&ga_search_type=all&ga_view_type=gallery&ga_search_query=&ref=sr_gallery-1-11&organic_search_click=1", vote: 0, photo: 'https://i.etsystatic.com/15505273/r/il/19a76e/4536588022/il_1588xN.4536588022_dmrk.jpg')
 GiftsTag.create!(gift_id: bague.id, tag_id: anniv.id)
 GiftsTag.create!(gift_id: bague.id, tag_id: noel.id)
 GiftsTag.create!(gift_id: bague.id, tag_id: adulte.id)
@@ -269,7 +269,7 @@ GiftsTag.create!(gift_id: bague.id, tag_id: un.id)
 GiftsTag.create!(gift_id: bague.id, tag_id: six.id)
 
 #15
-vase = Gift.create!(name: 'Vase', price: 24.02, description: "Vase à main humaine pour fleurs, plantes et fleurs séchées, vase en céramique, vase principal, vase à main, vase à fleurs en céramique, vase d'art unique", rating: 4.5, url: "https://www.etsy.com/listing/1076975823/human-hand-vase-for-flowers-plants-and?ga_order=most_relevant&ga_search_type=all&ga_view_type=gallery&ga_search_query=vase&ref=sr_gallery-1-7&pro=1&frs=1&organic_search_click=1", vote: 0, photo: 'https://i.etsystatic.com/23864248/r/il/671e22/3347076697/il_1588xN.3347076697_1nz2.jpg')
+vase = Gift.create!(name: 'Vase', price: 98, description: "Vase à main humaine pour fleurs, plantes et fleurs séchées, vase en céramique, vase principal, vase à main, vase à fleurs en céramique, vase d'art unique", rating: 4.5, url: "https://www.etsy.com/listing/1076975823/human-hand-vase-for-flowers-plants-and?ga_order=most_relevant&ga_search_type=all&ga_view_type=gallery&ga_search_query=vase&ref=sr_gallery-1-7&pro=1&frs=1&organic_search_click=1", vote: 0, photo: 'https://i.etsystatic.com/23864248/r/il/671e22/3347076697/il_1588xN.3347076697_1nz2.jpg')
 GiftsTag.create!(gift_id: vase.id, tag_id: anniv.id)
 GiftsTag.create!(gift_id: vase.id, tag_id: noel.id)
 GiftsTag.create!(gift_id: vase.id, tag_id: adulte.id)
@@ -280,7 +280,7 @@ GiftsTag.create!(gift_id: vase.id, tag_id: un.id)
 GiftsTag.create!(gift_id: vase.id, tag_id: six.id)
 
 #16
-fleur = Gift.create!(name: 'Fleurs séchées', price: 21.90, description: "fleurs séchées déco
+fleur = Gift.create!(name: 'Fleurs séchées', price: 90, description: "fleurs séchées déco
 Bouquets de fleurs séchées
 Rodanthe blanche
 Pour une décoration bohème et naturelle, à détourner selon vos envies.", rating: 5, url: "https://www.etsy.com/listing/763302340/bouquet-dried-flowers?ga_order=most_relevant&ga_search_type=all&ga_view_type=gallery&ga_search_query=fleur+sech%C3%A9e&ref=sr_gallery-1-46&etp=1&sts=1&organic_search_click=1", vote: 0, photo: 'https://i.etsystatic.com/16246620/r/il/0e3d65/2182825558/il_1588xN.2182825558_lvww.jpg')
