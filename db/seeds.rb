@@ -79,12 +79,12 @@ cinq = Tag.create!(name: "200...500€")
 p "------ Creating gift... ----------"
 #1
 
-gift_1 = Gift.create!(name: 'Bougies Carthage', price: 12.00, description: 'Nos bougies décoratives sont moulées individuellement en petite quantité dans notre studio à Paris. Nous utilisons la cire de soja 100% naturelle, végan et écoresponsable.', rating: 4.9, url: "https://www.etsy.com/listing/1395022433/the-carthage-pillars?ga_order=most_relevant&ga_search_type=all&ga_view_type=gallery&ga_search_query=bougies&ref=sr_gallery-1-7&organic_search_click=1", vote: 0, photo: 'https://i.etsystatic.com/40325058/r/il/a7fa98/4606306632/il_1588xN.4606306632_1t7x.jpg')
+gift_1 = Gift.create!(name: 'Bougies Carthage', price: 12, description: 'Nos bougies décoratives sont moulées individuellement en petite quantité dans notre studio à Paris. Nous utilisons la cire de soja 100% naturelle, végan et écoresponsable.', rating: 4.9, url: "https://www.etsy.com/listing/1395022433/the-carthage-pillars?ga_order=most_relevant&ga_search_type=all&ga_view_type=gallery&ga_search_query=bougies&ref=sr_gallery-1-7&organic_search_click=1", vote: 0, photo: 'https://i.etsystatic.com/40325058/r/il/a7fa98/4606306632/il_1588xN.4606306632_1t7x.jpg')
 # file = URI.open("https://i.etsystatic.com/40325058/r/il/a7fa98/4606306632/il_1588xN.4606306632_1t7x.jpg")
 # gift_1.gift_photo.attach(io: file, filename: "photo-bougie.jpg", content_type: "image/jpg")
 # gift_1.save
 
-bougie = Gift.create!(name: 'Bougies Carthage', price: 50.00, description: 'Nos bougies décoratives sont moulées individuellement en petite quantité dans notre studio à Paris. Nous utilisons la cire de soja 100% naturelle, végan et écoresponsable.', rating: 4.9, url: "https://www.etsy.com/listing/1395022433/the-carthage-pillars?ga_order=most_relevant&ga_search_type=all&ga_view_type=gallery&ga_search_query=bougies&ref=sr_gallery-1-7&organic_search_click=1", vote: 0, photo: 'https://i.etsystatic.com/40325058/r/il/a7fa98/4606306632/il_1588xN.4606306632_1t7x.jpg')
+bougie = Gift.create!(name: 'Bougies Carthage', price: 50, description: 'Nos bougies décoratives sont moulées individuellement en petite quantité dans notre studio à Paris. Nous utilisons la cire de soja 100% naturelle, végan et écoresponsable.', rating: 4.9, url: "https://www.etsy.com/listing/1395022433/the-carthage-pillars?ga_order=most_relevant&ga_search_type=all&ga_view_type=gallery&ga_search_query=bougies&ref=sr_gallery-1-7&organic_search_click=1", vote: 0, photo: 'https://i.etsystatic.com/40325058/r/il/a7fa98/4606306632/il_1588xN.4606306632_1t7x.jpg')
 GiftsTag.create!(gift_id: bougie.id, tag_id: deco.id)
 GiftsTag.create!(gift_id: bougie.id, tag_id: petit.id)
 GiftsTag.create!(gift_id: bougie.id, tag_id: noel.id)
@@ -108,7 +108,7 @@ GiftsTag.create!(gift_id: montre.id, tag_id: quatre.id)
 GiftsTag.create!(gift_id: montre.id, tag_id: six.id)
 
 #3
-cle = Gift.create!(name: 'Porte-clé', price: 55.00 , description: "Élégant porte-clés en cuir avec gravure. C'est un cadeau tout simplement sensationnel pour un être cher. Grâce à la belle rose des vents placée au centre du cercle en acier hautement poli, il devient un bijou de caractère.", rating: 4.1 , url: "https://www.etsy.com/listing/1381749398/unique-custom-coordinates-keychain?ga_order=most_relevant&ga_search_type=all&ga_view_type=gallery&ga_search_query=&ref=sc_gallery-1-13&frs=1&sts=1&plkey=159c4c12e5429332ea72dc1f2a420c710ce9127d%3A1381749398", vote: 0, photo: 'https://i.etsystatic.com/38174537/r/il/a505ee/4531898162/il_1588xN.4531898162_nk5e.jpg')
+cle = Gift.create!(name: 'Porte-clé', price: 55 , description: "Élégant porte-clés en cuir avec gravure. C'est un cadeau tout simplement sensationnel pour un être cher. Grâce à la belle rose des vents placée au centre du cercle en acier hautement poli, il devient un bijou de caractère.", rating: 4.1 , url: "https://www.etsy.com/listing/1381749398/unique-custom-coordinates-keychain?ga_order=most_relevant&ga_search_type=all&ga_view_type=gallery&ga_search_query=&ref=sc_gallery-1-13&frs=1&sts=1&plkey=159c4c12e5429332ea72dc1f2a420c710ce9127d%3A1381749398", vote: 0, photo: 'https://i.etsystatic.com/38174537/r/il/a505ee/4531898162/il_1588xN.4531898162_nk5e.jpg')
 GiftsTag.create!(gift_id: cle.id, tag_id: noel.id)
 GiftsTag.create!(gift_id: cle.id, tag_id: adulte.id)
 GiftsTag.create!(gift_id: cle.id, tag_id: ado.id)
@@ -230,7 +230,7 @@ GiftsTag.create!(gift_id: jeu.id, tag_id: trois.id)
 GiftsTag.create!(gift_id: jeu.id, tag_id: six.id)
 
 #12
-poster = Gift.create!(name: 'Poster Marrakech', price: 50.00, description: 'Souk des Tapis, Marrakech
+poster = Gift.create!(name: 'Poster Marrakech', price: 50, description: 'Souk des Tapis, Marrakech
 
 Illustration minimaliste et colorée pour apporter un bout du Maroc dans votre intérieur.', rating: 5, url: "https://www.etsy.com/listing/1066740749/marrakech-morocco?ga_order=most_relevant&ga_search_type=all&ga_view_type=gallery&ga_search_query=lifestyle&ref=sc_gallery-1-2&frs=1&plkey=fc6a418e933fac91d89b52b06e1bf52870ff820b%3A1066740749", vote: 0, photo: 'https://i.etsystatic.com/23478732/r/il/969e52/3261025834/il_1588xN.3261025834_4jwk.jpg')
 GiftsTag.create!(gift_id: poster.id, tag_id: anniv.id)
