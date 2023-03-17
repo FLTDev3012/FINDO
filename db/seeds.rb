@@ -169,7 +169,6 @@ GiftsTag.create!(gift_id: hochet.id, tag_id: naiss.id)
 GiftsTag.create!(gift_id: hochet.id, tag_id: noel.id)
 GiftsTag.create!(gift_id: hochet.id, tag_id: petit.id)
 GiftsTag.create!(gift_id: hochet.id, tag_id: bebe.id)
-GiftsTag.create!(gift_id: hochet.id, tag_id: deco.id)
 GiftsTag.create!(gift_id: hochet.id, tag_id: arti.id)
 GiftsTag.create!(gift_id: hochet.id, tag_id: made.id)
 GiftsTag.create!(gift_id: hochet.id, tag_id: un.id)
@@ -231,7 +230,6 @@ GiftsTag.create!(gift_id: jeu.id, tag_id: anniv.id)
 GiftsTag.create!(gift_id: jeu.id, tag_id: noel.id)
 GiftsTag.create!(gift_id: jeu.id, tag_id: naiss.id)
 GiftsTag.create!(gift_id: jeu.id, tag_id: bebe.id)
-GiftsTag.create!(gift_id: jeu.id, tag_id: deco.id)
 GiftsTag.create!(gift_id: jeu.id, tag_id: arti.id)
 GiftsTag.create!(gift_id: jeu.id, tag_id: petit.id)
 GiftsTag.create!(gift_id: jeu.id, tag_id: un.id)
@@ -303,7 +301,7 @@ GiftsTag.create!(gift_id: fleur.id, tag_id: un.id)
 GiftsTag.create!(gift_id: fleur.id, tag_id: six.id)
 
 #17
-terra = Gift.create!(name: 'Terrarium', price: 22.61, description: "Les terrariums suspendus en verre à bulles sont à la fois attrayants et écologiques. Leur fond est plat, ce qui permet de les suspendre ou de les poser sur une table. Remplissez ces pièces décoratives avec des plantes, des fleurs, des bougies ou d'autres objets pour une présentation étonnante qui impressionnera vos invités :) Ces objets sont livrés vides, prêts à être décorés !", rating: 4.5, url: "https://www.etsy.com/listing/864047849/3-6-round-bulb-terrarium-geometric-glass?ga_order=most_relevant&ga_search_type=all&ga_view_type=gallery&ga_search_query=terrarium+kit+for+adults&ref=sr_gallery-3-43&sts=1&organic_search_click=1", vote: 0, photo: 'https://i.etsystatic.com/9325814/r/il/4cb837/2549392811/il_1588xN.2549392811_abow.jpg')
+terra = Gift.create!(name: 'Terrarium', price: 52.61, description: "Les terrariums suspendus en verre à bulles sont à la fois attrayants et écologiques. Leur fond est plat, ce qui permet de les suspendre ou de les poser sur une table. Remplissez ces pièces décoratives avec des plantes, des fleurs, des bougies ou d'autres objets pour une présentation étonnante qui impressionnera vos invités :) Ces objets sont livrés vides, prêts à être décorés !", rating: 4.5, url: "https://www.etsy.com/listing/864047849/3-6-round-bulb-terrarium-geometric-glass?ga_order=most_relevant&ga_search_type=all&ga_view_type=gallery&ga_search_query=terrarium+kit+for+adults&ref=sr_gallery-3-43&sts=1&organic_search_click=1", vote: 0, photo: 'https://i.etsystatic.com/9325814/r/il/4cb837/2549392811/il_1588xN.2549392811_abow.jpg')
 GiftsTag.create!(gift_id: terra.id, tag_id: anniv.id)
 GiftsTag.create!(gift_id: terra.id, tag_id: noel.id)
 GiftsTag.create!(gift_id: terra.id, tag_id: adulte.id)
@@ -311,7 +309,7 @@ GiftsTag.create!(gift_id: terra.id, tag_id: ado.id)
 GiftsTag.create!(gift_id: terra.id, tag_id: deco.id)
 GiftsTag.create!(gift_id: terra.id, tag_id: life.id)
 GiftsTag.create!(gift_id: terra.id, tag_id: diy.id)
-GiftsTag.create!(gift_id: terra.id, tag_id: un.id)
+GiftsTag.create!(gift_id: terra.id, tag_id: trois.id)
 GiftsTag.create!(gift_id: terra.id, tag_id: six.id)
 
 #18
@@ -326,7 +324,7 @@ GiftsTag.create!(gift_id: matisse.id, tag_id: un.id)
 GiftsTag.create!(gift_id: matisse.id, tag_id: six.id)
 
 #19
-pochette = Gift.create!(name: 'Pochette tendance', price: 42, description: "Sac banane en velours de coton grosses côtes et doublure en Liberty ou coton imprimé de qualité, fermeture en métal doré écrue.
+pochette = Gift.create!(name: 'Pochette tendance', price: 52, description: "Sac banane en velours de coton grosses côtes et doublure en Liberty ou coton imprimé de qualité, fermeture en métal doré écrue.
 
 Sangle réglable en coton écru avec boucle coulissante.", rating: 5, url: "https://www.etsy.com/listing/1410442248/ribbed-velvet-belt-bag-khaki-beige-ocher?ga_order=most_relevant&ga_search_type=all&ga_view_type=gallery&ga_search_query=&ref=sr_gallery-1-7&sts=1&organic_search_click=1", vote: 0, photo: 'https://i.etsystatic.com/15569065/r/il/2ba911/4551930680/il_1588xN.4551930680_s58y.jpg')
 GiftsTag.create!(gift_id: trousse.id, tag_id: adulte.id)
@@ -335,19 +333,40 @@ GiftsTag.create!(gift_id: affiche.id, tag_id: anniv.id)
 GiftsTag.create!(gift_id: affiche.id, tag_id: noel.id)
 GiftsTag.create!(gift_id: affiche.id, tag_id: life.id)
 GiftsTag.create!(gift_id: affiche.id, tag_id: arti.id)
-GiftsTag.create!(gift_id: affiche.id, tag_id: deux.id)
+GiftsTag.create!(gift_id: affiche.id, tag_id: trois.id)
 GiftsTag.create!(gift_id: affiche.id, tag_id: six.id)
 
 #20
-bag = Gift.create!(name: 'Bumbag', price: 46.90, description: "Sac banane en cuir. Pochette banane porté bandoulière", rating: 4.5, url: "https://www.etsy.com/listing/1195987127/womens-leather-banana-bag-bum-bag-hip?ga_order=most_relevant&ga_search_type=all&ga_view_type=gallery&ga_search_query=sac+banane&ref=sc_gallery-1-6&frs=1&bes=1&plkey=3e31d3788b0d5a44238d5589e6721ff341178e98%3A1195987127", vote: 0, photo: 'https://i.etsystatic.com/23228114/r/il/d118c3/4204939046/il_1588xN.4204939046_cs01.jpg')
+bag = Gift.create!(name: 'Bumbag', price: 56.90, description: "Sac banane en cuir. Pochette banane porté bandoulière", rating: 4.5, url: "https://www.etsy.com/listing/1195987127/womens-leather-banana-bag-bum-bag-hip?ga_order=most_relevant&ga_search_type=all&ga_view_type=gallery&ga_search_query=sac+banane&ref=sc_gallery-1-6&frs=1&bes=1&plkey=3e31d3788b0d5a44238d5589e6721ff341178e98%3A1195987127", vote: 0, photo: 'https://i.etsystatic.com/23228114/r/il/d118c3/4204939046/il_1588xN.4204939046_cs01.jpg')
 GiftsTag.create!(gift_id: bag.id, tag_id: adulte.id)
 GiftsTag.create!(gift_id: bag.id, tag_id: ado.id)
 GiftsTag.create!(gift_id: bag.id, tag_id: anniv.id)
 GiftsTag.create!(gift_id: bag.id, tag_id: noel.id)
 GiftsTag.create!(gift_id: bag.id, tag_id: life.id)
 GiftsTag.create!(gift_id: bag.id, tag_id: arti.id)
-GiftsTag.create!(gift_id: bag.id, tag_id: deux.id)
+GiftsTag.create!(gift_id: bag.id, tag_id: trois.id)
 GiftsTag.create!(gift_id: bag.id, tag_id: six.id)
+
+#21
+fontaine = Gift.create!(name: 'Fontaine zen', price: 54.00, description: "La fontaine Terai illustre parfaitement cela avec un design très aérien et beaucoup de légèreté lui donnant une élégance rare.
+  Sa forme arrondie, ses lignes douces, ses jarres suspendus et le son cristallin de l'eau lui permettent de créer une atmosphère propice à la détente et la relaxation.", rating: 5, url: "etsy.com/fr/listing/1293977738/fontaine-dinterieur-zen?ga_order=most_relevant&ga_search_type=all&ga_view_type=gallery&ga_search_query=home+decor&ref=sc_gallery-1-7&frs=1&plkey=42a315fd149f3b3f319e2b233b7b476e9777f883%3A1293977738", vote: 0, photo: 'https://i.etsystatic.com/27119866/r/il/2e7405/4764576845/il_1588xN.4764576845_abqr.jpg')
+GiftsTag.create!(gift_id: fontaine.id, tag_id: adulte.id)
+GiftsTag.create!(gift_id: fontaine.id, tag_id: anniv.id)
+GiftsTag.create!(gift_id: fontaine.id, tag_id: noel.id)
+GiftsTag.create!(gift_id: fontaine.id, tag_id: life.id)
+GiftsTag.create!(gift_id: fontaine.id, tag_id: deco.id)
+GiftsTag.create!(gift_id: fontaine.id, tag_id: trois.id)
+GiftsTag.create!(gift_id: fontaine.id, tag_id: six.id)
+
+#22
+cadre = Gift.create!(name: 'Eucalyptus', price: 58.00, description: "Il s'agit d'un ensemble de 3 imprimés botaniques représentant un eucalyptus vert vif et une branche d'olivier. La couleur verte et vert sauge douce de ces plantes aquarelles apportera sûrement chaleur et harmonie dans votre espace. Cette belle combinaison de verdure à l'aquarelle est une décoration murale intemporelle et ajoutera de la légèreté à de nombreux intérieurs.", rating: 5, url: "https://www.etsy.com/fr/listing/638744835/minimalist-wall-decor-light-green?ga_order=most_relevant&ga_search_type=all&ga_view_type=gallery&ga_search_query=home+decor&ref=sc_gallery-1-2&pro=1&frs=1&sts=1&plkey=32897a68cd0eb578008b36a5b3aba8869e2ebf17%3A638744835", vote: 0, photo: 'https://i.etsystatic.com/18105190/r/il/3400c7/3977381628/il_1588xN.3977381628_qwln.jpg')
+GiftsTag.create!(gift_id: cadre.id, tag_id: adulte.id)
+GiftsTag.create!(gift_id: cadre.id, tag_id: anniv.id)
+GiftsTag.create!(gift_id: cadre.id, tag_id: noel.id)
+GiftsTag.create!(gift_id: cadre.id, tag_id: life.id)
+GiftsTag.create!(gift_id: cadre.id, tag_id: deco.id)
+GiftsTag.create!(gift_id: cadre.id, tag_id: trois.id)
+GiftsTag.create!(gift_id: cadre.id, tag_id: six.id)
 
 p "------ #{Gift.count} Gifts created ----------"
 
