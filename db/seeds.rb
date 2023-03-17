@@ -39,11 +39,6 @@ mathieu.save
 
 p "------ 4 pictures avatar created ----------"
 
-wishlist_1 = Wishlist.create(name: 'Anniversaire Pablo', user_id: dorian.id)
-wishlist_2 = Wishlist.create(name: 'Anniversaire Jose', user_id: jernito.id)
-
-
-p "------ #{Wishlist.count} wishlists created ----------"
 
 # seeds des cadeaux
 Gift.destroy_all
@@ -369,37 +364,6 @@ GiftsTag.create!(gift_id: cadre.id, tag_id: trois.id)
 GiftsTag.create!(gift_id: cadre.id, tag_id: six.id)
 
 p "------ #{Gift.count} Gifts created ----------"
-
-wishlists_gift1 = WishlistsGift.create!(wishlist_id: Wishlist.first.id, gift_id: Gift.first.id)
-wishlists_gift2 = WishlistsGift.create!(wishlist_id: Wishlist.first.id, gift_id: Gift.second.id)
-wishlists_gift3 = WishlistsGift.create!(wishlist_id: Wishlist.first.id, gift_id: Gift.last.id)
-wishlist_gift4 = WishlistsGift.create!(wishlist_id: Wishlist.first.id, gift_id: Gift.third.id)
-
-
-p "------ #{WishlistsGift.count} wishlistsGifts created ----------"
-
-
-Vote.create!(wishlists_gift_id: wishlists_gift1.id, user_id: User.first.id)
-wishlists_gift1.vote += 1
-wishlists_gift1.save!
-Vote.create!(wishlists_gift_id: wishlists_gift1.id, user_id: User.second.id)
-wishlists_gift1.vote += 1
-wishlists_gift1.save!
-Vote.create!(wishlists_gift_id: wishlists_gift1.id, user_id: User.third.id)
-wishlists_gift1.vote += 1
-wishlists_gift1.save!
-Vote.create!(wishlists_gift_id: wishlists_gift2.id, user_id: User.first.id)
-wishlists_gift2.vote += 1
-wishlists_gift2.save!
-
-
-wishlists_gift1 = WishlistsGift.create!(wishlist_id: Wishlist.second.id, gift_id: Gift.last.id)
-wishlists_gift2 = WishlistsGift.create!(wishlist_id: Wishlist.second.id, gift_id: Gift.second.id)
-Vote.create!(wishlists_gift_id: wishlists_gift1.id, user_id: User.first.id)
-wishlists_gift1.vote += 1
-wishlists_gift1.save!
-
-
 
 
 # gift tag
